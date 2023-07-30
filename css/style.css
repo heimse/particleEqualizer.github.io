@@ -30,26 +30,6 @@ canvas{
 ::-webkit-scrollbar-thumb:window-inactive {
     background: #999; 
 }
-
-
-
-body {
-	min-width: 1024px;
-	overflow: hidden;
-	margin: 0;
-	padding: 0;
-	/* background: url(https://naukatv.ru/upload/resize/webp/bestfit/1920/1080/4f/4fea30d2395e228a9adc1e9e949ce62c59b5790d.jpg/optimized.webp); */
-	background-size: cover;
-	font-family: Helvetica, arial, sans-serif
-}
-canvas {
-	position: fixed;
-	left: 0;
-	top: 0;
-	width: 80%;
-	height: 80%;
-
-}
 ::-webkit-scrollbar {
 	width: 20px
 }
@@ -93,9 +73,4 @@ canvas {
 .btn:active {
 	color: #0e83cd;
 	background: #fff;
-}
-
-.skip {
-	opacity: 0;
-	bottom: 200px;
 }
