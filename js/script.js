@@ -19,6 +19,7 @@ var init = function(){
     audioDiv.innerHTML = "<audio id='audio' src='src.mp3' type='audio/mp3'></audio>";
     console.log(audioDiv);
     var audio = document.getElementById("audio");
+    
     // init audio input analyzer
     m_analyzer = new AudioAnalyzer(audio);
     // init mouse handler
