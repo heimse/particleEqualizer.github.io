@@ -95,8 +95,6 @@ const interfaceFunctions = () => {
 
     
     $("#play").bind('click', () => {
-        
-        $("#play").toggleClass("played");
         if($("#play").hasClass( "played" )) {
             console.log('pause');
             audio.pause();
@@ -104,6 +102,7 @@ const interfaceFunctions = () => {
             console.log('play');
             audio.play();
         }
+        $("#play").toggleClass("played");
     })
 }
 
