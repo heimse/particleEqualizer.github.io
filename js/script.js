@@ -7,7 +7,8 @@ var m_pbr;
 var m_light;
 var m_ctrl;
 var m_device_checker;
-var flag;
+var flag = 0;
+
 var init = function(){
     console.log('init');
     // device_checker
@@ -90,7 +91,7 @@ const interfaceFunctions = () => {
     const audio = document.getElementById("audio");
 
     $("#play").bind('click', () => {
-        if(flag = 0) {
+        if(flag == 0 || flag == undefined) {
             init();
             flag = 1;
         }
