@@ -73,8 +73,8 @@ var update = function(){
    
 
     const context = new AudioContext();
-    const analyser = audioContext.createAnalyser();
-    const src = audioContext.createMediaElementSource(audio);
+    const analyser = context.createAnalyser();
+    const src = context.createMediaElementSource(audio);
     src.connect(analyser);
     analyser.connect(audio.destination);
     const array = new Uint8Array(analyser.frequencyBinCount);
