@@ -1,27 +1,31 @@
+var audio = document.getElementById("audio");
 var AudioAnalyzer = function(){
     this.is_init = false;
     this.is_pulse = false;
 
-    navigator.getUserMedia = (
-        navigator.getUserMedia ||
-        navigator.webkitGetUserMedia ||
-        navigator.mozGetUserMedia ||
-        navigator.msGetUserMedia);
+    // navigator.getUserMedia = (
+    //     navigator.getUserMedia ||
+    //     navigator.webkitGetUserMedia ||
+    //     navigator.mozGetUserMedia ||
+    //     navigator.msGetUserMedia);
 
-    if (navigator.getUserMedia) {
-        console.log('getUserMedia supported.');
-        navigator.getUserMedia ({
-            audio: true
-        }, this.init.bind(this),
-        this.init_without_stream.bind(this));
-    } else {
-        if(window.location.protocol == 'https:')
-            this.init_without_stream();
-        console.log('getUserMedia not supported on your browser!');
-    }
+    // if (navigator.getUserMedia) {
+    //     console.log('getUserMedia supported.');
+    //     navigator.getUserMedia ({
+    //         audio: true
+    //     }, this.init.bind(this),
+    //     this.init_without_stream.bind(this));
+    // } else {
+    //     if(window.location.protocol == 'https:')
+    //         this.init_without_stream();
+    //     console.log('getUserMedia not supported on your browser!');
+    // }
+
+    this.init(audio);
 };
 
 AudioAnalyzer.prototype.init = function(_stream){
+    console.log('init analyzer');
     var _ctx = new (
         window.AudioContext || 
         window.webkitAudioContext || 

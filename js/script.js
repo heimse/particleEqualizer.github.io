@@ -97,16 +97,16 @@ const interfaceFunctions = () => {
     $(".audioDiv").html("<audio id='audio' src='src.mp3' type='audio/mp3'></audio>");
     const audio = document.getElementById("audio");
    
-    const AudioContext = window.AudioContext || window.webkitAudioContext;
-    const audioContext = new AudioContext();
-    const analyserNode = audioContext.createAnalyser();
-    const src = audioContext.createMediaElementSource(audio);
-    src.connect(analyserNode);
-    analyserNode.connect(audioContext.destination);
-    const array = new Uint8Array(analyserNode.frequencyBinCount);
-    analyserNode.getByteFrequencyData(array);
+    // const AudioContext = window.AudioContext || window.webkitAudioContext;
+    // const audioContext = new AudioContext();
+    // const analyserNode = audioContext.createAnalyser();
+    // const src = audioContext.createMediaElementSource(audio);
+    // src.connect(analyserNode);
+    // analyserNode.connect(audioContext.destination);
+    // const array = new Uint8Array(analyserNode.frequencyBinCount);
+    // analyserNode.getByteFrequencyData(array);
     
-    console.log(array[40]);
+    //console.log(array[40]);
 
     
     $("#play").bind('click', () => {
