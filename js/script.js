@@ -94,7 +94,6 @@ const interfaceFunctions = () => {
 
     
     $("#play").bind('click', () => {
-        
         $("#play").toggleClass("played");
         if($("#play").hasClass( "played" )) {
             console.log('pause');
