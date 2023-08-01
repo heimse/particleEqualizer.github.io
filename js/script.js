@@ -53,7 +53,7 @@ var init = function(){
     ];
 
     // init gui
-    m_ctrl = new Ctrl(m_blob, m_light, m_pbr, analyser);
+    m_ctrl = new Ctrl(m_blob, m_light, m_pbr);
 };
 
 
