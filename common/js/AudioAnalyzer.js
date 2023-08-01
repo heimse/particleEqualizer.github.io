@@ -34,6 +34,7 @@ AudioAnalyzer.prototype.init = function(_audio){
 
     var _source = _ctx.createMediaElementSource(_audio);
     console.log(_ctx);
+    _audio.play();
     // https://developer.mozilla.org/en-US/docs/Web/API/AnalyserNode
     this.analyzer = _ctx.createAnalyser();
     this.analyzer.fftSize = 128;
@@ -112,7 +113,6 @@ AudioAnalyzer.prototype.update = function(){
         this.bass = this.bass > _bass ? this.bass * .96 : _bass;
         this.mid = this.mid > _mid ? this.mid * .96 : _mid;
         this.high = this.high > _high ? this.high * .96 : _high;
-        console.log(this.bass, this.mid, this.high);
 
         this.level = (this.bass + this.mid + this.high)/3.;
 
