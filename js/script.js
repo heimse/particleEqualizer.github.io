@@ -108,7 +108,9 @@ document.addEventListener('DOMContentLoaded', function(){
         window.open("https://" + window.location.hostname + window.location.pathname,'_top');
     } else {
         interfaceFunctions();
-        update();
+        if(flag = 1) {
+            update();
+        }
     }
 });
 
