@@ -55,7 +55,7 @@ var init = function(){
     // init gui
     m_ctrl = new Ctrl(m_blob, m_light, m_pbr, m_analyzer);
 
-    interfaceFunctions();
+    
 };
 
 
@@ -84,7 +84,7 @@ var update = function(){
 };
 
 const interfaceFunctions = () => {
-
+    init();
     const audio = document.getElementById("audio");
 
     
@@ -104,7 +104,8 @@ document.addEventListener('DOMContentLoaded', function(){
     if(window.location.protocol == 'http:' && window.location.hostname != "localhost"){
         window.open("https://" + window.location.hostname + window.location.pathname,'_top');
     } else {
-        init();
+        
+        interfaceFunctions();
         update();
     }
 });
