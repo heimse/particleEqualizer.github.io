@@ -100,6 +100,7 @@ const interfaceFunctions = () => {
             update();
         }
 
+        
         if($("#play").hasClass( "played" )) {
             console.log('pause');
             audio.pause();
