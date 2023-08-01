@@ -91,6 +91,7 @@ const interfaceFunctions = () => {
     const audio = document.getElementById("audio");
 
     $("#play").bind('click', () => {
+        console.log(flag);
         if(flag == 0 || flag == undefined) {
             console.log('inssit');
             init();
