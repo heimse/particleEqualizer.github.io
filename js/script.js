@@ -63,7 +63,7 @@ var init = function(){
 
 var update = function(){
     if(flag == 1) {
-        //requestAnimationFrame( update );
+        requestAnimationFrame( update );
         // update audio analyzer
         m_analyzer.update();
         // m_analyzer.debug(document.getElementsByTagName("canvas")[0]);
@@ -88,13 +88,14 @@ var update = function(){
 
 const interfaceFunctions = () => {
     
-    const audio = document.getElementById("audio");
+    let audio;
 
     $("#play").bind('click', () => {
         console.log(flag);
         if(flag == 0 || flag == undefined) {
             console.log('inssit');
             init();
+            audio = document.getElementById("audio");
             flag = 1;
         }
         if($("#play").hasClass( "played" )) {
@@ -114,7 +115,7 @@ document.addEventListener('DOMContentLoaded', function(){
     } else {
         interfaceFunctions();
         if(flag == 1) {
-            //update();
+            update();
         }
     }
 });
