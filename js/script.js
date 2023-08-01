@@ -97,6 +97,7 @@ const interfaceFunctions = () => {
             init();
             audio = document.getElementById("audio");
             flag = 1;
+            update();
         }
         if($("#play").hasClass( "played" )) {
             console.log('pause');
