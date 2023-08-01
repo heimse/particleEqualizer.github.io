@@ -8,7 +8,11 @@ var m_light;
 var m_ctrl;
 var m_device_checker;
 
+const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+const analyser = audioCtx.createAnalyser();
+
 var init = function(){
+    console.log(audioCtx, analyser)
     // device_checker
     m_device_checker = new DeviceChecker();
     var _is_mobile = m_device_checker.is_mobile();
@@ -68,17 +72,6 @@ var update = function(){
     // update light
     // if(m_ctrl.params.light_ziggle) 
     //     m_light.ziggle( m_renderer.timer );
-
-    const audio = document.getElementById("audio");
-   
-
-    const context = new AudioContext();
-    const analyser = context.createAnalyser();
-    //const src = context.createMediaElementSource(audio);
-    //src.connect(analyser);
-    //analyser.connect(audio.destination);
-    const array = new Uint8Array(analyser.frequencyBinCount);
-    analyser.getByteFrequencyData(array);
     
     console.log(array[40]);
     // update renderer
@@ -92,8 +85,6 @@ const interfaceFunctions = () => {
     // init audioAnaliyzer
     $(".audioDiv").html("<audio id='audio' src='src.mp3' type='audio/mp3'></audio>");
 
-
-    
     $("#play").bind('click', () => {
         if($("#play").hasClass( "played" )) {
             console.log('pause');
