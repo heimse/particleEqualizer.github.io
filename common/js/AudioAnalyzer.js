@@ -40,10 +40,10 @@ AudioAnalyzer.prototype.init = function(_audio){
     this.analyzer.fftSize = 128;
     console.log(this.analyzer);
 
-    //this.gain = _ctx.createGain();
-    //_source.connect(this.gain);
-    //this.gain.connect(this.analyzer);
-    //this.gain.gain.value = 70.;
+    this.gain = _ctx.createGain();
+    _source.connect(this.gain);
+    this.gain.connect(this.analyzer);
+    this.gain.gain.value = 70.;
 
     this.bass = 0.;
     this.mid = 0.;
