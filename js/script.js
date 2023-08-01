@@ -84,10 +84,14 @@ var update = function(){
 };
 
 const interfaceFunctions = () => {
-    init();
+    
     const audio = document.getElementById("audio");
 
     $("#play").bind('click', () => {
+        if(flag = 0) {
+            init();
+            flag = 1;
+        }
         if($("#play").hasClass( "played" )) {
             console.log('pause');
             audio.pause();
@@ -107,3 +111,5 @@ document.addEventListener('DOMContentLoaded', function(){
         update();
     }
 });
+
+var flag = 0;
