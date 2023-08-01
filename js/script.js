@@ -12,8 +12,7 @@ var src;
 const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
 const analyser = audioCtx.createAnalyser();
 const bufferLength = analyser.frequencyBinCount;
-src.connect(analyser);
-analyser.connect(audioCtx.destination);
+
 
 var init = function(){
     // device_checker
@@ -90,6 +89,8 @@ const interfaceFunctions = () => {
     $(".audioDiv").html("<audio id='audio' src='src.mp3' type='audio/mp3'></audio>");
     audio = document.getElementById('audio');
     src = audioCtx.createMediaElementSource(audio);
+    src.connect(analyser);
+    analyser.connect(audioCtx.destination);
     $("#play").bind('click', () => {
         if($("#play").hasClass( "played" )) {
             console.log('pause');
