@@ -73,7 +73,6 @@ var update = function(){
     // if(m_ctrl.params.light_ziggle) 
     //     m_light.ziggle( m_renderer.timer );
     
-    console.log(array[40]);
     // update renderer
     if(m_ctrl.params.cam_ziggle) 
         m_renderer.ziggle_cam(m_analyzer.get_history());
