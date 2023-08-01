@@ -95,10 +95,13 @@ const interfaceFunctions = () => {
         if(flag == 0 || flag == undefined) {
             console.log('inssit');
             init();
-            audio = document.getElementById("audio");
+            
             flag = 1;
             update();
+            $(".audioClone").html("<audio id='audioClone' src='src.mp3' type='audio/mp3'></audio>")
+            audio = document.getElementById("audioClone");
         }
+
         if($("#play").hasClass( "played" )) {
             console.log('pause');
             audio.pause();
