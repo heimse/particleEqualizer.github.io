@@ -32,12 +32,12 @@ AudioAnalyzer.prototype.init = function(_audio){
         window.mozAudioContext || 
         window.msAudioContext)();
 
-    console.log(_ctx);
     var _source = _ctx.createMediaElementSource(_audio);
-
+    console.log(_ctx);
     // https://developer.mozilla.org/en-US/docs/Web/API/AnalyserNode
     this.analyzer = _ctx.createAnalyser();
     this.analyzer.fftSize = 128;
+    console.log(this.analyzer);
 
     this.gain = _ctx.createGain();
     _source.connect(this.gain);
