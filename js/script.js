@@ -76,7 +76,7 @@ var update = function(){
     const analyser = context.createAnalyser();
     //const src = context.createMediaElementSource(audio);
     //src.connect(analyser);
-    analyser.connect(audio.destination);
+    //analyser.connect(audio.destination);
     const array = new Uint8Array(analyser.frequencyBinCount);
     analyser.getByteFrequencyData(array);
     
