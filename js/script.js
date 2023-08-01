@@ -7,11 +7,11 @@ var m_pbr;
 var m_light;
 var m_ctrl;
 var m_device_checker;
-
+var audio;
+var src;
 const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
 const analyser = audioCtx.createAnalyser();
 const bufferLength = analyser.frequencyBinCount;
-const src = audioCtx.createMediaElementSource(audio);
 src.connect(analyser);
 analyser.connect(audioCtx.destination);
 
@@ -88,7 +88,8 @@ const interfaceFunctions = () => {
 
     // init audioAnaliyzer
     $(".audioDiv").html("<audio id='audio' src='src.mp3' type='audio/mp3'></audio>");
-
+    audio = document.getElementById('audio');
+    src = audioCtx.createMediaElementSource(audio);
     $("#play").bind('click', () => {
         if($("#play").hasClass( "played" )) {
             console.log('pause');
