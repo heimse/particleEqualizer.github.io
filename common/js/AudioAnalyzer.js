@@ -112,6 +112,7 @@ AudioAnalyzer.prototype.update = function(){
         this.bass = this.bass > _bass ? this.bass * .96 : _bass;
         this.mid = this.mid > _mid ? this.mid * .96 : _mid;
         this.high = this.high > _high ? this.high * .96 : _high;
+        console.log(this.bass, this.mid, this.high);
 
         this.level = (this.bass + this.mid + this.high)/3.;
 
