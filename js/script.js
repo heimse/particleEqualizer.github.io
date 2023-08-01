@@ -9,6 +9,7 @@ var m_ctrl;
 var m_device_checker;
 
 var init = function(){
+    console.log('init');
     // device_checker
     m_device_checker = new DeviceChecker();
     var _is_mobile = m_device_checker.is_mobile();
@@ -61,7 +62,7 @@ var init = function(){
 
 var update = function(){
     if(flag = 1) {
-        requestAnimationFrame( update );
+        //requestAnimationFrame( update );
         // update audio analyzer
         m_analyzer.update();
         // m_analyzer.debug(document.getElementsByTagName("canvas")[0]);
@@ -110,7 +111,7 @@ document.addEventListener('DOMContentLoaded', function(){
     } else {
         interfaceFunctions();
         if(flag = 1) {
-            update();
+            //update();
         }
     }
 });
