@@ -32,6 +32,7 @@ AudioAnalyzer.prototype.init = function(_stream){
         window.mozAudioContext || 
         window.msAudioContext)();
 
+    console.log(_ctx);
     var _source = _ctx.createMediaStreamSource(_stream);
 
     // https://developer.mozilla.org/en-US/docs/Web/API/AnalyserNode
