@@ -92,6 +92,7 @@ const interfaceFunctions = () => {
 
     $("#play").bind('click', () => {
         if(flag == 0 || flag == undefined) {
+            console.log('inssit');
             init();
             flag = 1;
         }
