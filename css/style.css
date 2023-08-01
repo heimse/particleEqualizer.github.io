@@ -5,8 +5,8 @@ body{
     padding: 0px;
     background: #fff5ee;
     font-family: Helvetica, arial, sans-serif;
-	background: #000000; 
-	
+	background: url(../common/assets/bg.jpg); 
+	background-size: cover;
 }   
 canvas{
     position: fixed;
@@ -65,12 +65,16 @@ canvas{
 	border-radius: 15px;
 	user-select: none;
 	width: 40px;
+	height: 15px;
 	display: block !important;
 	text-align: center;
 }
+.playbtn {
+	bottom: 30px;
+	left: calc(50vh-(40/2));
+}
 
-.btn:hover,
-.btn:active {
+.btn:hover{
 	color: #0e83cd;
 	background: #fff;
 }
@@ -126,7 +130,6 @@ canvas{
 .toggle .line3 {
 	transform: scale(0.9) rotateZ(45deg) translate(-6px, -6px);
 }
-
 
 .menu {
 	position: fixed;

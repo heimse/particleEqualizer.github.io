@@ -99,6 +99,11 @@ const interfaceFunctions = () => {
             audio = document.getElementById("audio");
             flag = 1;
             update();
+
+            $("#play").fadeOut('fast', () => {
+                $("#play").html('⏯︎');
+                $("#play").fadeIn('fast');
+            })
         }
         if($("#play").hasClass( "played" )) {
             console.log('pause');
@@ -130,6 +135,10 @@ $(document).ready(() => {
 		navBar.classList.toggle('toggle');
 		menu.classList.toggle('toggle');
 	});
+ 
 });
 
+function startLogic() {
+
+}
 
