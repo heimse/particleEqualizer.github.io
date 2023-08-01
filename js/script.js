@@ -122,4 +122,14 @@ document.addEventListener('DOMContentLoaded', function(){
     }
 });
 
+$(document).ready(() => {
+	const toggleButton = document.querySelector('.toggle-menu');
+	const navBar = document.querySelector('.nav-bar');
+	const menu = document.querySelector('.menu');
+	toggleButton.addEventListener('click', function () {
+		navBar.classList.toggle('toggle');
+		menu.classList.toggle('toggle');
+	});
+});
+
 
