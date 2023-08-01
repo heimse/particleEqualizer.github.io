@@ -87,6 +87,7 @@ AudioAnalyzer.prototype.update = function(){
                 _bass = Math.random();
                 _mid = Math.random();
                 _high = Math.random();
+                console.log(_bass, _mid, _high)
             }
         }
 
