@@ -68,16 +68,26 @@ var update = function(){
         m_blob.update_PBR();
         
         // update pbr
-        m_pbr.exposure = 5. 
-            + 30. * m_analyzer.get_level();
+        if($("#play").hasClass( "played" )) {
+            m_pbr.exposure = 5. 
+                + 30. * m_analyzer.get_level();
+        } else {
+            m_pbr.exposure = 0;
+        }
+
 
         // update light
         // if(m_ctrl.params.light_ziggle) 
         //     m_light.ziggle( m_renderer.timer );
 
         // update renderer
-        if(m_ctrl.params.cam_ziggle) 
-            m_renderer.ziggle_cam(m_analyzer.get_history());
+        if($("#play").hasClass( "played" )) {
+            if(m_ctrl.params.cam_ziggle) 
+                m_renderer.ziggle_cam(m_analyzer.get_history());
+        } else {
+            if(m_ctrl.params.cam_ziggle) 
+                m_renderer.ziggle_cam(0);
+        }
         m_renderer.render(m_render_queue);
     }
 };
