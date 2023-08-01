@@ -40,10 +40,10 @@ AudioAnalyzer.prototype.init = function(_audio){
     this.analyzer.fftSize = 128;
     console.log(this.analyzer);
 
-    // this.gain = _ctx.createGain();
-    // _source.connect(this.gain);
-    // this.gain.connect(this.analyzer);
-    // this.gain.gain.value = 70.;
+    this.gain = _ctx.createGain();
+    _source.connect(this.gain);
+    this.gain.connect(this.analyzer);
+    this.gain.gain.value = 70.;
 
     this.bass = 0.;
     this.mid = 0.;
@@ -126,15 +126,15 @@ AudioAnalyzer.prototype.reset_history = function(){
     this.history = 0.;
 };
 
-// AudioAnalyzer.prototype.set_gain = function(_val){
-//     if(this.gain)
-//         this.gain.gain.value = _val;
-// };
+AudioAnalyzer.prototype.set_gain = function(_val){
+    if(this.gain)
+        this.gain.gain.value = _val;
+};
 
-// AudioAnalyzer.prototype.get_gain = function(){
-//     if(this.gain)
-//         this.gain.gain.value;
-// };
+AudioAnalyzer.prototype.get_gain = function(){
+    if(this.gain)
+        this.gain.gain.value;
+};
 
 AudioAnalyzer.prototype.get_bass = function(){
     return this.bass == undefined ? 0. : this.bass;
