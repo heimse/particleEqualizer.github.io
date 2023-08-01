@@ -11,9 +11,9 @@ var m_device_checker;
 const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
 const analyser = audioCtx.createAnalyser();
 const bufferLength = analyser.frequencyBinCount;
-src = context.createMediaElementSource(audio);
+const src = audioCtx.createMediaElementSource(audio);
 src.connect(analyser);
-analyser.connect(context.destination);
+analyser.connect(audioCtx.destination);
 var init = function(){
     // device_checker
     m_device_checker = new DeviceChecker();
