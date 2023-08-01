@@ -6,7 +6,7 @@ var Ctrl = function(_blob, _light, _pbr, _audio){
 		debug_shadow_map: false,
 		cam_ziggle: true,
 		light_ziggle: true,
-		audio_gain: 70.
+		//audio_gain: 70.
 	}
 	
 	// var _g_blob = new dat.GUI();
@@ -21,7 +21,7 @@ var Ctrl = function(_blob, _light, _pbr, _audio){
 
     // _g_scene.add(this.params, 'cam_ziggle');
     // _g_scene.add(this.params, 'light_ziggle');
-    _g_scene.add(this.params, 'audio_gain', 0., 500.).onChange( this.update_params.bind(this) );
+    //_g_scene.add(this.params, 'audio_gain', 0., 500.).onChange( this.update_params.bind(this) );
     _g_scene.add(this.audio, 'is_pulse');
     _g_scene.add(this.blob, 'show_hdr').onFinishChange( this.blob.toggle_cubemap.bind(this.blob) );
 

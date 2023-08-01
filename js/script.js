@@ -24,16 +24,11 @@ var init = function(){
 
     // init audio input analyzer
     m_analyzer = new AudioAnalyzer(audio);
-    audio.play();
+
     // init mouse handler
     // m_mouse = new MouseHandler();
     // m_mouse.register_dom_events(document.body);
 
-    // TODO VOLUME INPUT
-    // const gainNode = audioContext.createGain()
-    // console.log(gainNode.gain.value);
-    
-    
     // init shared renderer
     var _is_perspective = true;
     m_renderer = new ThreeSharedRenderer(_is_perspective);
