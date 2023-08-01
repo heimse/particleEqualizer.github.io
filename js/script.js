@@ -60,27 +60,28 @@ var init = function(){
 
 
 var update = function(){
-    requestAnimationFrame( update );
+    if(flag = 1) {
+        requestAnimationFrame( update );
+        // update audio analyzer
+        m_analyzer.update();
+        // m_analyzer.debug(document.getElementsByTagName("canvas")[0]);
 
-    // update audio analyzer
-    m_analyzer.update();
-    // m_analyzer.debug(document.getElementsByTagName("canvas")[0]);
+        // update blob
+        m_blob.update_PBR();
+        
+        // update pbr
+        m_pbr.exposure = 5. 
+            + 30. * m_analyzer.get_level();
 
-    // update blob
-    m_blob.update_PBR();
-    
-    // update pbr
-    m_pbr.exposure = 5. 
-        + 30. * m_analyzer.get_level();
+        // update light
+        // if(m_ctrl.params.light_ziggle) 
+        //     m_light.ziggle( m_renderer.timer );
 
-    // update light
-    // if(m_ctrl.params.light_ziggle) 
-    //     m_light.ziggle( m_renderer.timer );
-
-    // update renderer
-    if(m_ctrl.params.cam_ziggle) 
-        m_renderer.ziggle_cam(m_analyzer.get_history());
-    m_renderer.render(m_render_queue);
+        // update renderer
+        if(m_ctrl.params.cam_ziggle) 
+            m_renderer.ziggle_cam(m_analyzer.get_history());
+        m_renderer.render(m_render_queue);
+    }
 };
 
 const interfaceFunctions = () => {
