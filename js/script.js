@@ -103,6 +103,7 @@ const interfaceFunctions = () => {
             $("#play").fadeOut('1000', () => {
                 $("#play").html('⏯︎');
                 $("#play").fadeIn('1000');
+                $('.next').parent().first().fadeIn();
             })
         }
         if($("#play").hasClass( "played" )) {

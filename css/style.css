@@ -72,7 +72,7 @@ canvas{
 	z-index: 999;
 	bottom: 30px;
 	padding: 15px 60px;
-	left: calc(50vw - 86px);
+	left: calc(50vw - 47px);
 }
 
 .btn:hover{
