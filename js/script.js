@@ -100,9 +100,9 @@ const interfaceFunctions = () => {
             flag = 1;
             update();
 
-            $("#play").fadeOut('fast', () => {
+            $("#play").fadeOut('1000', () => {
                 $("#play").html('⏯︎');
-                $("#play").fadeIn('fast');
+                $("#play").fadeIn('1000');
             })
         }
         if($("#play").hasClass( "played" )) {

@@ -5,7 +5,7 @@ body{
     padding: 0px;
     background: #fff5ee;
     font-family: Helvetica, arial, sans-serif;
-	background: url(../common/assets/bg.jpg); 
+	background: #000000; 
 	background-size: cover;
 }   
 canvas{
@@ -49,29 +49,30 @@ canvas{
 .btn {
 	cursor: pointer;
 	padding: 15px 60px;
-	margin: 15px 30px;
 	text-transform: uppercase;
 	letter-spacing: 1px;
 	font-weight: 700;
 	outline: none;
-	position: fixed;
-	z-index: 999;
-	bottom: 30px;
+	position: relative;
 	-webkit-transition: all 0.3s;
 	-moz-transition: all 0.3s;
 	transition: all 0.3s, opacity 0.5s;
-	border: 3px solid #fff;
+	border: 1px solid #fff;
 	color: #fff;
 	border-radius: 15px;
 	user-select: none;
-	width: 40px;
+	min-width: 40px;
 	height: 15px;
 	display: block !important;
 	text-align: center;
+	margin: 100px 0px 0 0;
 }
 .playbtn {
+	position: fixed;
+	z-index: 999;
 	bottom: 30px;
-	left: calc(50vh-(40/2));
+	padding: 15px 60px;
+	left: calc(50vh - 51px);
 }
 
 .btn:hover{
@@ -79,7 +80,14 @@ canvas{
 	background: #fff;
 }
 
-
+.popupMsgWrapper {
+	position: relative;
+	color: #fff;
+	padding: 15px 60px;
+	max-width: 40vh;
+	border: 1px solid #fff;
+	border-radius: 15px;
+}
 
 .toggle {
 	left: 0;
