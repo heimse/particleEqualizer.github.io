@@ -17,14 +17,14 @@ var AudioAnalyzer = function(){
     //     this.init_without_stream.bind(this));
     // } else {
     //     if(window.location.protocol == 'https:')
-    //         this.init_without_stream();
+    //         this.init_without_audio();
     //     console.log('getUserMedia not supported on your browser!');
     // }
 
     this.init(audio);
 };
 
-AudioAnalyzer.prototype.init = function(_stream){
+AudioAnalyzer.prototype.init = function(_audio){
     console.log('init analyzer');
     var _ctx = new (
         window.AudioContext || 
@@ -33,7 +33,7 @@ AudioAnalyzer.prototype.init = function(_stream){
         window.msAudioContext)();
 
     console.log(_ctx);
-    var _source = _ctx.createMediaStreamSource(_stream);
+    var _source = _ctx.createMediaElementSource(_audio);
 
     // https://developer.mozilla.org/en-US/docs/Web/API/AnalyserNode
     this.analyzer = _ctx.createAnalyser();
@@ -61,7 +61,7 @@ AudioAnalyzer.prototype.init = function(_stream){
     this.is_init = true;
 };
 
-AudioAnalyzer.prototype.init_without_stream = function(){
+AudioAnalyzer.prototype.init_without_audio = function(){
     alert("microphone is not detected. pulse is activated instead of mic input");
 
     this.bass = 0.;
