@@ -14,6 +14,7 @@ const bufferLength = analyser.frequencyBinCount;
 const src = audioCtx.createMediaElementSource(audio);
 src.connect(analyser);
 analyser.connect(audioCtx.destination);
+
 var init = function(){
     // device_checker
     m_device_checker = new DeviceChecker();
@@ -43,7 +44,7 @@ var init = function(){
     m_light = new ThreePointLight();
 
     // init blob
-    m_blob = new NoiseBlob(m_renderer, m_analyzer, m_light);
+    m_blob = new NoiseBlob(m_renderer, analyser, m_light);
     m_blob.set_PBR(m_pbr);
     if(_is_retina) m_blob.set_retina();
     
@@ -53,7 +54,7 @@ var init = function(){
     ];
 
     // init gui
-    m_ctrl = new Ctrl(m_blob, m_light, m_pbr, m_analyzer);
+    m_ctrl = new Ctrl(m_blob, m_light, m_pbr, analyser);
 };
 
 
@@ -63,7 +64,7 @@ var update = function(){
     const dataArray = new Uint8Array(bufferLength);
     console.log(dataArray);
     // update audio analyzer
-    m_analyzer.update();
+    //m_analyzer.update();
     // m_analyzer.debug(document.getElementsByTagName("canvas")[0]);
 
     // update blob
@@ -71,7 +72,7 @@ var update = function(){
     
     // update pbr
     m_pbr.exposure = 5. 
-        + 30. * m_analyzer.get_level();
+        + 30. * 0.3242;
 
     // update light
     // if(m_ctrl.params.light_ziggle) 
@@ -79,7 +80,7 @@ var update = function(){
     
     // update renderer
     if(m_ctrl.params.cam_ziggle) 
-        m_renderer.ziggle_cam(m_analyzer.get_history());
+        m_renderer.ziggle_cam(0.03324);
     m_renderer.render(m_render_queue);
 };
 
