@@ -21,7 +21,7 @@ var init = function(){
     var _is_retina = m_device_checker.is_retina();
 
     // init audio input analyzer
-    m_analyzer = new AudioAnalyzer();
+    //m_analyzer = new AudioAnalyzer();
     // init mouse handler
     // m_mouse = new MouseHandler();
     // m_mouse.register_dom_events(document.body);
