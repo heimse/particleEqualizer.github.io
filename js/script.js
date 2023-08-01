@@ -19,16 +19,12 @@ var init = function(){
     audioDiv.innerHTML = "<audio id='audio' src='src.mp3' type='audio/mp3'></audio>";
     console.log(audioDiv);
     var audio = document.getElementById("audio");
-    
+
     // init audio input analyzer
     m_analyzer = new AudioAnalyzer(audio);
     // init mouse handler
     // m_mouse = new MouseHandler();
     // m_mouse.register_dom_events(document.body);
-
-
-
-    
 
     // TODO VOLUME INPUT
     // const gainNode = audioContext.createGain()
@@ -58,6 +54,8 @@ var init = function(){
 
     // init gui
     m_ctrl = new Ctrl(m_blob, m_light, m_pbr, m_analyzer);
+
+    interfaceFunctions();
 };
 
 
@@ -87,19 +85,7 @@ var update = function(){
 
 const interfaceFunctions = () => {
 
-    // init audioAnaliyzer
     const audio = document.getElementById("audio");
-   
-    // const AudioContext = window.AudioContext || window.webkitAudioContext;
-    // const audioContext = new AudioContext();
-    // const analyserNode = audioContext.createAnalyser();
-    // const src = audioContext.createMediaElementSource(audio);
-    // src.connect(analyserNode);
-    // analyserNode.connect(audioContext.destination);
-    // const array = new Uint8Array(analyserNode.frequencyBinCount);
-    // analyserNode.getByteFrequencyData(array);
-    
-    //console.log(array[40]);
 
     
     $("#play").bind('click', () => {
@@ -118,7 +104,6 @@ document.addEventListener('DOMContentLoaded', function(){
     if(window.location.protocol == 'http:' && window.location.hostname != "localhost"){
         window.open("https://" + window.location.hostname + window.location.pathname,'_top');
     } else {
-        interfaceFunctions();
         init();
         update();
     }
