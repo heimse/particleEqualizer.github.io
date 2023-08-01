@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
     var audioDiv = document.querySelector(".audioDiv");
-    audioDiv.innerHTML("<audio id='audio' src='src.mp3' type='audio/mp3'></audio>")
+    audioDiv.innerHTML = "<audio id='audio' src='src.mp3' type='audio/mp3'></audio>";
     console.log(audioDiv);
     var audio = document.getElementById("audio");
     var AudioAnalyzer = function(){
