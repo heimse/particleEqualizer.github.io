@@ -10,9 +10,9 @@ var m_device_checker;
 
 const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
 const analyser = audioCtx.createAnalyser();
+const bufferLength = analyser.frequencyBinCount;
 
 var init = function(){
-    console.log(audioCtx, analyser)
     // device_checker
     m_device_checker = new DeviceChecker();
     var _is_mobile = m_device_checker.is_mobile();
@@ -58,6 +58,8 @@ var init = function(){
 var update = function(){
     requestAnimationFrame( update );
 
+    const dataArray = new Uint8Array(bufferLength);
+    console.log(dataArray);
     // update audio analyzer
     m_analyzer.update();
     // m_analyzer.debug(document.getElementsByTagName("canvas")[0]);
