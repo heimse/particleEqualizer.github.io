@@ -8,7 +8,7 @@ var m_light;
 var m_ctrl;
 var m_device_checker;
 var flag = 0;
-
+var audio;
 var init = function(){
     console.log('init');
     // device_checker
@@ -20,10 +20,10 @@ var init = function(){
     var audioDiv = document.querySelector(".audioDiv");
     audioDiv.innerHTML = "<audio id='audio' src='src.mp3' type='audio/mp3'></audio>";
     console.log(audioDiv);
-    var audio = document.getElementById("audio");
+    audio = document.getElementById("audio");
 
     // init audio input analyzer
-    m_analyzer = new AudioAnalyzer(audio);
+    m_analyzer = new AudioAnalyzer();
 
     // init mouse handler
     // m_mouse = new MouseHandler();
@@ -95,8 +95,6 @@ const interfaceFunctions = () => {
             flag = 1;
             update();
         }
-
-
         if($("#play").hasClass( "played" )) {
             console.log('pause');
             audio.pause();
