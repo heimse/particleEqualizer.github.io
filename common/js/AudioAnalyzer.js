@@ -1,3 +1,6 @@
+var audioDiv = document.getElementsByClassName('.audioDiv')[0];
+audioDiv.innerHTML("<audio id='audio' src='src.mp3' type='audio/mp3'></audio>")
+console.log(audioDiv);
 var audio = document.getElementById("audio");
 var AudioAnalyzer = function(){
     this.is_init = false;

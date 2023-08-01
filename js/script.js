@@ -94,7 +94,6 @@ var update = function(){
 const interfaceFunctions = () => {
 
     // init audioAnaliyzer
-    $(".audioDiv").html("<audio id='audio' src='src.mp3' type='audio/mp3'></audio>");
     const audio = document.getElementById("audio");
    
     // const AudioContext = window.AudioContext || window.webkitAudioContext;
