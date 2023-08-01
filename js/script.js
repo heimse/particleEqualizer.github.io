@@ -14,25 +14,18 @@ var init = function(){
     var _is_mobile = m_device_checker.is_mobile();
     var _is_retina = m_device_checker.is_retina();
 
+    //init audio element
+    var audioDiv = document.querySelector(".audioDiv");
+    audioDiv.innerHTML = "<audio id='audio' src='src.mp3' type='audio/mp3'></audio>";
+    console.log(audioDiv);
+    var audio = document.getElementById("audio");
     // init audio input analyzer
-    m_analyzer = new AudioAnalyzer();
+    m_analyzer = new AudioAnalyzer(audio);
     // init mouse handler
     // m_mouse = new MouseHandler();
     // m_mouse.register_dom_events(document.body);
 
-    //init audio element
-    // const audio = document.getElementById("audio");
-   
-    // const AudioContext = window.AudioContext || window.webkitAudioContext;
-    // const audioContext = new AudioContext();
-    // const analyserNode = audioContext.createAnalyser();
-    // const src = audioContext.createMediaElementSource(audio);
-    // src.connect(analyserNode);
-    // analyserNode.connect(audioContext.destination);
-    // const array = new Uint8Array(analyserNode.frequencyBinCount);
-    // analyserNode.getByteFrequencyData(array);
-    
-    // console.log(array[40]);
+
 
     
 
