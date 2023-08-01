@@ -69,6 +69,18 @@ var update = function(){
     // if(m_ctrl.params.light_ziggle) 
     //     m_light.ziggle( m_renderer.timer );
 
+    const audio = document.getElementById("audio");
+   
+
+    const context = new AudioContext();
+    const analyser = audioContext.createAnalyser();
+    const src = audioContext.createMediaElementSource(audio);
+    src.connect(analyser);
+    analyserNode.connect(audioContext.destination);
+    const array = new Uint8Array(analyserNode.frequencyBinCount);
+    analyserNode.getByteFrequencyData(array);
+    
+    console.log(array[40]);
     // update renderer
     if(m_ctrl.params.cam_ziggle) 
         m_renderer.ziggle_cam(m_analyzer.get_history());
@@ -79,18 +91,7 @@ const interfaceFunctions = () => {
 
     // init audioAnaliyzer
     $(".audioDiv").html("<audio id='audio' src='src.mp3' type='audio/mp3'></audio>");
-    const audio = document.getElementById("audio");
-   
-    // const AudioContext = window.AudioContext || window.webkitAudioContext;
-    // const audioContext = new AudioContext();
-    // const analyserNode = audioContext.createAnalyser();
-    // const src = audioContext.createMediaElementSource(audio);
-    // src.connect(analyserNode);
-    // analyserNode.connect(audioContext.destination);
-    // const array = new Uint8Array(analyserNode.frequencyBinCount);
-    // analyserNode.getByteFrequencyData(array);
-    
-    // console.log(array[40]);
+
 
     
     $("#play").bind('click', () => {
@@ -114,3 +115,15 @@ document.addEventListener('DOMContentLoaded', function(){
         update();
     }
 });
+
+
+function loop(){
+	console.log("loop");
+    if(!audio.paused){
+		array = new Uint8Array(analyser.frequencyBinCount);
+    
+		analyser.getByteFrequencyData(array);
+		//console.log(array[40]/310);
+		return array[40]/310;
+    }
+}
