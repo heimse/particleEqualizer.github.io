@@ -87,7 +87,6 @@ const interfaceFunctions = () => {
     init();
     const audio = document.getElementById("audio");
 
-    
     $("#play").bind('click', () => {
         if($("#play").hasClass( "played" )) {
             console.log('pause');
@@ -104,7 +103,6 @@ document.addEventListener('DOMContentLoaded', function(){
     if(window.location.protocol == 'http:' && window.location.hostname != "localhost"){
         window.open("https://" + window.location.hostname + window.location.pathname,'_top');
     } else {
-        
         interfaceFunctions();
         update();
     }
