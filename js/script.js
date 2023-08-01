@@ -77,7 +77,7 @@ var update = function(){
 };
 
 const interfaceFunctions = () => {
-    $('#audioSpan').html('<audio src="audio/src.mp3" id="audio"></audio>');
+
     // init audioAnaliyzer
     const audio = document.getElementById("audio");
     //audio.crossOrigin = "anonymous";
