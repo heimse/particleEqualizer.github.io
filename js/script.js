@@ -97,8 +97,10 @@ const interfaceFunctions = () => {
         
         $("#play").toggleClass("played");
         if($("#play").hasClass( "played" )) {
+            console.log('pause');
             audio.pause();
         } else {
+            console.log('play');
             audio.play();
         }
     })
