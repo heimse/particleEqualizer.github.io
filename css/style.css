@@ -72,7 +72,7 @@ canvas{
 	z-index: 999;
 	bottom: 30px;
 	padding: 15px 60px;
-	left: calc(50vh - 51px);
+	left: calc(50vw - 86px);
 }
 
 .btn:hover{
@@ -88,7 +88,8 @@ canvas{
 	border: 1px solid #fff;
 	border-radius: 15px;
 	z-index: 1;
-	margin: 0 auto;
+	margin: 100px auto 0 auto;
+	
 }
 
 .ac {

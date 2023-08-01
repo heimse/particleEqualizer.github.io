@@ -135,7 +135,15 @@ $(document).ready(() => {
 		navBar.classList.toggle('toggle');
 		menu.classList.toggle('toggle');
 	});
- 
+
+    $('.next').parent().fadeOut('1');
+    $('.next').each(function(index) {
+        $(this).bind('click', () => {
+            $(this).parent().fadeOut('fast', () => {
+                $(this).parent().next().fadeIn();
+            });
+        })
+    });
 });
 
 function startLogic() {
