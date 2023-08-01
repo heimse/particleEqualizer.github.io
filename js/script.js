@@ -62,7 +62,7 @@ var init = function(){
 
 
 var update = function(){
-    if(flag = 1) {
+    if(flag == 1) {
         //requestAnimationFrame( update );
         // update audio analyzer
         m_analyzer.update();
@@ -113,7 +113,7 @@ document.addEventListener('DOMContentLoaded', function(){
         window.open("https://" + window.location.hostname + window.location.pathname,'_top');
     } else {
         interfaceFunctions();
-        if(flag = 1) {
+        if(flag == 1) {
             //update();
         }
     }
