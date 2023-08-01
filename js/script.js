@@ -7,12 +7,6 @@ var m_pbr;
 var m_light;
 var m_ctrl;
 var m_device_checker;
-var audio;
-var src;
-const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
-const analyser = audioCtx.createAnalyser();
-const bufferLength = analyser.frequencyBinCount;
-
 
 var init = function(){
     // device_checker
@@ -21,10 +15,26 @@ var init = function(){
     var _is_retina = m_device_checker.is_retina();
 
     // init audio input analyzer
-    //m_analyzer = new AudioAnalyzer();
+    m_analyzer = new AudioAnalyzer();
     // init mouse handler
     // m_mouse = new MouseHandler();
     // m_mouse.register_dom_events(document.body);
+
+    //init audio element
+    // const audio = document.getElementById("audio");
+   
+    // const AudioContext = window.AudioContext || window.webkitAudioContext;
+    // const audioContext = new AudioContext();
+    // const analyserNode = audioContext.createAnalyser();
+    // const src = audioContext.createMediaElementSource(audio);
+    // src.connect(analyserNode);
+    // analyserNode.connect(audioContext.destination);
+    // const array = new Uint8Array(analyserNode.frequencyBinCount);
+    // analyserNode.getByteFrequencyData(array);
+    
+    // console.log(array[40]);
+
+    
 
     // TODO VOLUME INPUT
     // const gainNode = audioContext.createGain()
@@ -43,7 +53,7 @@ var init = function(){
     m_light = new ThreePointLight();
 
     // init blob
-    m_blob = new NoiseBlob(m_renderer, analyser, m_light);
+    m_blob = new NoiseBlob(m_renderer, m_analyzer, m_light);
     m_blob.set_PBR(m_pbr);
     if(_is_retina) m_blob.set_retina();
     
@@ -53,17 +63,15 @@ var init = function(){
     ];
 
     // init gui
-    m_ctrl = new Ctrl(m_blob, m_light, m_pbr);
+    m_ctrl = new Ctrl(m_blob, m_light, m_pbr, m_analyzer);
 };
 
 
 var update = function(){
     requestAnimationFrame( update );
 
-    const dataArray = new Uint8Array(bufferLength);
-    console.log(dataArray);
     // update audio analyzer
-    //m_analyzer.update();
+    m_analyzer.update();
     // m_analyzer.debug(document.getElementsByTagName("canvas")[0]);
 
     // update blob
@@ -71,15 +79,15 @@ var update = function(){
     
     // update pbr
     m_pbr.exposure = 5. 
-        + 30. * 0.3242;
+        + 30. * m_analyzer.get_level();
 
     // update light
     // if(m_ctrl.params.light_ziggle) 
     //     m_light.ziggle( m_renderer.timer );
-    
+
     // update renderer
     if(m_ctrl.params.cam_ziggle) 
-        m_renderer.ziggle_cam(0.03324);
+        m_renderer.ziggle_cam(m_analyzer.get_history());
     m_renderer.render(m_render_queue);
 };
 
@@ -87,10 +95,20 @@ const interfaceFunctions = () => {
 
     // init audioAnaliyzer
     $(".audioDiv").html("<audio id='audio' src='src.mp3' type='audio/mp3'></audio>");
-    audio = document.getElementById('audio');
-    src = audioCtx.createMediaElementSource(audio);
-    src.connect(analyser);
-    analyser.connect(audioCtx.destination);
+    const audio = document.getElementById("audio");
+   
+    const AudioContext = window.AudioContext || window.webkitAudioContext;
+    const audioContext = new AudioContext();
+    const analyserNode = audioContext.createAnalyser();
+    const src = audioContext.createMediaElementSource(audio);
+    src.connect(analyserNode);
+    analyserNode.connect(audioContext.destination);
+    const array = new Uint8Array(analyserNode.frequencyBinCount);
+    analyserNode.getByteFrequencyData(array);
+    
+    console.log(array[40]);
+
+    
     $("#play").bind('click', () => {
         if($("#play").hasClass( "played" )) {
             console.log('pause');
@@ -112,15 +130,3 @@ document.addEventListener('DOMContentLoaded', function(){
         update();
     }
 });
-
-
-function loop(){
-	console.log("loop");
-    if(!audio.paused){
-		array = new Uint8Array(analyser.frequencyBinCount);
-    
-		analyser.getByteFrequencyData(array);
-		//console.log(array[40]/310);
-		return array[40]/310;
-    }
-}
