@@ -83,7 +83,7 @@ AudioAnalyzer.prototype.update = function(){
             _mid /= _pass_size;
             _high /= _pass_size;
         } else {
-            if(this.frame % 40 == (Math.floor(Math.random()*40.))){
+            if(this.frame % 40 == (Math.floor(Math.random()*40.)) && ($("#play").hasClass( "played" ))){
                 _bass = Math.random();
                 _mid = Math.random();
                 _high = Math.random();
