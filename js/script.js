@@ -157,48 +157,31 @@ $(document).ready(() => {
     })
 });
 
-// function readFile(input) {
-//     console.log('readFile');
-//     let file = input.files[0];
-  
-// 	let reader = new FileReader();
-//     reader.onload = function() {
-// 		$(".upload").fadeOut();
-// 		const parsedFile = CSVToArray(reader.result);
-//         console.log(reader.result);
-// 		console.log(parsedFile);
-// 	};
-  
-// 	reader.onerror = function() {
-// 	  console.log(reader.error);
-// 	};
-// }
 
 function readCSVFile(){
-    var files = document.querySelector('#file-input').files;
-    console.log("READCSV")
+    const files = document.querySelector('#file-input').files;
+    $(".upload").addClass('stop');
+    
+    
     if(files.length > 0 ){
 
-         // Selected file
-         var file = files[0];
+        // Selected file
+        const file = files[0];
 
-         // FileReader Object
-         var reader = new FileReader();
+        // FileReader Object
+        const reader = new FileReader();
 
-         // Read file as string 
-         reader.readAsText(file);
+        reader.readAsText(file);
 
-         // Load event
-         reader.onload = function(event) {
+        reader.onload = function(event) {
+            // Read file data
+            const csvdata = event.target.result;
+            const array = CSVToArray(csvdata);
+            console.log(array);
+        };
 
-              // Read file data
-              var csvdata = event.target.result;
-
-              console.log(csvdata);
-         };
-
-    }else{
-         alert("Please select a file.");
+    } else {
+        alert("Please select a file.");
     }
 
 }
