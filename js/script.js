@@ -204,13 +204,15 @@ function readCSVFile(){
                         datasets: [{
                             //y-axis
                             data: occ_past,
-                            borderWidth: 1
+                            borderWidth: 1,
+                            borderColor: '#ffffff',
+                            backgroundColor: '#ffffff',
                         }]
                     },
                     options: {
                         scales: {
                             y: {
-                            beginAtZero: true
+                                beginAtZero: true
                             }
                         }
                     }
