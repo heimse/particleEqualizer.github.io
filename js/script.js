@@ -142,6 +142,7 @@ $(document).ready(() => {
 		navBar.classList.toggle('toggle');
 		menu.classList.toggle('toggle');
 	});
+    $(".chartsWrapper").fadeOut();
 
     $('.next').each(function() {
         $(this).bind('click', () => {
@@ -171,6 +172,8 @@ function readCSVFile(){
         $("body").css({
             "overflow": "auto",
         })
+
+        $(".chartsWrapper").fadeIn();
 
         // Selected file
         const file = files[0];
