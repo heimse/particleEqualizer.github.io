@@ -184,11 +184,12 @@ function readCSVFile(){
             // Read file data
             const csvdata = event.target.result;
             const array = CSVToArray(csvdata);
-            
+            const charts = document.querySelectorAll('.chartJs');
+            for(let i=1; i <= charts.length; i++) {
+                drawChart(i);
+            }
             console.log(array);
-            $(".chartJs").each(() => {
-                drawChart($(this));
-            });
+            
         };
 
     } else {
@@ -196,8 +197,8 @@ function readCSVFile(){
     }
 
 }
-function drawChart(context) {
-    const ctx = context;
+function drawChart(id) {
+    const ctx = $(`#myChart${id}`);
 
     new Chart(ctx, {
         type: 'bar',

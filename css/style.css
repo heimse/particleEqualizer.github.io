@@ -1,5 +1,5 @@
 body{
-    overflow: hidden;
+    overflow-x: hidden;
 	margin: 0;
 	padding: 0;
 	width: 100vw;
@@ -229,7 +229,8 @@ canvas{
 }
 .charts-row {
 	display: flex;
-	width: 100%
+	width: 100%;
+	justify-content: space-evenly;
 }
 .charts-column {
 	margin: 10px;
