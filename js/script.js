@@ -151,6 +151,7 @@ $(document).ready(() => {
     });
 
     $('.lastbtn').bind('click', () => {
+        $('.upload').removeClass('stop');
         
     })
 });
