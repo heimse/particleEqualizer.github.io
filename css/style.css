@@ -219,17 +219,8 @@ canvas{
 	transition: all 0.3s;
 }
 
-input[type=file]::file-selector-button {
-	margin-right: 20px;
-	border: none;
-	background: #0e83cd;
-	padding: 10px 20px;
-	border-radius: 10px;
-	color: #fff;
-	cursor: pointer;
-	transition: background .2s ease-in-out;
+.file-input__label:hover {
+	color: #0e83cd;
+	background: #fff;
 }
-  
-input[type=file]::file-selector-button:hover {
-	background: #0c71af;
-}
+
