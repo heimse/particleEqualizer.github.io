@@ -19,6 +19,10 @@ canvas{
     height: 100%;
 }
 
+.chartJs {
+	position: relative;
+}
+
 ::-webkit-scrollbar {
     width: 2px;
 }
@@ -107,18 +111,14 @@ canvas{
 	z-index: 1;
 }
 
-
-
 .ac {
 	display: none;
 }
-
 .toggle {
 	left: 0;
 	box-shadow: 1px 0 15px 2px rgba(0, 0, 0, 0.4);
 
 }
-
 .toggle-menu {
 	background-color: rgba(0, 0, 0, 0.2);
 	position: fixed;
@@ -138,7 +138,6 @@ canvas{
 	-ms-border-radius: 5px;
 	-o-border-radius: 5px;
 }
-
 .line {
 	width: 100%;
 	height: 3px;
@@ -150,19 +149,15 @@ canvas{
 	-ms-transition: transform 0.2s ease-out;
 	-o-transition: transform 0.2s ease-out;
 }
-
 .toggle .line1 {
 	transform: scale(0.9) rotateZ(-45deg) translate(-6px, 4px);
 }
-
 .toggle .line2 {
 	display: none;
 }
-
 .toggle .line3 {
 	transform: scale(0.9) rotateZ(45deg) translate(-6px, -6px);
 }
-
 .menu {
 	position: fixed;
 	z-index: 99;
@@ -192,7 +187,6 @@ canvas{
 .menu.toggle {
 	left: 0px;
 }
-
 .file-input__input {
 	width: 0.1px;
 	height: 0.1px;
@@ -201,7 +195,6 @@ canvas{
 	position: absolute;
 	z-index: -1;
 }
-
 .file-input__label,
 .file-input-submit__label {
 	cursor: pointer;
@@ -221,14 +214,23 @@ canvas{
 	border: 3px solid #fff;
 	transition: all 0.3s;
 }
-
 .file-input-submit__label {
 	top: calc(55vh);
 }
-
 .file-input__label:hover,
 .file-input-submit__label {
 	color: #0e83cd;
 	background: #fff;
 }
 
+.chartsWrapper {
+	display: flex;
+	flex-direction: column;
+}
+.charts-row {
+	display: flex;
+	width: 100%
+}
+.charts-column {
+	margin: 10px;
+}

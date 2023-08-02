@@ -171,7 +171,7 @@ function readCSVFile(){
         $("body").css({
             "overflow": "auto",
         })
-        
+
         // Selected file
         const file = files[0];
 
@@ -186,13 +186,37 @@ function readCSVFile(){
             const array = CSVToArray(csvdata);
             
             console.log(array);
-            alert("console.log");
+            $(".chartJs").each(() => {
+                drawChart($(this));
+            });
         };
 
     } else {
         alert("Please select a file.");
     }
 
+}
+function drawChart(context) {
+    const ctx = context;
+
+    new Chart(ctx, {
+        type: 'bar',
+        data: {
+        labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+        datasets: [{
+            label: '# of Votes',
+            data: [12, 19, 3, 5, 2, 3],
+            borderWidth: 1
+        }]
+        },
+        options: {
+        scales: {
+            y: {
+            beginAtZero: true
+            }
+        }
+        }
+    });
 }
 function CSVToArray( strData, strDelimiter ){
     // Check to see if the delimiter is defined. If not,
