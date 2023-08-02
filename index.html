@@ -3,6 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+        <link rel="icon" type="image/x-icon" href="favicon.ico">
         <!--css-->
         <link rel="stylesheet" type="text/css" href="css/style.css">
         <!--libraries-->
@@ -40,6 +41,13 @@
             <div class="line line2"></div>
             <div class="line line3"></div>
         </div>
+    
+        <div class="menu">
+            <p class="menu-item">#1</p>
+            <p class="menu-item">#2</p>
+            <p class="menu-item">#3</p>
+            <p class="menu-item">#4</p>
+        </div>
 
         <div class="popupMsgWrapper">
             <div class="popupMsg">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor ipsam corporis tempore laboriosam eveniet necessitatibus accusamus porro cumque praesentium consequatur exercitationem id magni soluta quasi dicta, ad itaque explicabo sapiente?</div>
@@ -51,14 +59,14 @@
         </div>
         <div class="popupMsgWrapper">
             <div class="popupMsg">Lorem ipsum dolor sit amet consectetur adipisicing.</div>
-            <div class="btn next">Next</div>
+            <div class="btn next lastbtn">Next</div>
         </div>
-    
-        <div class="menu">
-            <p class="menu-item">#1</p>
-            <p class="menu-item">#2</p>
-            <p class="menu-item">#3</p>
-            <p class="menu-item">#4</p>
+
+        <div class="btn-upload upload stop" id="uploadBtn">
+            <input type="file" name="file-input" id="file-input" class="file-input__input" onchange="readFile(this)">
+            <label class="file-input__label" for="file-input">
+                <span>Upload file</span>
+            </label>
         </div>
     </body>
 </html>

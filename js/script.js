@@ -21,7 +21,7 @@ var init = function(){
     audioDiv.innerHTML = "<audio id='audio' src='src.mp3' type='audio/mp3'></audio>";
     console.log(audioDiv);
     audio = document.getElementById("audio");
-    
+
     audio.onended = function() {
         $('.audioDiv').addClass('stop');
     };
@@ -141,8 +141,6 @@ $(document).ready(() => {
 		menu.classList.toggle('toggle');
 	});
 
-
-
     $('.next').each(function() {
         $(this).bind('click', () => {
             $(this).parent().addClass('shown');
@@ -151,6 +149,10 @@ $(document).ready(() => {
             });
         })
     });
+
+    $('.lastbtn').bind('click', () => {
+        
+    })
 });
 
 function startLogic() {
