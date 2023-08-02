@@ -309,7 +309,7 @@ function readCSVFile(){
                         datasets: [{
                             //y-axis
                             label: 'revenue_future',
-                            data: getAllColumn(array, 15),
+                            data: getAllColumn(array, 14),
                             borderWidth: 1,
                             borderColor: '#ffffff',
                             backgroundColor: '#ffffff',
@@ -349,7 +349,29 @@ function readCSVFile(){
                     type: 'bar',
                     data: {
                         //x-axis
-                        labels: getAllColumn(array, 2),
+                        labels: getAllColumn(array, 10),
+                        datasets: [{
+                            //y-axis
+                            label: 'gross_adr_future',
+                            data: getAllColumn(array, 15),
+                            borderWidth: 1,
+                            borderColor: '#ffffff',
+                            backgroundColor: '#ffffff',
+                        }]
+                    },
+                    options: {
+                        scales: {
+                            y: {
+                                beginAtZero: true
+                            }
+                        }
+                    }
+                },
+                {
+                    type: 'bar',
+                    data: {
+                        //x-axis
+                        labels: getAllColumn(array, 10),
                         datasets: [{
                             //y-axis
                             label: 'gross_adr_future',
@@ -371,33 +393,11 @@ function readCSVFile(){
                     type: 'bar',
                     data: {
                         //x-axis
-                        labels: getAllColumn(array, 2),
+                        labels: getAllColumn(array, 10),
                         datasets: [{
                             //y-axis
                             label: 'gross_adr_future',
                             data: getAllColumn(array, 17),
-                            borderWidth: 1,
-                            borderColor: '#ffffff',
-                            backgroundColor: '#ffffff',
-                        }]
-                    },
-                    options: {
-                        scales: {
-                            y: {
-                                beginAtZero: true
-                            }
-                        }
-                    }
-                },
-                {
-                    type: 'bar',
-                    data: {
-                        //x-axis
-                        labels: getAllColumn(array, 2),
-                        datasets: [{
-                            //y-axis
-                            label: 'gross_adr_future',
-                            data: getAllColumn(array, 18),
                             borderWidth: 1,
                             borderColor: '#ffffff',
                             backgroundColor: '#ffffff',
