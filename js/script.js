@@ -158,6 +158,7 @@ $(document).ready(() => {
 });
 
 function readFile(input) {
+    console.log('readFile');
     let file = input.files[0];
   
 	let reader = new FileReader();
