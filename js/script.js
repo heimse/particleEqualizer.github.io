@@ -167,7 +167,7 @@ function readCSVFile(){
         const audio = document.getElementById("audio");
         audio.pause();
         $("canvas:not(.chartJs)").fadeOut("slow");
-        $(".playbtn").fadeOut("slow");
+        $(".playbtn").addClass('stop');
         $(".wrapper").fadeOut("slow");
         $("body").css({
             "overflow": "auto",
