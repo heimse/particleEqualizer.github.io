@@ -200,10 +200,11 @@ function readCSVFile(){
                     type: 'bar',
                     data: {
                         //x-axis
-                        labels: ['A', 'B', 'C'],
+                        labels: date_past,
                         datasets: [{
                             //y-axis
-                            data: ['20', '9', '78'],
+                            label: 'occ_past',
+                            data: occ_past,
                             borderWidth: 1,
                             borderColor: '#ffffff',
                             backgroundColor: '#ffffff',
