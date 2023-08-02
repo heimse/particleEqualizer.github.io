@@ -186,7 +186,7 @@ function readCSVFile(){
             const array = CSVToArray(csvdata);
             const charts = document.querySelectorAll('.chartJs');
 
-            const date_past = getAllColumn(array, 3);
+            const date_past = getAllColumn(array, 2);
             date_past.shift();
 
             console.log(array);
