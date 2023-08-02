@@ -241,9 +241,9 @@ function getAllColumn(array, myIndex) {
     array.forEach((element,i) => {
         newArray.push(array[i][0].split(';')[myIndex]);
     });
-    date_past.shift();
+    newArray.shift();
 
-    date_past = date_past.filter(function( element ) {
+    newArray = newArray.filter(function( element ) {
         return element !== undefined;
     });
 
