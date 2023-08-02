@@ -22,9 +22,7 @@ canvas{
 .chartJs {
 	position: relative;
 }
-.forecast {
-	font-size: 40px;
-}
+
 ::-webkit-scrollbar {
     width: 2px;
 }
@@ -235,5 +233,9 @@ canvas{
 	justify-content: space-evenly;
 }
 .charts-column {
-	margin: 10px;
+	margin: 10px 0;
+	height: 300px;
+}
+.forecast {
+	font-size: 40px;
 }

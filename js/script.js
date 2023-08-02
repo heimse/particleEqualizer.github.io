@@ -169,9 +169,6 @@ function readCSVFile(){
         $("canvas:not(.chartJs)").fadeOut("slow");
         $(".playbtn").addClass('stop');
         $(".wrapper").fadeOut("slow");
-        $("body").css({
-            "overflow": "auto",
-        })
 
         $(".chartsWrapper").fadeIn();
 
