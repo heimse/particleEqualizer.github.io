@@ -211,10 +211,10 @@ function readCSVFile(){
             ];
 
             for(let i = 0; i < settingsArray.length; i++) {
-                drawChart(i, settingsArray[i]);
+                //drawChart(i, settingsArray[i]);
             }
 
-            console.log(stringToSplit.split(';'));
+            console.log(array[0].split(';'));
             
         };
 
