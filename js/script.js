@@ -214,7 +214,8 @@ function readCSVFile(){
                 //drawChart(i, settingsArray[i]);
             }
 
-            console.log(array[0].split(';'));
+            console.log(array);
+            console.log(array[0][0].split(';'));
             
         };
 
