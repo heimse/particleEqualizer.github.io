@@ -21,7 +21,10 @@ var init = function(){
     audioDiv.innerHTML = "<audio id='audio' src='src.mp3' type='audio/mp3'></audio>";
     console.log(audioDiv);
     audio = document.getElementById("audio");
-
+    
+    audio.onended = function() {
+        $('.audioDiv').addClass('stop');
+    };
     // init audio input analyzer
     m_analyzer = new AudioAnalyzer();
 
@@ -104,7 +107,7 @@ const interfaceFunctions = () => {
                 $("#play").html('⏯︎');
                 $("#play").fadeIn('1000');
                 $('.next').parent().first().fadeIn();
-                
+
             })
         }
         if($("#play").hasClass( "played" )) {
@@ -137,10 +140,7 @@ $(document).ready(() => {
 		navBar.classList.toggle('toggle');
 		menu.classList.toggle('toggle');
 	});
-    let aud = document.getElementById("audio");
-    aud.onended = function() {
-        $('.audioDiv').addClass('stop');
-    };
+
 
 
     $('.next').each(function() {
