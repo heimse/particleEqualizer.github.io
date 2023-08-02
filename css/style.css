@@ -219,6 +219,10 @@ canvas{
 	transition: all 0.3s;
 }
 
+.btn-upload-submit {
+	top: calc(55vh);
+}
+
 .file-input__label:hover {
 	color: #0e83cd;
 	background: #fff;

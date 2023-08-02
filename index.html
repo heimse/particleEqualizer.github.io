@@ -10,7 +10,7 @@
         <script type="text/javascript" src="./common/lib/three.min.js"></script>
         <script type="text/javascript" src="./common/lib/dat.gui.min.js"></script>
 		<script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.3.2/chart.min.js" integrity="sha512-csUso5vWY3PpIJkxLWFbPI7KkjXFhKXpUaAUp1ZLyNhxVWdQacEPH9e7Iw6Rco4es1uQNnlxdCCFkSnJ/f1ZzA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
         <!--tools-->
         <script type="text/javascript" src="./common/js/AudioAnalyzer.js"></script>
         <script type="text/javascript" src="./common/js/ThreeSharedRenderer.js"></script>
@@ -66,10 +66,18 @@
         </div>
 
         <div class="btn-upload upload stop" id="uploadBtn">
-            <input type="file" name="file-input" id="file-input" class="file-input__input" onchange="readFile(this)">
+            <input type="file" name="file-input" id="file-input" class="file-input__input">
             <label class="file-input__label" for="file-input">
                 <span>Upload file</span>
             </label>
         </div>
+        <div class="btn-upload-submit upload stop">
+            <input type="button" id="btnsubmit" value="Submit" onclick="readCSVFile();" class="file-input__input">
+            <label class="file-input__label" for="file-input">
+                <span>Submit</span>
+            </label>
+        </div>
+
+        <canvas id="myChart" style="width:100%;max-width:700px"></canvas>
     </body>
 </html>
