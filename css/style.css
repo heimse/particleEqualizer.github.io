@@ -200,7 +200,8 @@ canvas{
 	z-index: -1;
 }
 
-.file-input__label {
+.file-input__label,
+.file-input-submit__label {
 	cursor: pointer;
 	display: inline-flex;
 	position: fixed;
@@ -219,7 +220,7 @@ canvas{
 	transition: all 0.3s;
 }
 
-.btn-upload-submit {
+.file-input-submit__label {
 	top: calc(55vh);
 }
 
