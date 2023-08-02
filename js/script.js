@@ -192,7 +192,7 @@ function readCSVFile(){
             const occ_past = getAllColumn(array, 5);
             occ_past.shift();
 
-            console.log(array);
+            console.log(array,date_past,occ_past);
             
 
             const settingsArray = [
