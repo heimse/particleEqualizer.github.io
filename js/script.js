@@ -220,7 +220,7 @@ function readCSVFile(){
             ];
 
             for(let i = 1; i <= settingsArray.length; i++) {
-                drawChart(i, settingsArray[i]);
+                drawChart(i, settingsArray[i-1]);
             }
             
         };
