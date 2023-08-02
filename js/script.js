@@ -232,6 +232,7 @@ function readCSVFile(){
 }
 function drawChart(id, settings) {
     const ctx = $(`#myChart${id}`);
+    console.log(settings);
     new Chart(ctx, settings);
 }
 
