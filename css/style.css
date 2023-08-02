@@ -1,5 +1,7 @@
 body{
     overflow: hidden;
+	margin: 0;
+	padding: 0;
 	width: 100vw;
 	height: 100vh;
     margin: 0px;
@@ -225,7 +227,7 @@ canvas{
 }
 
 .file-input__label:hover,
-.file-input-submit__label:hover {
+.file-input-submit__label {
 	color: #0e83cd;
 	background: #fff;
 }

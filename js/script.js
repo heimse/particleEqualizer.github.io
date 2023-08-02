@@ -165,7 +165,13 @@ function readCSVFile(){
         $(".upload").addClass('stop');
         const audio = document.getElementById("audio");
         audio.pause();
-        $("canvas:not(.chartJs)").fadeOut();
+        $("canvas:not(.chartJs)").fadeOut("slow");
+        $(".playbtn").fadeOut("slow");
+        $(".wrapper").fadeOut("slow");
+        $("body").css({
+            "overflow": "auto",
+        })
+        
         // Selected file
         const file = files[0];
 
