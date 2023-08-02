@@ -237,7 +237,7 @@ function drawChart(id, settings) {
 
 
 function getAllColumn(array, myIndex) {
-    const newArray = [];
+    let newArray = [];
     array.forEach((element,i) => {
         newArray.push(array[i][0].split(';')[myIndex]);
     });
