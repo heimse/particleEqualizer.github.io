@@ -188,6 +188,9 @@ function readCSVFile(){
 
             const date_past = [];
             
+            console.log(array);
+            console.log(array[0][0].split(';'));
+            console.log(createArrayOfIndex(array, 3));
             const settingsArray = [
                 {
                     type: 'bar',
@@ -211,7 +214,7 @@ function readCSVFile(){
             ];
 
             for(let i = 0; i < settingsArray.length; i++) {
-                //drawChart(i, settingsArray[i]);
+                drawChart(i, settingsArray[i]);
             }
 
             console.log(array);
@@ -227,6 +230,14 @@ function readCSVFile(){
 function drawChart(id, settings) {
     const ctx = $(`#myChart${id}`);
     new Chart(ctx, settings);
+}
+function createArrayOfIndex(array, myIndex) {
+    const newArray = [];
+    array.forEach((element,i) => {
+        newArray.push(array[i][0].split(';')[myIndex]);
+    });
+
+    return newArray;
 }
 
 function CSVToArray( strData, strDelimiter ){
