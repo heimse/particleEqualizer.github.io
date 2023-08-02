@@ -232,8 +232,27 @@ function readCSVFile(){
 }
 function drawChart(id, settings) {
     const ctx = $(`#myChart${id}`);
-    new Chart(ctx, settings);
+    new Chart(ctx, {
+        type: 'bar',
+        data: {
+          labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+          datasets: [{
+            label: '# of Votes',
+            data: [12, 19, 3, 5, 2, 3],
+            borderWidth: 1
+          }]
+        },
+        options: {
+          scales: {
+            y: {
+              beginAtZero: true
+            }
+          }
+        }
+      });
 }
+
+
 function getAllColumn(array, myIndex) {
     const newArray = [];
     array.forEach((element,i) => {
@@ -242,7 +261,6 @@ function getAllColumn(array, myIndex) {
 
     return newArray;
 }
-
 function CSVToArray( strData, strDelimiter ){
     // Check to see if the delimiter is defined. If not,
     // then default to comma.
