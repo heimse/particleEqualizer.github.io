@@ -8,7 +8,7 @@ body{
     padding: 0px;
     background: #fff5ee;
     font-family: Helvetica, arial, sans-serif;
-	background: #2e2e2e; 
+	background: url(../common/assets/bg.jpg); 
 	background-size: cover;
 }   
 
