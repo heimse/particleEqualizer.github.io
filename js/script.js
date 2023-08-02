@@ -189,18 +189,21 @@ function readCSVFile(){
             const date_past = getAllColumn(array, 2);
             date_past.shift();
 
+            const occ_past = getAllColumn(array, 5);
+            occ_past.shift();
+
             console.log(array);
-            console.log(date_past);
+            
 
             const settingsArray = [
                 {
                     type: 'bar',
                     data: {
                         //x-axis
-                        labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+                        labels: date_past,
                         datasets: [{
                             //y-axis
-                            data: [12, 19, 3, 5, 2, 3],
+                            data: occ_past,
                             borderWidth: 1
                         }]
                     },
@@ -214,7 +217,7 @@ function readCSVFile(){
                 },  
             ];
 
-            for(let i = 0; i < settingsArray.length; i++) {
+            for(let i = 1; i <= settingsArray.length; i++) {
                 drawChart(i, settingsArray[i]);
             }
             
