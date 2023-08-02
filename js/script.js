@@ -187,10 +187,8 @@ function readCSVFile(){
             const charts = document.querySelectorAll('.chartJs');
 
             const date_past = getAllColumn(array, 2);
-            date_past.shift();
 
             const occ_past = getAllColumn(array, 5);
-            occ_past.shift();
 
             console.log(array,date_past,occ_past);
             
@@ -242,6 +240,11 @@ function getAllColumn(array, myIndex) {
     const newArray = [];
     array.forEach((element,i) => {
         newArray.push(array[i][0].split(';')[myIndex]);
+    });
+    date_past.shift();
+
+    date_past = date_past.filter(function( element ) {
+        return element !== undefined;
     });
 
     return newArray;
