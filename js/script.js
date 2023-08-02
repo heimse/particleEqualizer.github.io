@@ -186,11 +186,8 @@ function readCSVFile(){
             const array = CSVToArray(csvdata);
             const charts = document.querySelectorAll('.chartJs');
 
-            const date_past = getAllColumn(array, 2);
 
-            const occ_past = getAllColumn(array, 5);
-
-            console.log(array,date_past,occ_past);
+            console.log(array);
             
 
             const settingsArray = [
@@ -198,11 +195,11 @@ function readCSVFile(){
                     type: 'bar',
                     data: {
                         //x-axis
-                        labels: date_past,
+                        labels: getAllColumn(array, 2),
                         datasets: [{
                             //y-axis
                             label: 'occ_past',
-                            data: occ_past,
+                            data: getAllColumn(array, 5),
                             borderWidth: 1,
                             borderColor: '#ffffff',
                             backgroundColor: '#ffffff',
@@ -215,7 +212,205 @@ function readCSVFile(){
                             }
                         }
                     }
-                },  
+                },
+                {
+                    type: 'bar',
+                    data: {
+                        //x-axis
+                        labels: getAllColumn(array, 10),
+                        datasets: [{
+                            //y-axis
+                            label: 'occ_future',
+                            data: getAllColumn(array, 12),
+                            borderWidth: 1,
+                            borderColor: '#ffffff',
+                            backgroundColor: '#ffffff',
+                        }]
+                    },
+                    options: {
+                        scales: {
+                            y: {
+                                beginAtZero: true
+                            }
+                        }
+                    }
+                },
+                {
+                    type: 'bar',
+                    data: {
+                        //x-axis
+                        labels: getAllColumn(array, 2),
+                        datasets: [{
+                            //y-axis
+                            label: 'occ_past_p',
+                            data: getAllColumn(array, 6),
+                            borderWidth: 1,
+                            borderColor: '#ffffff',
+                            backgroundColor: '#ffffff',
+                        }]
+                    },
+                    options: {
+                        scales: {
+                            y: {
+                                beginAtZero: true
+                            }
+                        }
+                    }
+                }, 
+                {
+                    type: 'bar',
+                    data: {
+                        //x-axis
+                        labels: getAllColumn(array, 10),
+                        datasets: [{
+                            //y-axis
+                            label: 'occ_future_p',
+                            data: getAllColumn(array, 13),
+                            borderWidth: 1,
+                            borderColor: '#ffffff',
+                            backgroundColor: '#ffffff',
+                        }]
+                    },
+                    options: {
+                        scales: {
+                            y: {
+                                beginAtZero: true
+                            }
+                        }
+                    }
+                }, 
+                {
+                    type: 'bar',
+                    data: {
+                        //x-axis
+                        labels: getAllColumn(array, 2),
+                        datasets: [{
+                            //y-axis
+                            label: 'revenue_past',
+                            data: getAllColumn(array, 7),
+                            borderWidth: 1,
+                            borderColor: '#ffffff',
+                            backgroundColor: '#ffffff',
+                        }]
+                    },
+                    options: {
+                        scales: {
+                            y: {
+                                beginAtZero: true
+                            }
+                        }
+                    }
+                }, 
+                {
+                    type: 'bar',
+                    data: {
+                        //x-axis
+                        labels: getAllColumn(array, 10),
+                        datasets: [{
+                            //y-axis
+                            label: 'revenue_future',
+                            data: getAllColumn(array, 15),
+                            borderWidth: 1,
+                            borderColor: '#ffffff',
+                            backgroundColor: '#ffffff',
+                        }]
+                    },
+                    options: {
+                        scales: {
+                            y: {
+                                beginAtZero: true
+                            }
+                        }
+                    }
+                }, 
+                {
+                    type: 'bar',
+                    data: {
+                        //x-axis
+                        labels: getAllColumn(array, 2),
+                        datasets: [{
+                            //y-axis
+                            label: 'gross_adr_past',
+                            data: getAllColumn(array, 8),
+                            borderWidth: 1,
+                            borderColor: '#ffffff',
+                            backgroundColor: '#ffffff',
+                        }]
+                    },
+                    options: {
+                        scales: {
+                            y: {
+                                beginAtZero: true
+                            }
+                        }
+                    }
+                },
+                {
+                    type: 'bar',
+                    data: {
+                        //x-axis
+                        labels: getAllColumn(array, 2),
+                        datasets: [{
+                            //y-axis
+                            label: 'gross_adr_future',
+                            data: getAllColumn(array, 16),
+                            borderWidth: 1,
+                            borderColor: '#ffffff',
+                            backgroundColor: '#ffffff',
+                        }]
+                    },
+                    options: {
+                        scales: {
+                            y: {
+                                beginAtZero: true
+                            }
+                        }
+                    }
+                },
+                {
+                    type: 'bar',
+                    data: {
+                        //x-axis
+                        labels: getAllColumn(array, 2),
+                        datasets: [{
+                            //y-axis
+                            label: 'gross_adr_future',
+                            data: getAllColumn(array, 17),
+                            borderWidth: 1,
+                            borderColor: '#ffffff',
+                            backgroundColor: '#ffffff',
+                        }]
+                    },
+                    options: {
+                        scales: {
+                            y: {
+                                beginAtZero: true
+                            }
+                        }
+                    }
+                },
+                {
+                    type: 'bar',
+                    data: {
+                        //x-axis
+                        labels: getAllColumn(array, 2),
+                        datasets: [{
+                            //y-axis
+                            label: 'gross_adr_future',
+                            data: getAllColumn(array, 18),
+                            borderWidth: 1,
+                            borderColor: '#ffffff',
+                            backgroundColor: '#ffffff',
+                        }]
+                    },
+                    options: {
+                        scales: {
+                            y: {
+                                beginAtZero: true
+                            }
+                        }
+                    }
+                },
             ];
 
             for(let i = 1; i <= settingsArray.length; i++) {
