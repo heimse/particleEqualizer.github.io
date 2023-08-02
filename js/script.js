@@ -185,10 +185,36 @@ function readCSVFile(){
             const csvdata = event.target.result;
             const array = CSVToArray(csvdata);
             const charts = document.querySelectorAll('.chartJs');
-            for(let i=1; i <= charts.length; i++) {
-                drawChart(i);
+
+            const date_past = [];
+            
+            const settingsArray = [
+                {
+                    type: 'bar',
+                    data: {
+                        //x-axis
+                        labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+                        datasets: [{
+                            //y-axis
+                            data: [12, 19, 3, 5, 2, 3],
+                            borderWidth: 1
+                        }]
+                    },
+                    options: {
+                        scales: {
+                            y: {
+                            beginAtZero: true
+                            }
+                        }
+                    }
+                },  
+            ];
+
+            for(let i = 0; i < settingsArray.length; i++) {
+                drawChart(i, settingsArray[i]);
             }
-            console.log(array);
+
+            console.log(splitString(array[0], ";"));
             
         };
 
@@ -197,27 +223,17 @@ function readCSVFile(){
     }
 
 }
-function drawChart(id) {
+function drawChart(id, settings) {
     const ctx = $(`#myChart${id}`);
-
-    new Chart(ctx, {
-        type: 'bar',
-        data: {
-        labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
-        datasets: [{
-            label: '# of Votes',
-            data: [12, 19, 3, 5, 2, 3],
-            borderWidth: 1
-        }]
-        },
-        options: {
-        scales: {
-            y: {
-            beginAtZero: true
-            }
-        }
-        }
-    });
+    new Chart(ctx, settings);
+}
+function splitString(stringToSplit, separator) {
+    const arrayOfStrings = stringToSplit.split(separator);
+  
+    console.log('Оригинальная строка: "' + stringToSplit + '"');
+    console.log('Разделитель: "' + separator + '"');
+    console.log('Массив содержит ' + arrayOfStrings.length + ' элементов: ' + arrayOfStrings.join(' / '));
+    console.log(arrayOfStrings);
 }
 function CSVToArray( strData, strDelimiter ){
     // Check to see if the delimiter is defined. If not,
