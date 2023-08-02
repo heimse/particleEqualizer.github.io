@@ -177,7 +177,9 @@ function readCSVFile(){
             // Read file data
             const csvdata = event.target.result;
             const array = CSVToArray(csvdata);
+            
             console.log(array);
+            alert("console.log");
         };
 
     } else {
