@@ -214,7 +214,7 @@ function readCSVFile(){
                 drawChart(i, settingsArray[i]);
             }
 
-            console.log(splitString(array[0], ";"));
+            console.log(stringToSplit.split(';'));
             
         };
 
@@ -227,14 +227,7 @@ function drawChart(id, settings) {
     const ctx = $(`#myChart${id}`);
     new Chart(ctx, settings);
 }
-function splitString(stringToSplit, separator) {
-    const arrayOfStrings = stringToSplit.split(separator);
-  
-    console.log('Оригинальная строка: "' + stringToSplit + '"');
-    console.log('Разделитель: "' + separator + '"');
-    console.log('Массив содержит ' + arrayOfStrings.length + ' элементов: ' + arrayOfStrings.join(' / '));
-    console.log(arrayOfStrings);
-}
+
 function CSVToArray( strData, strDelimiter ){
     // Check to see if the delimiter is defined. If not,
     // then default to comma.
