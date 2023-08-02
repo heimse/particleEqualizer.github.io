@@ -171,7 +171,7 @@ canvas{
 	height: 100vh;
 	width: 35vw;
 	top: 0;
-	left: -50vh;
+	left: -100wh;
 	transition: all 0.3s ease;
 	background:#141414;
 	color: #fff;
