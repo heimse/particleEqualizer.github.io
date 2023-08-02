@@ -187,10 +187,10 @@ function readCSVFile(){
             const charts = document.querySelectorAll('.chartJs');
 
             const date_past = [];
-            
+            date_past = createArrayOfIndex(array, 3).shift()
             console.log(array);
-            console.log(array[0][0].split(';'));
-            console.log(createArrayOfIndex(array, 3));
+            console.log(date_past);
+
             const settingsArray = [
                 {
                     type: 'bar',
@@ -216,9 +216,6 @@ function readCSVFile(){
             for(let i = 0; i < settingsArray.length; i++) {
                 drawChart(i, settingsArray[i]);
             }
-
-            console.log(array);
-            console.log(array[0][0].split(';'));
             
         };
 
@@ -231,7 +228,7 @@ function drawChart(id, settings) {
     const ctx = $(`#myChart${id}`);
     new Chart(ctx, settings);
 }
-function createArrayOfIndex(array, myIndex) {
+function getAllColumn(array, myIndex) {
     const newArray = [];
     array.forEach((element,i) => {
         newArray.push(array[i][0].split(';')[myIndex]);
