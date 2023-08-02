@@ -375,7 +375,7 @@ function readCSVFile(){
                         datasets: [{
                             //y-axis
                             label: 'gross_adr_future',
-                            data: getAllColumn(array, 16),
+                            data: getAllColumn(array, 17),
                             borderWidth: 1,
                             borderColor: '#ffffff',
                             backgroundColor: '#ffffff',
@@ -397,7 +397,7 @@ function readCSVFile(){
                         datasets: [{
                             //y-axis
                             label: 'gross_adr_future',
-                            data: getAllColumn(array, 17),
+                            data: getAllColumn(array, 18),
                             borderWidth: 1,
                             borderColor: '#ffffff',
                             backgroundColor: '#ffffff',
