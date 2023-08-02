@@ -81,6 +81,7 @@ canvas{
 }
 
 .popupMsgWrapper {
+	opacity: 0;
 	position: relative;
 	color: #fff;
 	padding: 15px 60px;

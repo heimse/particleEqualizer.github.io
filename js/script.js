@@ -104,6 +104,7 @@ const interfaceFunctions = () => {
                 $("#play").html('⏯︎');
                 $("#play").fadeIn('1000');
                 $('.next').parent().first().fadeIn();
+                
             })
         }
         if($("#play").hasClass( "played" )) {
@@ -136,10 +137,15 @@ $(document).ready(() => {
 		navBar.classList.toggle('toggle');
 		menu.classList.toggle('toggle');
 	});
+    let aud = document.getElementById("audio");
+    aud.onended = function() {
+        $('.audioDiv').addClass('stop');
+    };
 
-    $('.next').parent().fadeOut('1');
-    $('.next').each(function(index) {
+
+    $('.next').each(function() {
         $(this).bind('click', () => {
+            $(this).parent().addClass('shown');
             $(this).parent().fadeOut('fast', () => {
                 $(this).parent().next().fadeIn();
             });
