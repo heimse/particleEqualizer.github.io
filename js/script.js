@@ -176,7 +176,7 @@ $(document).ready(() => {
 
 function readCSVFile(){
     var files = document.querySelector('#file').files;
-
+    console.log("READCSV")
     if(files.length > 0 ){
 
          // Selected file
