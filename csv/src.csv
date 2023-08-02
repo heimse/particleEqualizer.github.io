@@ -1,0 +1,15 @@
+today;past;date_past;day_past_col;rooms_to_sale_past;occ_past;occ_past_p;revenue_past;gross_adr_past;future;date_future;day_future_col;occ_future;occ_future_p;revenue_future;gross_adr_future;forecast;o_occ_forecast;o_occ_forecact_p;rec;recomendation
+28-JUL-23;past;14-JUL-23;green;353;290;82;1994229.86;6877;future;28-JUL-23;green;272;78;1897052.99;6974;forecast;272;78;rec;Down price
+28-JUL-23;past;15-JUL-23;red;353;278;79;1737587.5;6250;future;29-JUL-23;red;253;72;1670927.81;6604;forecast;251;72;rec;Down price
+28-JUL-23;past;16-JUL-23;red;353;277;78;1764456.98;6370;future;30-JUL-23;red;234;67;1489269.03;6364;forecast;225;64;rec;Down price
+28-JUL-23;past;17-JUL-23;green;352;292;83;2357569.4;8074;future;31-JUL-23;green;247;70;1677272.33;6791;forecast;229;65;rec;Down price
+28-JUL-23;past;18-JUL-23;green;353;307;87;2477282.53;8069;future;01-AUG-23;green;276;78;1953544.94;7078;forecast;266;76;rec;Down price
+28-JUL-23;past;19-JUL-23;green;354;299;84;2286914.61;7649;future;02-AUG-23;green;282;80;2157685;7651;forecast;264;75;rec;Down price
+28-JUL-23;past;20-JUL-23;green;352;306;87;2420254.93;7909;future;03-AUG-23;green;279;79;2241801.36;8035;forecast;261;74;rec;Down price
+28-JUL-23;past;21-JUL-23;green;354;301;85;2183859.15;7255;future;04-AUG-23;green;272;77;2010743.48;7392;forecast;254;72;rec;Down price
+28-JUL-23;past;22-JUL-23;red;353;285;81;1877131.77;6586;future;05-AUG-23;red;260;74;1688165.24;6493;forecast;232;66;rec;Down price
+28-JUL-23;past;23-JUL-23;red;348;267;77;1732679.65;6489;future;06-AUG-23;red;253;72;1637101.88;6471;forecast;224;63;rec;Down price
+28-JUL-23;past;24-JUL-23;green;348;289;83;2082730.4;7207;future;07-AUG-23;green;296;84;2192912.29;7408;forecast;260;74;rec;Down price
+28-JUL-23;past;25-JUL-23;green;350;295;84;2166187.53;7343;future;08-AUG-23;green;290;82;2280052.16;7862;forecast;246;70;rec;Down price
+28-JUL-23;past;26-JUL-23;green;351;288;82;2113879.23;7340;future;09-AUG-23;green;311;88;2412716.57;7758;forecast;268;76;rec;Down price
+28-JUL-23;past;27-JUL-23;green;352;280;80;1965079.91;7018;future;10-AUG-23;green;315;89;2456039.6;7797;forecast;275;78;rec;UP Price
