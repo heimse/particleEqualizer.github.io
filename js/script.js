@@ -433,11 +433,21 @@ function readCSVFile(){
                 drawChart(i, settingsArray[i-1]);
             }
             
-            // for(let i = 0; i < ; i++) {
-            //     for(let j = 0; j < ; j++) {
-
-            //     }
-            // }
+            const table = document.querySelector(".tg");
+            const rows = document.querySelectorAll(".tg tr");
+            const futureDates = getAllColumn(array, 10);
+            const reccomendation = getAllColumn(array, 10);
+            for(let i = 0; i < rows.length; i++) {
+                rows[0].children.item(i).innerHTML = futureDates[i];
+            }
+            for(let i = 0; i < futureDates.length; i++) {
+                rows[1].children.item(i).innerHTML = reccomendation[i];
+                if (rows[1].children.item(i).innerHTML == "Down price") {
+                    rows[1].children.item(i).style.color = "red";
+                } else {
+                    rows[1].children.item(i).style.color = "green";
+                }
+            }
         };
 
     } else {
