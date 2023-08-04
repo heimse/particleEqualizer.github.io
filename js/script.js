@@ -432,13 +432,13 @@ function readCSVFile(){
             const rows = document.querySelectorAll(".tg tr");
             const futureDates = getAllColumn(array, 10);
             const reccomendation = getAllColumn(array, 10);
-            for(let i = 0; i < rows.length; i++) {
+            for(let i = 0; i < futureDates.length; i++) {
                 const td = document.createElement("td");
                 td.classList.add("tg-0lax");
                 rows[0].appendChild(td);
                 rows[0].children.item(i).innerHTML = futureDates[i];
             }
-            for(let i = 0; i < futureDates.length; i++) {
+            for(let i = 0; i < reccomendation.length; i++) {
                 const td = document.createElement("td");
                 td.classList.add("tg-0lax");
                 rows[1].appendChild(td);
