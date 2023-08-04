@@ -104,15 +104,15 @@ const interfaceFunctions = () => {
             update();
 
             $("#play").fadeOut('1000', () => {
-                $("#play").html('⏯︎');
+                $("#play").html('Skip');
                 $("#play").fadeIn('1000');
                 $('.next').parent().first().fadeIn();
 
             })
         }
         if($("#play").hasClass( "played" )) {
-            console.log('pause');
             audio.pause();
+            $(".popupMsgWrapper").fadeOut();
         } else {
             console.log('play');
             audio.play();
@@ -156,6 +156,9 @@ $(document).ready(() => {
     $('.lastbtn').bind('click', () => {
         $('.upload').removeClass('stop');
     })
+
+    const inputElement = document.getElementById("'#file-input'");
+    inputElement.addEventListener("change", readCSVFile, false);
 });
 
 
