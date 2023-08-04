@@ -254,3 +254,7 @@ canvas:not(.chartJs){
 	font-size: 40px;
 	color: #fff;
 }
+
+.next {
+	display: none;
+}

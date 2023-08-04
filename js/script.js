@@ -106,7 +106,24 @@ const interfaceFunctions = () => {
             $("#play").fadeOut('1000', () => {
                 $("#play").html('Skip');
                 $("#play").fadeIn('1000');
-                $('.next').parent().first().fadeIn();
+                setTimeout(function() {
+                    $("#popup1").show(400);
+                }, 1000);
+                  setTimeout(function() {
+                    $("#popup2").show(400);
+                }, 2000);
+                  setTimeout(function() {
+                    $("#popup3").show(400);
+                }, 3000);
+                setTimeout(function() {
+                    $("#popup1").hide(400);
+                }, 4000);
+                setTimeout(function() {
+                    $("#popup2").hide(400);
+                }, 5000);
+                setTimeout(function() {
+                    $("#popup3").hide(400);
+                }, 6000);
             })
         }
         if($("#play").hasClass( "played" )) {
@@ -144,14 +161,6 @@ $(document).ready(() => {
 	});
     $(".chartsWrapper").fadeOut();
 
-    $('.next').each(function() {
-        $(this).bind('click', () => {
-            $(this).parent().addClass('shown');
-            $(this).parent().fadeOut('fast', () => {
-                $(this).parent().next().fadeIn();
-            });
-        })
-    });
 
     $('.lastbtn').bind('click', () => {
         $('.upload').removeClass('stop');
