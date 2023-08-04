@@ -107,12 +107,12 @@ const interfaceFunctions = () => {
                 $("#play").html('Skip');
                 $("#play").fadeIn('1000');
                 $('.next').parent().first().fadeIn();
-
             })
         }
         if($("#play").hasClass( "played" )) {
             audio.pause();
             $(".popupMsgWrapper").fadeOut();
+            $('.upload').removeClass('stop');
         } else {
             console.log('play');
             audio.play();
@@ -432,10 +432,8 @@ function readCSVFile(){
 }
 function drawChart(id, settings) {
     const ctx = $(`#myChart${id}`);
-    console.log(settings);
     new Chart(ctx, settings);
 }
-
 
 function getAllColumn(array, myIndex) {
     let newArray = [];

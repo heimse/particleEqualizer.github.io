@@ -252,4 +252,5 @@ canvas:not(.chartJs){
 }
 .forecast {
 	font-size: 40px;
+	color: #fff;
 }
