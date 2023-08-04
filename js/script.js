@@ -437,6 +437,7 @@ function readCSVFile(){
                 td.classList.add("tg-0lax");
                 rows[0].appendChild(td);
                 rows[0].children.item(i).innerHTML = futureDates[i];
+                rows[0].children.item(i).style.color = "white";
             }
             for(let i = 0; i < reccomendation.length; i++) {
                 const td = document.createElement("td");
