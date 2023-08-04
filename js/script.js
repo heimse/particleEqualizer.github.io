@@ -171,6 +171,7 @@ $(document).ready(() => {
     inputElement.addEventListener("change", () => {
         console.log('input changes');
         readCSVFile();
+        $(".upload").addClass('stop');
     }, false);
 });
 
@@ -178,7 +179,6 @@ $(document).ready(() => {
 function readCSVFile(){
     const files = document.querySelector('#file-input').files;
     if(files.length > 0 ){
-
         $(".upload").addClass('stop');
         const audio = document.getElementById("audio");
         audio.pause();
@@ -438,9 +438,11 @@ function readCSVFile(){
             const futureDates = getAllColumn(array, 10);
             const reccomendation = getAllColumn(array, 10);
             for(let i = 0; i < rows.length; i++) {
+                rows[0].append("<td class='tg-0lax'></td>");
                 rows[0].children.item(i).innerHTML = futureDates[i];
             }
             for(let i = 0; i < futureDates.length; i++) {
+                rows[1].append("<td class='tg-0lax'></td>");
                 rows[1].children.item(i).innerHTML = reccomendation[i];
                 if (rows[1].children.item(i).innerHTML == "Down price") {
                     rows[1].children.item(i).style.color = "red";
