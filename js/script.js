@@ -157,7 +157,7 @@ $(document).ready(() => {
         $('.upload').removeClass('stop');
     })
 
-    const inputElement = document.getElementById("'#file-input'");
+    const inputElement = document.getElementById("#file-input");
     inputElement.addEventListener("change", readCSVFile, false);
 });
 
