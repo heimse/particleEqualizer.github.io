@@ -174,7 +174,7 @@ $(document).ready(() => {
 function readCSVFile(){
     const files = document.querySelector('#file-input').files;
     if(files.length > 0 ){
-        $(".upload").addClass('stop');
+        $(".upload").addClass('hidden');
         const audio = document.getElementById("audio");
         audio.pause();
         $("canvas:not(.chartJs)").fadeOut("slow");
