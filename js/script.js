@@ -123,12 +123,13 @@ const interfaceFunctions = () => {
                 }, 10000);
                 setTimeout(function() {
                     $("#popup3").hide(400);
+                    $('.upload').removeClass('stop');
                 }, 14000);
             })
         }
         if($("#play").hasClass( "played" )) {
             audio.pause();
-            $(".popupMsgWrapper").fadeOut();
+            $(".popupMsgWrapper").css("display", "none");
             $('.upload').removeClass('stop');
         } else {
             console.log('play');
@@ -432,6 +433,11 @@ function readCSVFile(){
                 drawChart(i, settingsArray[i-1]);
             }
             
+            // for(let i = 0; i < ; i++) {
+            //     for(let j = 0; j < ; j++) {
+
+            //     }
+            // }
         };
 
     } else {
