@@ -158,7 +158,9 @@ $(document).ready(() => {
     })
 
     const inputElement = document.getElementById("#file-input");
-    inputElement.addEventListener("change", readCSVFile, false);
+    inputElement.addEventListener("change", () => {
+        console.log('input changes');
+    }, false);
 });
 
 
