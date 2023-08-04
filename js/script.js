@@ -431,7 +431,7 @@ function readCSVFile(){
             const table = document.querySelector(".tg");
             const rows = document.querySelectorAll(".tg tr");
             const futureDates = getAllColumn(array, 10);
-            const reccomendation = getAllColumn(array, 10);
+            const reccomendation = getAllColumn(array, 20);
             for(let i = 0; i < futureDates.length; i++) {
                 const td = document.createElement("td");
                 td.classList.add("tg-0lax");
