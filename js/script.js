@@ -111,19 +111,19 @@ const interfaceFunctions = () => {
                 }, 1000);
                   setTimeout(function() {
                     $("#popup2").show(400);
-                }, 2000);
+                }, 7000);
                   setTimeout(function() {
                     $("#popup3").show(400);
-                }, 3000);
+                }, 10000);
                 setTimeout(function() {
                     $("#popup1").hide(400);
-                }, 4000);
-                setTimeout(function() {
-                    $("#popup2").hide(400);
                 }, 5000);
                 setTimeout(function() {
+                    $("#popup2").hide(400);
+                }, 10000);
+                setTimeout(function() {
                     $("#popup3").hide(400);
-                }, 6000);
+                }, 14000);
             })
         }
         if($("#play").hasClass( "played" )) {
