@@ -124,6 +124,7 @@ const interfaceFunctions = () => {
                 setTimeout(function() {
                     $("#popup3").hide(400);
                     $('.upload').removeClass('stop');
+                    $("#play").css("display", "none");
                 }, 14000);
             })
         }
@@ -131,6 +132,7 @@ const interfaceFunctions = () => {
             audio.pause();
             $(".popupMsgWrapper").css("display", "none");
             $('.upload').removeClass('stop');
+            $("#play").css("display", "none");
         } else {
             console.log('play');
             audio.play();
