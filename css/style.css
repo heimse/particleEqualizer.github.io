@@ -103,7 +103,9 @@ canvas:not(.chartJs){
 	padding: 15px 60px;
 	left: calc(50vw - 85px);
 }
-
+.hidden {
+	display: none !important;
+}
 .btn:hover{
 	color: #0e83cd;
 	background: #fff;

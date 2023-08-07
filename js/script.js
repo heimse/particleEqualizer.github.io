@@ -130,7 +130,7 @@ const interfaceFunctions = () => {
         }
         if($("#play").hasClass( "played" )) {
             audio.pause();
-            $(".popupMsgWrapper").css("display", "none");
+            $(".popupMsgWrapper").addClass("hidden");
             $('.upload').removeClass('stop');
             $("#play").css("display", "none");
         } else {
