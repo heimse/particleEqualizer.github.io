@@ -104,7 +104,7 @@ const interfaceFunctions = () => {
             update();
 
             $("#play").fadeOut('1000', () => {
-                $("#play").html('Skip');
+                $("#play p").html('Skip');
                 $("#play").fadeIn('1000');
                 setTimeout(function() {
                     $("#popup1").show(400);
