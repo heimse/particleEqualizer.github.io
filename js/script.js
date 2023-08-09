@@ -925,6 +925,8 @@ function readCSVFile(){
                                 text: 'Custom Chart Title'
                             }
                         }
+
+                        
                     }
                 },
             ];
