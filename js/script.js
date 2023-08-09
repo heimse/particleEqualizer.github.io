@@ -235,6 +235,12 @@ function readCSVFile(){
                         }]
                     },
                     options:{
+                        plugins: {
+                            title: {
+                                display: true,
+                                text: 'Custom Chart Title'
+                            }
+                        },
                         chartArea: {
                             backgroundColor: 'rgba(251, 85, 85, 0.4)'
                         },
@@ -552,12 +558,7 @@ function readCSVFile(){
                             xPadding: 10,
                             yPadding: 10
                         },
-                        plugins: {
-                            title: {
-                                display: true,
-                                text: 'Custom Chart Title'
-                            }
-                        }
+                         
                     }
                 }, 
                 {
@@ -576,12 +577,6 @@ function readCSVFile(){
                         }]
                     },
                     options:{
-                        plugins: {
-                            title: {
-                                display: true,
-                                text: 'Custom Chart Title'
-                            }
-                        },
                         chartArea: {
                             backgroundColor: 'rgba(251, 85, 85, 0.4)'
                         },
@@ -691,12 +686,7 @@ function readCSVFile(){
                             xPadding: 10,
                             yPadding: 10
                         },
-                        plugins: {
-                            title: {
-                                display: true,
-                                text: 'Custom Chart Title'
-                            }
-                        }
+                         
                     }
                 },
                 {
@@ -763,12 +753,7 @@ function readCSVFile(){
                             xPadding: 10,
                             yPadding: 10
                         },
-                        plugins: {
-                            title: {
-                                display: true,
-                                text: 'Custom Chart Title'
-                            }
-                        }
+                         
                     }
                 },
                 {
@@ -841,12 +826,7 @@ function readCSVFile(){
                             xPadding: 10,
                             yPadding: 10
                         },
-                        plugins: {
-                            title: {
-                                display: true,
-                                text: 'Custom Chart Title'
-                            }
-                        }
+                         
                     }
                 },
                 {
@@ -918,12 +898,7 @@ function readCSVFile(){
                             xPadding: 10,
                             yPadding: 10
                         },
-                        plugins: {
-                            title: {
-                                display: true,
-                                text: 'Custom Chart Title'
-                            }
-                        }
+                         
 
                         
                     }
