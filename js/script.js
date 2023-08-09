@@ -266,7 +266,7 @@ function readCSVFile(){
                             }
                         },
                         legend: {
-                            display: true
+                            display: false
                         },
                         point: {
                             backgroundColor: '#00c7d6'
@@ -337,7 +337,7 @@ function readCSVFile(){
                             }
                         },
                         legend: {
-                            display: true
+                            display: false
                         },
                         point: {
                             backgroundColor: '#00c7d6'
@@ -402,7 +402,7 @@ function readCSVFile(){
                             }
                         },
                         legend: {
-                            display: true
+                            display: false
                         },
                         point: {
                             backgroundColor: '#00c7d6'
@@ -475,7 +475,7 @@ function readCSVFile(){
                             }
                         },
                         legend: {
-                            display: true
+                            display: false
                         },
                         point: {
                             backgroundColor: '#00c7d6'
@@ -538,7 +538,7 @@ function readCSVFile(){
                             }
                         },
                         legend: {
-                            display: true
+                            display: false
                         },
                         point: {
                             backgroundColor: '#00c7d6'
@@ -602,7 +602,7 @@ function readCSVFile(){
                             }
                         },
                         legend: {
-                            display: true
+                            display: false
                         },
                         point: {
                             backgroundColor: '#00c7d6'
@@ -666,7 +666,7 @@ function readCSVFile(){
                             }
                         },
                         legend: {
-                            display: true
+                            display: false
                         },
                         point: {
                             backgroundColor: '#00c7d6'
@@ -732,7 +732,7 @@ function readCSVFile(){
                             }
                         },
                         legend: {
-                            display: true
+                            display: false
                         },
                         point: {
                             backgroundColor: '#00c7d6'
@@ -804,7 +804,7 @@ function readCSVFile(){
                             }
                         },
                         legend: {
-                            display: true
+                            display: false
                         },
                         point: {
                             backgroundColor: '#00c7d6'
@@ -875,7 +875,7 @@ function readCSVFile(){
                             }
                         },
                         legend: {
-                            display: true
+                            display: false
                         },
                         point: {
                             backgroundColor: '#00c7d6'
