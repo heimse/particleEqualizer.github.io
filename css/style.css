@@ -248,6 +248,7 @@ canvas:not(.chartJs){
 .chartCustomTitle {
 	color: #ffffff;
 	font-size: 20px;
+	text-align: center;
 	margin-bottom: 10px;
 }
 .charts-column {
