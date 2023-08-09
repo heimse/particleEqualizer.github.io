@@ -280,7 +280,7 @@ function readCSVFile(){
                             xPadding: 10,
                             yPadding: 10
                         },
-                        myTitle: {
+                        chartCustomTitle: {
                             text: "My custom title"
                         }
                     }
@@ -937,8 +937,8 @@ function readCSVFile(){
 }
 function drawChart(id, settings) {
     const ctx = $(`#myChart${id}`);
-    if(settings.options.myTitle) {
-        $(`#myChart${id}`).parent().prepend(`<h2 class="myTitle">${settings.options.myTitle.text}</h2>`);
+    if(settings.options.chartCustomTitle) {
+        $(`#myChart${id}`).parent().prepend(`<h2 class="chartCustomTitle">${settings.options.chartCustomTitle.text}</h2>`);
     }
     new Chart(ctx, settings);
 }

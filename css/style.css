@@ -245,6 +245,10 @@ canvas:not(.chartJs){
 	justify-content: space-evenly;
 	margin: 35px 0;
 }
+.chartCustomTitle {
+	color: #ffffff;
+	font-size: 20px;
+}
 .charts-column {
 	margin: 20px 0;
 	height: 300px;
