@@ -235,11 +235,9 @@ function readCSVFile(){
                         }]
                     },
                     options:{
-                        plugins: {
-                            title: {
-                                display: true,
-                                text: 'Custom Chart Title'
-                            }
+                        title: {
+                            display: true,
+                            text: 'Custom Chart Title'
                         },
                         chartArea: {
                             backgroundColor: 'rgba(251, 85, 85, 0.4)'
@@ -272,7 +270,7 @@ function readCSVFile(){
                             }
                         },
                         legend: {
-                            display: true
+                            display: false
                         },
                         point: {
                             backgroundColor: '#00c7d6'
