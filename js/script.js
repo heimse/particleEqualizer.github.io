@@ -642,7 +642,7 @@ function readCSVFile(){
                         labels: getAllColumn(array, 2),
                         datasets: [{
                             //y-axis
-                            label: 'Cредний тариф в прошлом',
+                            label: 'Средний тариф в прошлом',
                             data: getAllColumn(array, 8),
                             borderWidth: 1,
 							pointBackgroundColor: '#00c7d6',
@@ -698,7 +698,7 @@ function readCSVFile(){
                             yPadding: 10
                         },
                         chartCustomTitle: {
-                            text: `Cредний тариф в прошлом <br>Среднее значение: ${getAverage(getAllColumn(array, 8))}%`
+                            text: `Средний тариф в прошлом <br>Среднее значение: ${getAverage(getAllColumn(array, 8))}`
                         }
                     }
                 },
@@ -767,7 +767,7 @@ function readCSVFile(){
                             yPadding: 10
                         },
                         chartCustomTitle: {
-                            text: `Средний тариф в будущем <br>Среднее значение: ${getAverage(getAllColumn(array, 15))}%`
+                            text: `Средний тариф в будущем <br>Среднее значение: ${getAverage(getAllColumn(array, 15))}`
                         }
                          
                     }
@@ -843,7 +843,7 @@ function readCSVFile(){
                             yPadding: 10
                         },
                         chartCustomTitle: {
-                            text: `Прогноз загрузки в комнатах <br>Среднее значение: ${getAverage(getAllColumn(array, 17))}%`
+                            text: `Прогноз загрузки в комнатах <br>Среднее значение: ${getAverage(getAllColumn(array, 17))}`
                         }
                     }
                 },
@@ -917,7 +917,7 @@ function readCSVFile(){
                             yPadding: 10
                         },
                         chartCustomTitle: {
-                            text: `Прогноз загрузки в комнатах <br>Среднее значение: ${getAverage(getAllColumn(array, 18))}%`
+                            text: `Прогноз загрузки в комнатах <br>Среднее значение: ${getAverage(getAllColumn(array, 18))}`
                         }  
                     }
                 },

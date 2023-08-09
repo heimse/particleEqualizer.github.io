@@ -251,6 +251,9 @@ canvas:not(.chartJs){
 	text-align: center;
 	margin-bottom: 10px;
 }
+div.chartsWrapper > div.forecast {
+	margin: 100px 0 0 0;
+}
 .charts-column {
 	margin: 20px 0;
 	height: 300px;
