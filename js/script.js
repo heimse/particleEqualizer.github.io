@@ -943,7 +943,7 @@ function drawChart(id, settings) {
     new Chart(ctx, settings);
 }
 function getAverage(numbers) {
-    const sum = numbers.reduce((acc, number) => acc + number, 0);
+    const sum = numbers.reduce((acc, number) => +acc + +number, 0);
     console.log(sum);
     const length = numbers.length;
     return Math.ceil(sum / length);
