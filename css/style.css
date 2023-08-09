@@ -47,10 +47,10 @@ canvas:not(.chartJs){
     background: #999; 
 }
 ::-webkit-scrollbar {
-	width: 20px
+	width: 2px
 }
 ::-webkit-scrollbar-track {
-	border-radius: 20px;
+	border-radius: 2px;
 	background: #111
 }
 ::-webkit-scrollbar-thumb {
@@ -88,20 +88,20 @@ canvas:not(.chartJs){
 	transition: all 0.3s, opacity 0.5s;
 	border: 1px solid #fff;
 	color: #fff;
-	border-radius: 15px;
+	border-radius: 5px;
 	user-select: none;
 	min-width: 40px;
 	height: 15px;
 	display: block ;
 	text-align: center;
-	margin: 100px 0px 0 0;
+	margin: 100px 100px 0 0;
 }
 .playbtn {
 	position: fixed;
 	z-index: 999;
 	bottom: 30px;
 	padding: 15px 60px;
-	left: calc(50vw - 85px);
+	left: calc(50vw - 60px);
 }
 .hidden {
 	display: none !important;
@@ -114,13 +114,8 @@ canvas:not(.chartJs){
 .popupMsgWrapper {
 	display: none;
 	position: relative;
-	color: #fff;
-	padding: 15px 60px;
-	max-width: 40vw;
-	border: 1px solid #fff;
-	border-radius: 15px;
 	z-index: 1;
-	top: 15vh;
+	top: 2vh;
 }
 
 .ac {
@@ -182,7 +177,7 @@ canvas:not(.chartJs){
 	top: 0;
 	left: -100vw;
 	transition: all 0.3s ease;
-	background:#141414;
+	
 	color: #fff;
 }
 .menu-item {
@@ -213,7 +208,7 @@ canvas:not(.chartJs){
 	display: inline-flex;
 	position: fixed;
 	z-index: 999;
-	top: calc(45vh);
+	top: calc(75vh);
 	left: calc(50vw - 130px);
 	align-items: center;
 	border-radius: 4px;
@@ -266,6 +261,6 @@ canvas:not(.chartJs){
 	display: none;
 }
 
-.tg  {border-collapse:collapse;border-spacing:0;margin:0px auto;width: 80%;}
-.tg td{border-color:#ffffff;border-style:solid;border-width:1px;font-size:16px;overflow:hidden;padding:10px 5px;word-break:normal;}
+.tg  {border-collapse:collapse;border-spacing:0;margin:0px auto;width: 100%;}
+.tg td{border-color:#ffffff;border-style:solid;border-width:1px;font-size:10px;overflow:hidden;padding:10px 5px;word-break:normal;}
 .tg .tg-0lax{text-align:center;}

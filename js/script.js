@@ -111,21 +111,39 @@ const interfaceFunctions = () => {
                 }, 1000);
                   setTimeout(function() {
                     $("#popup2").show(400);
-                }, 7000);
+                }, 10000);
                   setTimeout(function() {
                     $("#popup3").show(400);
-                }, 10000);
+                }, 20000);
+				setTimeout(function() {
+                    $("#popup4").show(400);
+                }, 30000);
+				setTimeout(function() {
+                    $("#popup5").show(400);
+                }, 40000);
+				setTimeout(function() {
+                    $("#popup6").show(400);
+                }, 50000);				
                 setTimeout(function() {
                     $("#popup1").hide(400);
-                }, 5000);
+                }, 9000);
                 setTimeout(function() {
                     $("#popup2").hide(400);
-                }, 10000);
+                }, 19000);
                 setTimeout(function() {
                     $("#popup3").hide(400);
+                }, 29000);
+                setTimeout(function() {
+                    $("#popup4").hide(400);
+                }, 39000);	
+                setTimeout(function() {
+                    $("#popup5").hide(400);
+                }, 49000);				
+               setTimeout(function() {
+                    $("#popup6").hide(400);
                     $('.upload').removeClass('stop');
                     $("#play").css("display", "none");
-                }, 14000);
+                }, 57000);				
             })
         }
         if($("#play").hasClass( "played" )) {
@@ -202,117 +220,353 @@ function readCSVFile(){
 
             console.log(array);
             
+			
+
+			
+			
 
             const settingsArray = [
+			
+			
+
+
                 {
-                    type: 'bar',
+                    type: 'line',
                     data: {
                         //x-axis
                         labels: getAllColumn(array, 2),
                         datasets: [{
                             //y-axis
-                            label: 'occ_past',
+                            label: 'Загрузка в комнатах в прошлом',
                             data: getAllColumn(array, 5),
                             borderWidth: 1,
-                            borderColor: '#ffffff',
-                            backgroundColor: '#ffffff',
+							pointBackgroundColor: '#00c7d6',
+                            borderColor: '#0e1a2f',
+                            backgroundColor: '#02fa9',
                         }]
                     },
-                    options: {
-                        scales: {
-                            y: {
-                                beginAtZero: true
-                            }
-                        }
-                    }
+                    options:{
+
+    chartArea: {
+        backgroundColor: 'rgba(251, 85, 85, 0.4)'
+    },
+	responsive: true,
+	maintainAspectRatio: true,
+	animation: {
+		easing: 'easeInOutQuad',
+		duration: 520
+	},
+	scales: {
+		yAxes: [{
+      ticks: {
+        fontColor: '#5e6a81'
+      },
+			gridLines: {
+				color: 'rgba(200, 200, 200, 0.08)',
+				lineWidth: 1
+			}
+		}],
+    xAxes:[{
+      ticks: {
+        fontColor: '#5e6a81'
+      }
+    }]
+	},
+	elements: {
+		line: {
+			tension: 0.4
+		}
+	},
+	legend: {
+		display: false
+	},
+	point: {
+		backgroundColor: '#00c7d6'
+	},
+	tooltips: {
+		titleFontFamily: 'Poppins',
+		backgroundColor: 'rgba(0,0,0,0.4)',
+		titleFontColor: 'white',
+		caretSize: 5,
+		cornerRadius: 2,
+		xPadding: 10,
+		yPadding: 10
+	}
+}
                 },
-                {
-                    type: 'bar',
+                 {
+                    type: 'line',
                     data: {
                         //x-axis
                         labels: getAllColumn(array, 10),
                         datasets: [{
                             //y-axis
-                            label: 'occ_future',
+                            label: 'Загрузка в комнатах в будущем',
                             data: getAllColumn(array, 12),
                             borderWidth: 1,
-                            borderColor: '#ffffff',
-                            backgroundColor: '#ffffff',
+							pointBackgroundColor: '#00c7d6',
+                            borderColor: '#0e1a2f',
+                            backgroundColor: '#02faf2',
+                        },{
+                            //y-axis
+                            label: 'Загрузка в комнатах в прошлом',
+                            data: getAllColumn(array, 5),
+                            borderWidth: 1,
+							pointBackgroundColor: '#00c7d6',
+                            borderColor: '#0e1a2f',
+                            backgroundColor: '#02fa9',
                         }]
                     },
-                    options: {
-                        scales: {
-                            y: {
-                                beginAtZero: true
-                            }
-                        }
-                    }
+                    options:{
+
+    chartArea: {
+        backgroundColor: 'rgba(251, 85, 85, 0.4)'
+    },
+	responsive: true,
+	maintainAspectRatio: true,
+	animation: {
+		easing: 'easeInOutQuad',
+		duration: 520
+	},
+	scales: {
+		yAxes: [{
+      ticks: {
+        fontColor: '#5e6a81'
+      },
+			gridLines: {
+				color: 'rgba(200, 200, 200, 0.08)',
+				lineWidth: 1
+			}
+		}],
+    xAxes:[{
+      ticks: {
+        fontColor: '#5e6a81'
+      }
+    }]
+	},
+	elements: {
+		line: {
+			tension: 0.4
+		}
+	},
+	legend: {
+		display: false
+	},
+	point: {
+		backgroundColor: '#00c7d6'
+	},
+	tooltips: {
+		titleFontFamily: 'Poppins',
+		backgroundColor: 'rgba(0,0,0,0.4)',
+		titleFontColor: 'white',
+		caretSize: 5,
+		cornerRadius: 2,
+		xPadding: 10,
+		yPadding: 10
+	}
+}
                 },
                 {
-                    type: 'bar',
+                    type: 'line',
                     data: {
                         //x-axis
                         labels: getAllColumn(array, 2),
                         datasets: [{
                             //y-axis
-                            label: 'occ_past_p',
+                            label: 'Закрузка в процентах в прошлом',
                             data: getAllColumn(array, 6),
                             borderWidth: 1,
-                            borderColor: '#ffffff',
-                            backgroundColor: '#ffffff',
+							pointBackgroundColor: '#00c7d6',
+                            borderColor: '#0e1a2f',
+                            backgroundColor: '#02fa9',
                         }]
                     },
-                    options: {
-                        scales: {
-                            y: {
-                                beginAtZero: true
-                            }
-                        }
-                    }
+                    options:{
+
+    chartArea: {
+        backgroundColor: 'rgba(251, 85, 85, 0.4)'
+    },
+	responsive: true,
+	maintainAspectRatio: true,
+	animation: {
+		easing: 'easeInOutQuad',
+		duration: 520
+	},
+	scales: {
+		yAxes: [{
+      ticks: {
+	    beginAtZero: true,
+        fontColor: '#5e6a81'
+      },
+			gridLines: {
+				color: 'rgba(200, 200, 200, 0.08)',
+				lineWidth: 1
+			}
+		}],
+    xAxes:[{
+      ticks: {
+        fontColor: '#5e6a81'
+      }
+    }]
+	},
+	elements: {
+		line: {
+			tension: 0.4
+		}
+	},
+	legend: {
+		display: false
+	},
+	point: {
+		backgroundColor: '#00c7d6'
+	},
+	tooltips: {
+		titleFontFamily: 'Poppins',
+		backgroundColor: 'rgba(0,0,0,0.4)',
+		titleFontColor: 'white',
+		caretSize: 5,
+		cornerRadius: 2,
+		xPadding: 10,
+		yPadding: 10
+	}
+}
                 }, 
                 {
-                    type: 'bar',
+                    type: 'line',
                     data: {
                         //x-axis
                         labels: getAllColumn(array, 10),
                         datasets: [{
                             //y-axis
-                            label: 'occ_future_p',
+                            label: 'Закрузка в процентах в будущем',
                             data: getAllColumn(array, 13),
                             borderWidth: 1,
-                            borderColor: '#ffffff',
-                            backgroundColor: '#ffffff',
+							pointBackgroundColor: '#00c7d6',
+                            borderColor: '#0e1a2f',
+                            backgroundColor: '#02fa93',
+                        },{
+                            //y-axis
+                            label: 'Закрузка в процентах в прошлом',
+                            data: getAllColumn(array, 6),
+                            borderWidth: 1,
+							pointBackgroundColor: '#00c7d6',
+                            borderColor: '#0e1a2f',
+                            backgroundColor: '#02fa9',
                         }]
                     },
-                    options: {
-                        scales: {
-                            y: {
-                                beginAtZero: true
-                            }
-                        }
-                    }
+                    options:{
+
+    chartArea: {
+        backgroundColor: 'rgba(251, 85, 85, 0.4)'
+    },
+	responsive: true,
+	maintainAspectRatio: true,
+	animation: {
+		easing: 'easeInOutQuad',
+		duration: 520
+	},
+	scales: {
+		yAxes: [{
+      ticks: {
+	    beginAtZero: true,
+        fontColor: '#5e6a81'
+      },
+			gridLines: {
+				color: 'rgba(200, 200, 200, 0.08)',
+				lineWidth: 1
+			}
+		}],
+    xAxes:[{
+      ticks: {
+        fontColor: '#5e6a81'
+      }
+    }]
+	},
+	elements: {
+		line: {
+			tension: 0.4
+		}
+	},
+	legend: {
+		display: false
+	},
+	point: {
+		backgroundColor: '#00c7d6'
+	},
+	tooltips: {
+		titleFontFamily: 'Poppins',
+		backgroundColor: 'rgba(0,0,0,0.4)',
+		titleFontColor: 'white',
+		caretSize: 5,
+		cornerRadius: 2,
+		xPadding: 10,
+		yPadding: 10
+	}
+}
                 }, 
-                {
+{
                     type: 'bar',
                     data: {
                         //x-axis
                         labels: getAllColumn(array, 2),
                         datasets: [{
                             //y-axis
-                            label: 'revenue_past',
+                            label: 'Доход в прошлом',
                             data: getAllColumn(array, 7),
                             borderWidth: 1,
-                            borderColor: '#ffffff',
-                            backgroundColor: '#ffffff',
+							pointBackgroundColor: '#00c7d6',
+                            borderColor: '#0e1a2f',
+                            backgroundColor: '#030bff',
                         }]
                     },
-                    options: {
-                        scales: {
-                            y: {
-                                beginAtZero: true
-                            }
-                        }
-                    }
+                    options:{
+
+    chartArea: {
+        backgroundColor: 'rgba(251, 85, 85, 0.4)'
+    },
+	responsive: true,
+	maintainAspectRatio: true,
+	animation: {
+		easing: 'easeInOutQuad',
+		duration: 520
+	},
+	scales: {
+		yAxes: [{
+      ticks: {
+        fontColor: '#5e6a81'
+      },
+			gridLines: {
+				color: 'rgba(200, 200, 200, 0.08)',
+				lineWidth: 1
+			}
+		}],
+    xAxes:[{
+      ticks: {
+        fontColor: '#5e6a81'
+      }
+    }]
+	},
+	elements: {
+		line: {
+			tension: 0.4
+		}
+	},
+	legend: {
+		display: false
+	},
+	point: {
+		backgroundColor: '#00c7d6'
+	},
+	tooltips: {
+		titleFontFamily: 'Poppins',
+		backgroundColor: 'rgba(0,0,0,0.4)',
+		titleFontColor: 'white',
+		caretSize: 5,
+		cornerRadius: 2,
+		xPadding: 10,
+		yPadding: 10
+	}
+}
                 }, 
                 {
                     type: 'bar',
@@ -321,20 +575,62 @@ function readCSVFile(){
                         labels: getAllColumn(array, 10),
                         datasets: [{
                             //y-axis
-                            label: 'revenue_future',
+                            label: 'Доход в будущем',
                             data: getAllColumn(array, 14),
                             borderWidth: 1,
-                            borderColor: '#ffffff',
-                            backgroundColor: '#ffffff',
+							pointBackgroundColor: '#00c7d6',
+                            borderColor: '#0e1a2f',
+                            backgroundColor: '#030bff',
                         }]
                     },
-                    options: {
-                        scales: {
-                            y: {
-                                beginAtZero: true
-                            }
-                        }
-                    }
+                    options:{
+
+    chartArea: {
+        backgroundColor: 'rgba(251, 85, 85, 0.4)'
+    },
+	responsive: true,
+	maintainAspectRatio: true,
+	animation: {
+		easing: 'easeInOutQuad',
+		duration: 520
+	},
+	scales: {
+		yAxes: [{
+      ticks: {
+        fontColor: '#5e6a81'
+      },
+			gridLines: {
+				color: 'rgba(200, 200, 200, 0.08)',
+				lineWidth: 1
+			}
+		}],
+    xAxes:[{
+      ticks: {
+        fontColor: '#5e6a81'
+      }
+    }]
+	},
+	elements: {
+		line: {
+			tension: 0.4
+		}
+	},
+	legend: {
+		display: false
+	},
+	point: {
+		backgroundColor: '#00c7d6'
+	},
+	tooltips: {
+		titleFontFamily: 'Poppins',
+		backgroundColor: 'rgba(0,0,0,0.4)',
+		titleFontColor: 'white',
+		caretSize: 5,
+		cornerRadius: 2,
+		xPadding: 10,
+		yPadding: 10
+	}
+}
                 }, 
                 {
                     type: 'bar',
@@ -343,20 +639,62 @@ function readCSVFile(){
                         labels: getAllColumn(array, 2),
                         datasets: [{
                             //y-axis
-                            label: 'gross_adr_past',
+                            label: 'средний тариф в прошлом',
                             data: getAllColumn(array, 8),
                             borderWidth: 1,
-                            borderColor: '#ffffff',
-                            backgroundColor: '#ffffff',
+							pointBackgroundColor: '#00c7d6',
+                            borderColor: '#0e1a2f',
+                            backgroundColor: '#a34502',
                         }]
                     },
-                    options: {
-                        scales: {
-                            y: {
-                                beginAtZero: true
-                            }
-                        }
-                    }
+                    options:{
+
+    chartArea: {
+        backgroundColor: 'rgba(251, 85, 85, 0.4)'
+    },
+	responsive: true,
+	maintainAspectRatio: true,
+	animation: {
+		easing: 'easeInOutQuad',
+		duration: 520
+	},
+	scales: {
+		yAxes: [{
+      ticks: {
+        fontColor: '#5e6a81'
+      },
+			gridLines: {
+				color: 'rgba(200, 200, 200, 0.08)',
+				lineWidth: 1
+			}
+		}],
+    xAxes:[{
+      ticks: {
+        fontColor: '#5e6a81'
+      }
+    }]
+	},
+	elements: {
+		line: {
+			tension: 0.4
+		}
+	},
+	legend: {
+		display: false
+	},
+	point: {
+		backgroundColor: '#00c7d6'
+	},
+	tooltips: {
+		titleFontFamily: 'Poppins',
+		backgroundColor: 'rgba(0,0,0,0.4)',
+		titleFontColor: 'white',
+		caretSize: 5,
+		cornerRadius: 2,
+		xPadding: 10,
+		yPadding: 10
+	}
+}
                 },
                 {
                     type: 'bar',
@@ -365,64 +703,208 @@ function readCSVFile(){
                         labels: getAllColumn(array, 10),
                         datasets: [{
                             //y-axis
-                            label: 'gross_adr_future',
+							
+                            label: 'средний тариф в будущем',
                             data: getAllColumn(array, 15),
                             borderWidth: 1,
-                            borderColor: '#ffffff',
-                            backgroundColor: '#ffffff',
+							pointBackgroundColor: '#00c7d6',
+                            borderColor: '#0e1a2f',
+                            backgroundColor: '#a34502',
                         }]
                     },
-                    options: {
-                        scales: {
-                            y: {
-                                beginAtZero: true
-                            }
-                        }
-                    }
+                    options:{
+
+    chartArea: {
+        backgroundColor: 'rgba(251, 85, 85, 0.4)'
+    },
+	responsive: true,
+	maintainAspectRatio: true,
+	animation: {
+		easing: 'easeInOutQuad',
+		duration: 520
+	},
+	scales: {
+		yAxes: [{
+      ticks: {
+	 
+        fontColor: '#5e6a81'
+      },
+			gridLines: {
+				color: 'rgba(200, 200, 200, 0.08)',
+				lineWidth: 1
+			}
+		}],
+    xAxes:[{
+      ticks: {
+        fontColor: '#5e6a81'
+      }
+    }]
+	},
+	elements: {
+		line: {
+			tension: 0.4
+		}
+	},
+	legend: {
+		display: false
+	},
+	point: {
+		backgroundColor: '#00c7d6'
+	},
+	tooltips: {
+		titleFontFamily: 'Poppins',
+		backgroundColor: 'rgba(0,0,0,0.4)',
+		titleFontColor: 'white',
+		caretSize: 5,
+		cornerRadius: 2,
+		xPadding: 10,
+		yPadding: 10
+	}
+}
                 },
                 {
-                    type: 'bar',
+                    type: 'line',
                     data: {
                         //x-axis
                         labels: getAllColumn(array, 10),
                         datasets: [{
                             //y-axis
-                            label: 'gross_adr_future',
+                            label: 'Загрузка в комнатах в будущем на сегодня',
+                            data: getAllColumn(array, 12),
+                            borderWidth: 1,
+							pointBackgroundColor: '#00c7d6',
+                            borderColor: '#0e1a2f',
+                           
+                        },{
+                            //y-axis
+                            label: 'Прогноз загрузки в комнатах',
                             data: getAllColumn(array, 17),
                             borderWidth: 1,
-                            borderColor: '#ffffff',
-                            backgroundColor: '#ffffff',
+							pointBackgroundColor: '#00c7d6',
+                            borderColor: '#0e1a2f',
+                            backgroundColor: '#02faf2',
                         }]
                     },
-                    options: {
-                        scales: {
-                            y: {
-                                beginAtZero: true
-                            }
-                        }
-                    }
+                    options:{
+
+    chartArea: {
+        backgroundColor: 'rgba(251, 85, 85, 0.4)'
+    },
+	responsive: true,
+	maintainAspectRatio: true,
+	animation: {
+		easing: 'easeInOutQuad',
+		duration: 520
+	},
+	scales: {
+		yAxes: [{
+      ticks: {
+        fontColor: '#5e6a81'
+      },
+			gridLines: {
+				color: 'rgba(200, 200, 200, 0.08)',
+				lineWidth: 1
+			}
+		}],
+    xAxes:[{
+      ticks: {
+        fontColor: '#5e6a81'
+      }
+    }]
+	},
+	elements: {
+		line: {
+			tension: 0.4
+		}
+	},
+	legend: {
+		display: false
+	},
+	point: {
+		backgroundColor: '#00c7d6'
+	},
+	tooltips: {
+		titleFontFamily: 'Poppins',
+		backgroundColor: 'rgba(0,0,0,0.4)',
+		titleFontColor: 'white',
+		caretSize: 5,
+		cornerRadius: 2,
+		xPadding: 10,
+		yPadding: 10
+	}
+}
                 },
                 {
-                    type: 'bar',
+                    type: 'line',
                     data: {
                         //x-axis
                         labels: getAllColumn(array, 10),
                         datasets: [{
                             //y-axis
-                            label: 'gross_adr_future',
+                            label: 'Загрузка в процентах в будущем на сегодня',
+                            data: getAllColumn(array, 6),
+                            borderWidth: 1,
+							pointBackgroundColor: '#00c7d6',
+                            borderColor: '#0e1a2f',
+                           
+                        },{
+                            //y-axis
+                            label: 'Прогноз загрузки в процентах',
                             data: getAllColumn(array, 18),
                             borderWidth: 1,
-                            borderColor: '#ffffff',
-                            backgroundColor: '#ffffff',
+							pointBackgroundColor: '#00c7d6',
+                            borderColor: '#0e1a2f',
+                            backgroundColor: '#02faf2',
                         }]
                     },
-                    options: {
-                        scales: {
-                            y: {
-                                beginAtZero: true
-                            }
-                        }
-                    }
+                    options:{
+
+    chartArea: {
+        backgroundColor: 'rgba(251, 85, 85, 0.4)'
+    },
+	responsive: true,
+	maintainAspectRatio: true,
+	animation: {
+		easing: 'easeInOutQuad',
+		duration: 520
+	},
+	scales: {
+		yAxes: [{
+      ticks: {
+        fontColor: '#5e6a81'
+      },
+			gridLines: {
+				color: 'rgba(200, 200, 200, 0.08)',
+				lineWidth: 1
+			}
+		}],
+    xAxes:[{
+      ticks: {
+        fontColor: '#5e6a81'
+      }
+    }]
+	},
+	elements: {
+		line: {
+			tension: 0.4
+		}
+	},
+	legend: {
+		display: false
+	},
+	point: {
+		backgroundColor: '#00c7d6'
+	},
+	tooltips: {
+		titleFontFamily: 'Poppins',
+		backgroundColor: 'rgba(0,0,0,0.4)',
+		titleFontColor: 'white',
+		caretSize: 5,
+		cornerRadius: 2,
+		xPadding: 10,
+		yPadding: 10
+	}
+}
                 },
             ];
 
@@ -557,5 +1039,7 @@ function CSVToArray( strData, strDelimiter ){
 
     // Return the parsed data.
     return( arrData );
+	
+	
 }
 

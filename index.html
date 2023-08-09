@@ -28,15 +28,177 @@
         <!--main-->
         <script type="text/javascript" src="js/script.js"></script>
     </head>
-	
+    <style>
+      
+    *,
+    *:before,
+    *:after {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+
+    .comet {
+
+    
+      margin: auto;
+      padding-right: 2rem;
+      padding-left: 2rem;
+      font-size: 1rem;
+      text-transform: uppercase;
+      letter-spacing: 6px;
+      
+
+      background-size: calc(100% - 15px) calc(100% - 15px);
+      background-repeat: no-repeat;
+      background-position: center;
+      cursor: pointer;
+      user-select: none;
+      box-shadow: 0 0 0 1px rgba(41, 255, 106, 0.1),
+        inset 0 0 0 1px rgba(41, 255, 106, 0.1);
+      transform: translateZ(0);
+      transition: transform 0.1s;
+
+      
+    }
+
+
+
+    .comet:active{
+      transform: scale(0.9);
+    }
+
+    .comet:before,
+    .comet:after{
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 4px;
+      height: 4px;
+      background-color: #29ff6a;
+      animation-name: comet;
+      animation-iteration-count: infinite;
+      animation-play-state: running;
+      animation-timing-function: linear;
+      animation-delay: -0.3;
+      border-radius: 50%;
+      opacity: 1;
+      transform: translateX(-50%) translateY(-50%) scale(1);
+      transition: all 4s;
+    }
+
+    .comet:before{
+      animation-duration: 2s;
+    }
+    .comet:after{
+      animation-duration: 2.5s;
+    }
+    .comet:hover:before,
+    .comet:hover:after{
+      opacity: 0;
+      filter: blur(2px);
+      transform: translateX(-50%) translateY(-50%) scale(2);
+      transition: all .7s;
+    }
+
+    @keyframes comet {
+      0% {
+        top: 0;
+        left: 0;
+        box-shadow: 0 0 15px 1px #29FF6A, 0 0 2px rgba(41, 255, 106, 0.7), 0 0 2px rgba(41, 255, 106, 0.5), 0 0 2px rgba(41, 255, 106, 0.3), 0 0 1px rgba(41, 255, 106, 0.25);
+        animation-timing-function: ease-in;
+      }
+
+      15% {
+        top: 0;
+        left: 50%;
+        box-shadow: 0 0 15px 1px #29FF6A, -4px 0 2px rgba(41, 255, 106, 0.7), -8px 0 2px rgba(41, 255, 106, 0.5), -12px 0 2px rgba(41, 255, 106, 0.3), -14px 0 1px -1px rgba(41, 255, 106, 0.25);
+        animation-timing-function: ease-out;
+      }
+
+      30% {
+        top: 0;
+        left: 100%;
+        box-shadow: 0 0 15px 1px #29FF6A, 0 0 2px rgba(41, 255, 106, 0.7), 0 0 2px rgba(41, 255, 106, 0.5), 0 0 2px rgba(41, 255, 106, 0.3), 0 0 1px rgba(41, 255, 106, 0.25);
+        animation-timing-function: ease-in;
+      }
+
+      40% {
+        top: 50%;
+        left: 100%;
+        box-shadow: 0 0 15px 1px #29FF6A, 0 -4px 2px rgba(41, 255, 106, 0.7), 0 -8px 2px rgba(41, 255, 106, 0.5), 0 -12px 2px rgba(41, 255, 106, 0.3), 0 -14px 1px rgba(41, 255, 106, 0.25);
+        animation-timing-function: ease-out;
+      }
+
+      50% {
+        top: 100%;
+        left: 100%;
+        box-shadow: 0 0 15px 1px #29FF6A, 0 0 2px rgba(41, 255, 106, 0.7), 0 0 2px rgba(41, 255, 106, 0.5), 0 0 2px rgba(41, 255, 106, 0.3), 0 0 1px rgba(41, 255, 106, 0.25);
+        animation-timing-function: ease-in;
+      }
+
+      65% {
+        top: 100%;
+        left: 50%;
+        box-shadow: 0 0 15px 1px #29FF6A, 4px 0 2px rgba(41, 255, 106, 0.7), 8px 0 2px rgba(41, 255, 106, 0.5), 12px 0 2px rgba(41, 255, 106, 0.3), 14px 0 1px rgba(41, 255, 106, 0.25);
+        animation-timing-function: ease-out;
+      }
+
+      80% {
+        top: 100%;
+        left: 0;
+        box-shadow: 0 0 15px 1px #29FF6A, 0 0 2px rgba(41, 255, 106, 0.7), 0 0 2px rgba(41, 255, 106, 0.5), 0 0 2px rgba(41, 255, 106, 0.3), 0 0 1px rgba(41, 255, 106, 0.25);
+        animation-timing-function: ease-in;
+      }
+
+      90% {
+        top: 50%;
+        left: 0;
+        box-shadow: 0 0 15px 1px #29FF6A, 0 4px 2px rgba(41, 255, 106, 0.7), 0 8px 2px rgba(41, 255, 106, 0.5), 0 12px 2px rgba(41, 255, 106, 0.3), 0 14px 1px rgba(41, 255, 106, 0.25);
+        animation-timing-function: ease-out;
+      }
+
+      100% {
+        top: 0;
+        left: 0;
+        box-shadow: 0 0 15px 1px #29FF6A, 0 0 2px rgba(41, 255, 106, 0.7), 0 0 2px rgba(41, 255, 106, 0.5), 0 0 2px rgba(41, 255, 106, 0.3), 0 0 1px rgba(41, 255, 106, 0.25);
+        animation-timing-function: ease-in;
+      }
+    }
+
+    .header {
+      font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+      font-size: 1.4rem;
+      font-weight:  100;
+      letter-spacing: 2px;
+      text-align: center;
+      color: #f35626;
+      background-image: -webkit-linear-gradient(92deg, #f35626, #feab3a);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      -webkit-animation: hue 10s infinite linear;
+    }
+
+    @-webkit-keyframes hue {
+      from {
+        -webkit-filter: hue-rotate(0deg);
+      }
+      to {
+        -webkit-filter: hue-rotate(-360deg);
+      }
+    }
+
+
+
+
+
+    </style>
     <body>
-		<div class="audioDiv">
-
-        </div>
-		<btn class="btn playbtn" id="play">Play</btn>
-        
-
-
+		<div class="audioDiv"></div>
+		<btn class="btn playbtn comet" id="play" style="
+    height: 40px;"><p>Start</p></btn>
         <div class="toggle-menu nav-bar">
             <div class="line line1"></div>
             <div class="line line2"></div>
@@ -44,22 +206,32 @@
         </div>
     
         <div class="menu">
-            <p class="menu-item">#1</p>
-            <p class="menu-item">#2</p>
-            <p class="menu-item">#3</p>
-            <p class="menu-item">#4</p>
+            <p class="menu-item">Инструкция</p>
+            <p class="menu-item">Файлы</p>
+            <p class="menu-item">О Еве</p>
+			      <p class="menu-item">Оставить отзыв</p>
         </div>
 
-        <div class="wrapper">
-            <div id="popup1" class="popupMsgWrapper">
-                <div class="popupMsg">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor ipsam corporis tempore laboriosam eveniet necessitatibus accusamus porro cumque praesentium consequatur exercitationem id magni soluta quasi dicta, ad itaque explicabo sapiente?</div>
+        <div class="wrapper" style="margin-top: 10px;">
+            <div id="popup1" class="popupMsgWrapper header">
+                <div class="popupMsg">Здравствуйте. Я первый искусственный интеллект для отелей. <br> Меня зовут Ева. Давайте вместе поработаем</div>
             </div>
-            <div id="popup2" class="popupMsgWrapper">
-                <div class="popupMsg">Lorem ipsum dolor sit amet consectetur adipisicing elit. Est, esse.</div>
+            <div id="popup2" class="popupMsgWrapper header">
+                <div class="popupMsg">На базе прошлого мы создадим машину времени <br> и попробуем предсказать какая ожидается загрузка в отеле</div>
             </div>
-            <div id="popup3" class="popupMsgWrapper">
-                <div class="popupMsg">Lorem ipsum dolor sit amet consectetur adipisicing.</div>
+            <div id="popup3" class="popupMsgWrapper header">
+                <div class="popupMsg">Для начала, в меню посмотрите инструкцию. <br>Там все просто но может потребоваться помощь вашего ит</div>
             </div>
+            <div id="popup4" class="popupMsgWrapper header">
+                <div class="popupMsg">После загрузите фаил, и я спрогнозирую. <br>А так же скажу что сделать сегодня, что бы завтра было лучше</div>
+            </div>	
+	            <div id="popup5" class="popupMsgWrapper header">
+                <div class="popupMsg">Для эффективной работы пользуйтесь мной каждый день. <br>Если я угадаю то с вас лайк и подписка.</div>
+            </div>		
+	            </div>	
+	            <div id="popup6" class="popupMsgWrapper header">
+                <div class="popupMsg">Завтра это то, что мы сделаем сегодня. <br>Давайте вместе сделаем хорошую работу.</div>
+				</div>			
         </div>
 
         <div class="btn-upload upload stop" id="uploadBtn">
@@ -69,10 +241,17 @@
             </label>
         </div>
         
-        <div class="chartsWrapper">
-            <div class="charts-row">
-                <div class="charts-column"><canvas id="myChart1" class="chartJs"style="width:100%;max-width:700px"></canvas></div>
-                <div class="charts-column"><canvas id="myChart2" class="chartJs"style="width:100%;max-width:700px"></canvas></div>
+        <div class="chartsWrapper" style="background: linear-gradient(-45deg, #000080, #000000);" >
+            <div class="charts-row" >
+                <div class="charts-column">
+					
+					
+					
+					
+
+					
+					<canvas id="myChart1" class="chartJs"style="width:100%;max-width:700px "></canvas></div>
+                <div class="charts-column"><canvas id="myChart2" class="chartJs"style="width:100%;max-width:700px">1111111</canvas></div>
             </div>
             <div class="charts-row">
                 <div class="charts-column"><canvas id="myChart3" class="chartJs"style="width:100%;max-width:700px"></canvas></div>
@@ -86,24 +265,26 @@
                 <div class="charts-column"><canvas id="myChart7" class="chartJs"style="width:100%;max-width:700px"></canvas></div>
                 <div class="charts-column"><canvas id="myChart8" class="chartJs"style="width:100%;max-width:700px"></canvas></div>
             </div>
-            <div class="charts-row">
-                <div class="charts-column"><div class="forecast">forecast</div></div>
+            <div class="charts-row" >
+                <div class="charts-column"><div class="forecast">Прогноз</div></div>
             </div>
             <div class="charts-row">
                 <div class="charts-column"><canvas id="myChart9" class="chartJs"style="width:100%;max-width:700px"></canvas></div>
                 <div class="charts-column"><canvas id="myChart10" class="chartJs"style="width:100%;max-width:700px"></canvas></div>
             </div>
-
+            <div style="text-align:  center;" class="forecast">Рекомендация по управлению ценой для повышения загрузки</div>
             <div class="charts-row">
+			
                 <table class="tg">
                     <tbody>
-                      <tr>
+                      <tr style="height:10px;">
                       </tr>
-                      <tr>
+                      <tr style="height:10px;">
                       </tr>
                     </tbody>
                     </table>
             </div>
+			
         </div>
     </body>
 </html>
