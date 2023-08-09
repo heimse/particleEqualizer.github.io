@@ -642,7 +642,7 @@ function readCSVFile(){
                         labels: getAllColumn(array, 2),
                         datasets: [{
                             //y-axis
-                            label: 'средний тариф в прошлом',
+                            label: 'Cредний тариф в прошлом',
                             data: getAllColumn(array, 8),
                             borderWidth: 1,
 							pointBackgroundColor: '#00c7d6',
@@ -697,7 +697,9 @@ function readCSVFile(){
                             xPadding: 10,
                             yPadding: 10
                         },
-                         
+                        chartCustomTitle: {
+                            text: `Cредний тариф в прошлом <br>Среднее значение: ${getAverage(getAllColumn(array, 8))}%`
+                        }
                     }
                 },
                 {
@@ -708,7 +710,7 @@ function readCSVFile(){
                         datasets: [{
                             //y-axis
 							
-                            label: 'средний тариф в будущем',
+                            label: 'Средний тариф в будущем',
                             data: getAllColumn(array, 15),
                             borderWidth: 1,
 							pointBackgroundColor: '#00c7d6',
@@ -764,6 +766,9 @@ function readCSVFile(){
                             xPadding: 10,
                             yPadding: 10
                         },
+                        chartCustomTitle: {
+                            text: `Средний тариф в будущем <br>Среднее значение: ${getAverage(getAllColumn(array, 15))}%`
+                        }
                          
                     }
                 },
@@ -837,7 +842,9 @@ function readCSVFile(){
                             xPadding: 10,
                             yPadding: 10
                         },
-                         
+                        chartCustomTitle: {
+                            text: `Прогноз загрузки в комнатах <br>Среднее значение: ${getAverage(getAllColumn(array, 17))}%`
+                        }
                     }
                 },
                 {
@@ -909,9 +916,9 @@ function readCSVFile(){
                             xPadding: 10,
                             yPadding: 10
                         },
-                         
-
-                        
+                        chartCustomTitle: {
+                            text: `Прогноз загрузки в комнатах <br>Среднее значение: ${getAverage(getAllColumn(array, 18))}%`
+                        }  
                     }
                 },
             ];
