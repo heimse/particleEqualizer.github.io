@@ -281,7 +281,7 @@ function readCSVFile(){
                             yPadding: 10
                         },
                         chartCustomTitle: {
-                            text: `Загрузка в комнатах в прошлом<br>${getAverage(getAllColumn(array, 5))}`
+                            text: `Загрузка в комнатах в прошлом<br>Среднее значение: ${getAverage(getAllColumn(array, 5))}`
                         }
                     }
                 },
@@ -300,7 +300,7 @@ function readCSVFile(){
                             backgroundColor: '#02faf2',
                         },{
                             //y-axis
-                            label: 'Загрузка в комнатах в прошлом',
+                            label: 'Загрузка в комнатах в будущем',
                             data: getAllColumn(array, 5),
                             borderWidth: 1,
 							pointBackgroundColor: '#00c7d6',
@@ -353,6 +353,9 @@ function readCSVFile(){
                             cornerRadius: 2,
                             xPadding: 10,
                             yPadding: 10
+                        },
+                        chartCustomTitle: {
+                            text: `Загрузка в комнатах в будущем <br>Среднее значение: ${getAverage(getAllColumn(array, 12))}`
                         }
                     }
                 },
@@ -418,6 +421,9 @@ function readCSVFile(){
                             cornerRadius: 2,
                             xPadding: 10,
                             yPadding: 10
+                        },
+                        chartCustomTitle: {
+                            text: `Закрузка в процентах в прошлом <br>Среднее значение: ${getAverage(getAllColumn(array, 6))}%`
                         }
                     }
                 }, 
