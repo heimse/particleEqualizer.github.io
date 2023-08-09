@@ -235,10 +235,6 @@ function readCSVFile(){
                         }]
                     },
                     options:{
-                        title: {
-                            display: true,
-                            text: 'Custom Chart Title'
-                        },
                         chartArea: {
                             backgroundColor: 'rgba(251, 85, 85, 0.4)'
                         },
@@ -283,10 +279,13 @@ function readCSVFile(){
                             cornerRadius: 2,
                             xPadding: 10,
                             yPadding: 10
+                        },
+                        myTitle: {
+                            text: "My custom title"
                         }
                     }
                 },
-                 {
+                {
                     type: 'line',
                     data: {
                         //x-axis
@@ -938,6 +937,9 @@ function readCSVFile(){
 }
 function drawChart(id, settings) {
     const ctx = $(`#myChart${id}`);
+    if(settings.options.myTitle) {
+        $(`#myChart${id}`).parent().prepend(`<h2 class="myTitle">${settings.options.myTitle.text}</h2>`);
+    }
     new Chart(ctx, settings);
 }
 
