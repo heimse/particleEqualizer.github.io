@@ -217,20 +217,8 @@ function readCSVFile(){
             const csvdata = event.target.result;
             const array = CSVToArray(csvdata);
             const charts = document.querySelectorAll('.chartJs');
-
-
-            console.log(array);
-            
-			
-
-			
-			
-
+            console.log(array);            
             const settingsArray = [
-			
-			
-
-
                 {
                     type: 'line',
                     data: {
@@ -247,53 +235,52 @@ function readCSVFile(){
                         }]
                     },
                     options:{
-
-    chartArea: {
-        backgroundColor: 'rgba(251, 85, 85, 0.4)'
-    },
-	responsive: true,
-	maintainAspectRatio: true,
-	animation: {
-		easing: 'easeInOutQuad',
-		duration: 520
-	},
-	scales: {
-		yAxes: [{
-      ticks: {
-        fontColor: '#5e6a81'
-      },
-			gridLines: {
-				color: 'rgba(200, 200, 200, 0.08)',
-				lineWidth: 1
-			}
-		}],
-    xAxes:[{
-      ticks: {
-        fontColor: '#5e6a81'
-      }
-    }]
-	},
-	elements: {
-		line: {
-			tension: 0.4
-		}
-	},
-	legend: {
-		display: false
-	},
-	point: {
-		backgroundColor: '#00c7d6'
-	},
-	tooltips: {
-		titleFontFamily: 'Poppins',
-		backgroundColor: 'rgba(0,0,0,0.4)',
-		titleFontColor: 'white',
-		caretSize: 5,
-		cornerRadius: 2,
-		xPadding: 10,
-		yPadding: 10
-	}
-}
+                        chartArea: {
+                            backgroundColor: 'rgba(251, 85, 85, 0.4)'
+                        },
+                        responsive: true,
+                        maintainAspectRatio: true,
+                        animation: {
+                            easing: 'easeInOutQuad',
+                            duration: 520
+                        },
+                        scales: {
+                            yAxes: [{
+                        ticks: {
+                            fontColor: '#5e6a81'
+                        },
+                                gridLines: {
+                                    color: 'rgba(200, 200, 200, 0.08)',
+                                    lineWidth: 1
+                                }
+                            }],
+                        xAxes:[{
+                        ticks: {
+                            fontColor: '#5e6a81'
+                        }
+                        }]
+                        },
+                        elements: {
+                            line: {
+                                tension: 0.4
+                            }
+                        },
+                        legend: {
+                            display: true
+                        },
+                        point: {
+                            backgroundColor: '#00c7d6'
+                        },
+                        tooltips: {
+                            titleFontFamily: 'Poppins',
+                            backgroundColor: 'rgba(0,0,0,0.4)',
+                            titleFontColor: 'white',
+                            caretSize: 5,
+                            cornerRadius: 2,
+                            xPadding: 10,
+                            yPadding: 10
+                        }
+                    }
                 },
                  {
                     type: 'line',
@@ -319,53 +306,52 @@ function readCSVFile(){
                         }]
                     },
                     options:{
-
-    chartArea: {
-        backgroundColor: 'rgba(251, 85, 85, 0.4)'
-    },
-	responsive: true,
-	maintainAspectRatio: true,
-	animation: {
-		easing: 'easeInOutQuad',
-		duration: 520
-	},
-	scales: {
-		yAxes: [{
-      ticks: {
-        fontColor: '#5e6a81'
-      },
-			gridLines: {
-				color: 'rgba(200, 200, 200, 0.08)',
-				lineWidth: 1
-			}
-		}],
-    xAxes:[{
-      ticks: {
-        fontColor: '#5e6a81'
-      }
-    }]
-	},
-	elements: {
-		line: {
-			tension: 0.4
-		}
-	},
-	legend: {
-		display: false
-	},
-	point: {
-		backgroundColor: '#00c7d6'
-	},
-	tooltips: {
-		titleFontFamily: 'Poppins',
-		backgroundColor: 'rgba(0,0,0,0.4)',
-		titleFontColor: 'white',
-		caretSize: 5,
-		cornerRadius: 2,
-		xPadding: 10,
-		yPadding: 10
-	}
-}
+                        chartArea: {
+                            backgroundColor: 'rgba(251, 85, 85, 0.4)'
+                        },
+                        responsive: true,
+                        maintainAspectRatio: true,
+                        animation: {
+                            easing: 'easeInOutQuad',
+                            duration: 520
+                        },
+                        scales: {
+                            yAxes: [{
+                        ticks: {
+                            fontColor: '#5e6a81'
+                        },
+                                gridLines: {
+                                    color: 'rgba(200, 200, 200, 0.08)',
+                                    lineWidth: 1
+                                }
+                            }],
+                        xAxes:[{
+                        ticks: {
+                            fontColor: '#5e6a81'
+                        }
+                        }]
+                        },
+                        elements: {
+                            line: {
+                                tension: 0.4
+                            }
+                        },
+                        legend: {
+                            display: true
+                        },
+                        point: {
+                            backgroundColor: '#00c7d6'
+                        },
+                        tooltips: {
+                            titleFontFamily: 'Poppins',
+                            backgroundColor: 'rgba(0,0,0,0.4)',
+                            titleFontColor: 'white',
+                            caretSize: 5,
+                            cornerRadius: 2,
+                            xPadding: 10,
+                            yPadding: 10
+                        }
+                    }
                 },
                 {
                     type: 'line',
@@ -384,53 +370,53 @@ function readCSVFile(){
                     },
                     options:{
 
-    chartArea: {
-        backgroundColor: 'rgba(251, 85, 85, 0.4)'
-    },
-	responsive: true,
-	maintainAspectRatio: true,
-	animation: {
-		easing: 'easeInOutQuad',
-		duration: 520
-	},
-	scales: {
-		yAxes: [{
-      ticks: {
-	    beginAtZero: true,
-        fontColor: '#5e6a81'
-      },
-			gridLines: {
-				color: 'rgba(200, 200, 200, 0.08)',
-				lineWidth: 1
-			}
-		}],
-    xAxes:[{
-      ticks: {
-        fontColor: '#5e6a81'
-      }
-    }]
-	},
-	elements: {
-		line: {
-			tension: 0.4
-		}
-	},
-	legend: {
-		display: false
-	},
-	point: {
-		backgroundColor: '#00c7d6'
-	},
-	tooltips: {
-		titleFontFamily: 'Poppins',
-		backgroundColor: 'rgba(0,0,0,0.4)',
-		titleFontColor: 'white',
-		caretSize: 5,
-		cornerRadius: 2,
-		xPadding: 10,
-		yPadding: 10
-	}
-}
+                        chartArea: {
+                            backgroundColor: 'rgba(251, 85, 85, 0.4)'
+                        },
+                        responsive: true,
+                        maintainAspectRatio: true,
+                        animation: {
+                            easing: 'easeInOutQuad',
+                            duration: 520
+                        },
+                        scales: {
+                            yAxes: [{
+                        ticks: {
+                            beginAtZero: true,
+                            fontColor: '#5e6a81'
+                        },
+                                gridLines: {
+                                    color: 'rgba(200, 200, 200, 0.08)',
+                                    lineWidth: 1
+                                }
+                            }],
+                        xAxes:[{
+                        ticks: {
+                            fontColor: '#5e6a81'
+                        }
+                        }]
+                        },
+                        elements: {
+                            line: {
+                                tension: 0.4
+                            }
+                        },
+                        legend: {
+                            display: true
+                        },
+                        point: {
+                            backgroundColor: '#00c7d6'
+                        },
+                        tooltips: {
+                            titleFontFamily: 'Poppins',
+                            backgroundColor: 'rgba(0,0,0,0.4)',
+                            titleFontColor: 'white',
+                            caretSize: 5,
+                            cornerRadius: 2,
+                            xPadding: 10,
+                            yPadding: 10
+                        }
+                    }
                 }, 
                 {
                     type: 'line',
@@ -457,55 +443,55 @@ function readCSVFile(){
                     },
                     options:{
 
-    chartArea: {
-        backgroundColor: 'rgba(251, 85, 85, 0.4)'
-    },
-	responsive: true,
-	maintainAspectRatio: true,
-	animation: {
-		easing: 'easeInOutQuad',
-		duration: 520
-	},
-	scales: {
-		yAxes: [{
-      ticks: {
-	    beginAtZero: true,
-        fontColor: '#5e6a81'
-      },
-			gridLines: {
-				color: 'rgba(200, 200, 200, 0.08)',
-				lineWidth: 1
-			}
-		}],
-    xAxes:[{
-      ticks: {
-        fontColor: '#5e6a81'
-      }
-    }]
-	},
-	elements: {
-		line: {
-			tension: 0.4
-		}
-	},
-	legend: {
-		display: false
-	},
-	point: {
-		backgroundColor: '#00c7d6'
-	},
-	tooltips: {
-		titleFontFamily: 'Poppins',
-		backgroundColor: 'rgba(0,0,0,0.4)',
-		titleFontColor: 'white',
-		caretSize: 5,
-		cornerRadius: 2,
-		xPadding: 10,
-		yPadding: 10
-	}
-}
+                        chartArea: {
+                            backgroundColor: 'rgba(251, 85, 85, 0.4)'
+                        },
+                        responsive: true,
+                        maintainAspectRatio: true,
+                        animation: {
+                            easing: 'easeInOutQuad',
+                            duration: 520
+                        },
+                        scales: {
+                            yAxes: [{
+                        ticks: {
+                            beginAtZero: true,
+                            fontColor: '#5e6a81'
+                        },
+                                gridLines: {
+                                    color: 'rgba(200, 200, 200, 0.08)',
+                                    lineWidth: 1
+                                }
+                            }],
+                        xAxes:[{
+                        ticks: {
+                            fontColor: '#5e6a81'
+                        }
+                        }]
+                        },
+                        elements: {
+                            line: {
+                                tension: 0.4
+                            }
+                        },
+                        legend: {
+                            display: true
+                        },
+                        point: {
+                            backgroundColor: '#00c7d6'
+                        },
+                        tooltips: {
+                            titleFontFamily: 'Poppins',
+                            backgroundColor: 'rgba(0,0,0,0.4)',
+                            titleFontColor: 'white',
+                            caretSize: 5,
+                            cornerRadius: 2,
+                            xPadding: 10,
+                            yPadding: 10
+                        }
+                    }
                 }, 
-{
+                {
                     type: 'bar',
                     data: {
                         //x-axis
@@ -515,59 +501,58 @@ function readCSVFile(){
                             label: 'Доход в прошлом',
                             data: getAllColumn(array, 7),
                             borderWidth: 1,
-							pointBackgroundColor: '#00c7d6',
+                            pointBackgroundColor: '#00c7d6',
                             borderColor: '#0e1a2f',
                             backgroundColor: '#030bff',
                         }]
                     },
                     options:{
-
-    chartArea: {
-        backgroundColor: 'rgba(251, 85, 85, 0.4)'
-    },
-	responsive: true,
-	maintainAspectRatio: true,
-	animation: {
-		easing: 'easeInOutQuad',
-		duration: 520
-	},
-	scales: {
-		yAxes: [{
-      ticks: {
-        fontColor: '#5e6a81'
-      },
-			gridLines: {
-				color: 'rgba(200, 200, 200, 0.08)',
-				lineWidth: 1
-			}
-		}],
-    xAxes:[{
-      ticks: {
-        fontColor: '#5e6a81'
-      }
-    }]
-	},
-	elements: {
-		line: {
-			tension: 0.4
-		}
-	},
-	legend: {
-		display: false
-	},
-	point: {
-		backgroundColor: '#00c7d6'
-	},
-	tooltips: {
-		titleFontFamily: 'Poppins',
-		backgroundColor: 'rgba(0,0,0,0.4)',
-		titleFontColor: 'white',
-		caretSize: 5,
-		cornerRadius: 2,
-		xPadding: 10,
-		yPadding: 10
-	}
-}
+                        chartArea: {
+                            backgroundColor: 'rgba(251, 85, 85, 0.4)'
+                        },
+                        responsive: true,
+                        maintainAspectRatio: true,
+                        animation: {
+                            easing: 'easeInOutQuad',
+                            duration: 520
+                        },
+                        scales: {
+                            yAxes: [{
+                        ticks: {
+                            fontColor: '#5e6a81'
+                        },
+                                gridLines: {
+                                    color: 'rgba(200, 200, 200, 0.08)',
+                                    lineWidth: 1
+                                }
+                            }],
+                        xAxes:[{
+                        ticks: {
+                            fontColor: '#5e6a81'
+                        }
+                        }]
+                        },
+                        elements: {
+                            line: {
+                                tension: 0.4
+                            }
+                        },
+                        legend: {
+                            display: true
+                        },
+                        point: {
+                            backgroundColor: '#00c7d6'
+                        },
+                        tooltips: {
+                            titleFontFamily: 'Poppins',
+                            backgroundColor: 'rgba(0,0,0,0.4)',
+                            titleFontColor: 'white',
+                            caretSize: 5,
+                            cornerRadius: 2,
+                            xPadding: 10,
+                            yPadding: 10
+                        }
+                    }
                 }, 
                 {
                     type: 'bar',
@@ -586,52 +571,52 @@ function readCSVFile(){
                     },
                     options:{
 
-    chartArea: {
-        backgroundColor: 'rgba(251, 85, 85, 0.4)'
-    },
-	responsive: true,
-	maintainAspectRatio: true,
-	animation: {
-		easing: 'easeInOutQuad',
-		duration: 520
-	},
-	scales: {
-		yAxes: [{
-      ticks: {
-        fontColor: '#5e6a81'
-      },
-			gridLines: {
-				color: 'rgba(200, 200, 200, 0.08)',
-				lineWidth: 1
-			}
-		}],
-    xAxes:[{
-      ticks: {
-        fontColor: '#5e6a81'
-      }
-    }]
-	},
-	elements: {
-		line: {
-			tension: 0.4
-		}
-	},
-	legend: {
-		display: false
-	},
-	point: {
-		backgroundColor: '#00c7d6'
-	},
-	tooltips: {
-		titleFontFamily: 'Poppins',
-		backgroundColor: 'rgba(0,0,0,0.4)',
-		titleFontColor: 'white',
-		caretSize: 5,
-		cornerRadius: 2,
-		xPadding: 10,
-		yPadding: 10
-	}
-}
+                        chartArea: {
+                            backgroundColor: 'rgba(251, 85, 85, 0.4)'
+                        },
+                        responsive: true,
+                        maintainAspectRatio: true,
+                        animation: {
+                            easing: 'easeInOutQuad',
+                            duration: 520
+                        },
+                        scales: {
+                            yAxes: [{
+                        ticks: {
+                            fontColor: '#5e6a81'
+                        },
+                                gridLines: {
+                                    color: 'rgba(200, 200, 200, 0.08)',
+                                    lineWidth: 1
+                                }
+                            }],
+                        xAxes:[{
+                        ticks: {
+                            fontColor: '#5e6a81'
+                        }
+                        }]
+                        },
+                        elements: {
+                            line: {
+                                tension: 0.4
+                            }
+                        },
+                        legend: {
+                            display: true
+                        },
+                        point: {
+                            backgroundColor: '#00c7d6'
+                        },
+                        tooltips: {
+                            titleFontFamily: 'Poppins',
+                            backgroundColor: 'rgba(0,0,0,0.4)',
+                            titleFontColor: 'white',
+                            caretSize: 5,
+                            cornerRadius: 2,
+                            xPadding: 10,
+                            yPadding: 10
+                        }
+                    }
                 }, 
                 {
                     type: 'bar',
@@ -650,52 +635,52 @@ function readCSVFile(){
                     },
                     options:{
 
-    chartArea: {
-        backgroundColor: 'rgba(251, 85, 85, 0.4)'
-    },
-	responsive: true,
-	maintainAspectRatio: true,
-	animation: {
-		easing: 'easeInOutQuad',
-		duration: 520
-	},
-	scales: {
-		yAxes: [{
-      ticks: {
-        fontColor: '#5e6a81'
-      },
-			gridLines: {
-				color: 'rgba(200, 200, 200, 0.08)',
-				lineWidth: 1
-			}
-		}],
-    xAxes:[{
-      ticks: {
-        fontColor: '#5e6a81'
-      }
-    }]
-	},
-	elements: {
-		line: {
-			tension: 0.4
-		}
-	},
-	legend: {
-		display: false
-	},
-	point: {
-		backgroundColor: '#00c7d6'
-	},
-	tooltips: {
-		titleFontFamily: 'Poppins',
-		backgroundColor: 'rgba(0,0,0,0.4)',
-		titleFontColor: 'white',
-		caretSize: 5,
-		cornerRadius: 2,
-		xPadding: 10,
-		yPadding: 10
-	}
-}
+                        chartArea: {
+                            backgroundColor: 'rgba(251, 85, 85, 0.4)'
+                        },
+                        responsive: true,
+                        maintainAspectRatio: true,
+                        animation: {
+                            easing: 'easeInOutQuad',
+                            duration: 520
+                        },
+                        scales: {
+                            yAxes: [{
+                        ticks: {
+                            fontColor: '#5e6a81'
+                        },
+                                gridLines: {
+                                    color: 'rgba(200, 200, 200, 0.08)',
+                                    lineWidth: 1
+                                }
+                            }],
+                        xAxes:[{
+                        ticks: {
+                            fontColor: '#5e6a81'
+                        }
+                        }]
+                        },
+                        elements: {
+                            line: {
+                                tension: 0.4
+                            }
+                        },
+                        legend: {
+                            display: true
+                        },
+                        point: {
+                            backgroundColor: '#00c7d6'
+                        },
+                        tooltips: {
+                            titleFontFamily: 'Poppins',
+                            backgroundColor: 'rgba(0,0,0,0.4)',
+                            titleFontColor: 'white',
+                            caretSize: 5,
+                            cornerRadius: 2,
+                            xPadding: 10,
+                            yPadding: 10
+                        }
+                    }
                 },
                 {
                     type: 'bar',
@@ -715,53 +700,53 @@ function readCSVFile(){
                     },
                     options:{
 
-    chartArea: {
-        backgroundColor: 'rgba(251, 85, 85, 0.4)'
-    },
-	responsive: true,
-	maintainAspectRatio: true,
-	animation: {
-		easing: 'easeInOutQuad',
-		duration: 520
-	},
-	scales: {
-		yAxes: [{
-      ticks: {
-	 
-        fontColor: '#5e6a81'
-      },
-			gridLines: {
-				color: 'rgba(200, 200, 200, 0.08)',
-				lineWidth: 1
-			}
-		}],
-    xAxes:[{
-      ticks: {
-        fontColor: '#5e6a81'
-      }
-    }]
-	},
-	elements: {
-		line: {
-			tension: 0.4
-		}
-	},
-	legend: {
-		display: false
-	},
-	point: {
-		backgroundColor: '#00c7d6'
-	},
-	tooltips: {
-		titleFontFamily: 'Poppins',
-		backgroundColor: 'rgba(0,0,0,0.4)',
-		titleFontColor: 'white',
-		caretSize: 5,
-		cornerRadius: 2,
-		xPadding: 10,
-		yPadding: 10
-	}
-}
+                        chartArea: {
+                            backgroundColor: 'rgba(251, 85, 85, 0.4)'
+                        },
+                        responsive: true,
+                        maintainAspectRatio: true,
+                        animation: {
+                            easing: 'easeInOutQuad',
+                            duration: 520
+                        },
+                        scales: {
+                            yAxes: [{
+                        ticks: {
+                        
+                            fontColor: '#5e6a81'
+                        },
+                                gridLines: {
+                                    color: 'rgba(200, 200, 200, 0.08)',
+                                    lineWidth: 1
+                                }
+                            }],
+                        xAxes:[{
+                        ticks: {
+                            fontColor: '#5e6a81'
+                        }
+                        }]
+                        },
+                        elements: {
+                            line: {
+                                tension: 0.4
+                            }
+                        },
+                        legend: {
+                            display: true
+                        },
+                        point: {
+                            backgroundColor: '#00c7d6'
+                        },
+                        tooltips: {
+                            titleFontFamily: 'Poppins',
+                            backgroundColor: 'rgba(0,0,0,0.4)',
+                            titleFontColor: 'white',
+                            caretSize: 5,
+                            cornerRadius: 2,
+                            xPadding: 10,
+                            yPadding: 10
+                        }
+                    }
                 },
                 {
                     type: 'line',
@@ -788,52 +773,52 @@ function readCSVFile(){
                     },
                     options:{
 
-    chartArea: {
-        backgroundColor: 'rgba(251, 85, 85, 0.4)'
-    },
-	responsive: true,
-	maintainAspectRatio: true,
-	animation: {
-		easing: 'easeInOutQuad',
-		duration: 520
-	},
-	scales: {
-		yAxes: [{
-      ticks: {
-        fontColor: '#5e6a81'
-      },
-			gridLines: {
-				color: 'rgba(200, 200, 200, 0.08)',
-				lineWidth: 1
-			}
-		}],
-    xAxes:[{
-      ticks: {
-        fontColor: '#5e6a81'
-      }
-    }]
-	},
-	elements: {
-		line: {
-			tension: 0.4
-		}
-	},
-	legend: {
-		display: false
-	},
-	point: {
-		backgroundColor: '#00c7d6'
-	},
-	tooltips: {
-		titleFontFamily: 'Poppins',
-		backgroundColor: 'rgba(0,0,0,0.4)',
-		titleFontColor: 'white',
-		caretSize: 5,
-		cornerRadius: 2,
-		xPadding: 10,
-		yPadding: 10
-	}
-}
+                        chartArea: {
+                            backgroundColor: 'rgba(251, 85, 85, 0.4)'
+                        },
+                        responsive: true,
+                        maintainAspectRatio: true,
+                        animation: {
+                            easing: 'easeInOutQuad',
+                            duration: 520
+                        },
+                        scales: {
+                            yAxes: [{
+                        ticks: {
+                            fontColor: '#5e6a81'
+                        },
+                                gridLines: {
+                                    color: 'rgba(200, 200, 200, 0.08)',
+                                    lineWidth: 1
+                                }
+                            }],
+                        xAxes:[{
+                        ticks: {
+                            fontColor: '#5e6a81'
+                        }
+                        }]
+                        },
+                        elements: {
+                            line: {
+                                tension: 0.4
+                            }
+                        },
+                        legend: {
+                            display: true
+                        },
+                        point: {
+                            backgroundColor: '#00c7d6'
+                        },
+                        tooltips: {
+                            titleFontFamily: 'Poppins',
+                            backgroundColor: 'rgba(0,0,0,0.4)',
+                            titleFontColor: 'white',
+                            caretSize: 5,
+                            cornerRadius: 2,
+                            xPadding: 10,
+                            yPadding: 10
+                        }
+                    }
                 },
                 {
                     type: 'line',
@@ -859,53 +844,52 @@ function readCSVFile(){
                         }]
                     },
                     options:{
-
-    chartArea: {
-        backgroundColor: 'rgba(251, 85, 85, 0.4)'
-    },
-	responsive: true,
-	maintainAspectRatio: true,
-	animation: {
-		easing: 'easeInOutQuad',
-		duration: 520
-	},
-	scales: {
-		yAxes: [{
-      ticks: {
-        fontColor: '#5e6a81'
-      },
-			gridLines: {
-				color: 'rgba(200, 200, 200, 0.08)',
-				lineWidth: 1
-			}
-		}],
-    xAxes:[{
-      ticks: {
-        fontColor: '#5e6a81'
-      }
-    }]
-	},
-	elements: {
-		line: {
-			tension: 0.4
-		}
-	},
-	legend: {
-		display: false
-	},
-	point: {
-		backgroundColor: '#00c7d6'
-	},
-	tooltips: {
-		titleFontFamily: 'Poppins',
-		backgroundColor: 'rgba(0,0,0,0.4)',
-		titleFontColor: 'white',
-		caretSize: 5,
-		cornerRadius: 2,
-		xPadding: 10,
-		yPadding: 10
-	}
-}
+                        chartArea: {
+                            backgroundColor: 'rgba(251, 85, 85, 0.4)'
+                        },
+                        responsive: true,
+                        maintainAspectRatio: true,
+                        animation: {
+                            easing: 'easeInOutQuad',
+                            duration: 520
+                        },
+                        scales: {
+                            yAxes: [{
+                        ticks: {
+                            fontColor: '#5e6a81'
+                        },
+                                gridLines: {
+                                    color: 'rgba(200, 200, 200, 0.08)',
+                                    lineWidth: 1
+                                }
+                            }],
+                        xAxes:[{
+                        ticks: {
+                            fontColor: '#5e6a81'
+                        }
+                        }]
+                        },
+                        elements: {
+                            line: {
+                                tension: 0.4
+                            }
+                        },
+                        legend: {
+                            display: true
+                        },
+                        point: {
+                            backgroundColor: '#00c7d6'
+                        },
+                        tooltips: {
+                            titleFontFamily: 'Poppins',
+                            backgroundColor: 'rgba(0,0,0,0.4)',
+                            titleFontColor: 'white',
+                            caretSize: 5,
+                            cornerRadius: 2,
+                            xPadding: 10,
+                            yPadding: 10
+                        }
+                    }
                 },
             ];
 
