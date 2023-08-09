@@ -150,6 +150,7 @@ const interfaceFunctions = () => {
             audio.pause();
             $(".popupMsgWrapper").addClass("hidden");
             $('.upload').removeClass('stop');
+            $("canvas:not(.chartJs)").fadeOut("slow");
             $("#play").css("display", "none");
         } else {
             console.log('play');
