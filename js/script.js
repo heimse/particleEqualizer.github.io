@@ -565,7 +565,7 @@ function readCSVFile(){
                             yPadding: 10
                         },
                         chartCustomTitle: {
-                            text: `Доход в прошлом<br>Всего: ${getSumm(getAllColumn(array, 7))}%`
+                            text: `Доход в прошлом<br>Всего: ${getSumm(getAllColumn(array, 7))}`
                         }
                     }
                 }, 
@@ -631,7 +631,7 @@ function readCSVFile(){
                             yPadding: 10
                         },
                         chartCustomTitle: {
-                            text: `Доход в будущем<br>Всего: ${getSumm(getAllColumn(array, 14))}%`
+                            text: `Доход в будущем<br>Всего: ${getSumm(getAllColumn(array, 14))}`
                         }
                     }
                 }, 
@@ -963,7 +963,7 @@ function getAverage(numbers) {
     return Math.ceil(sum / length);
 };
 function getSumm(numbers) {
-    return numbers.reduce((acc, number) => +acc + +number, 0);
+    return Math.ceil(numbers.reduce((acc, number) => +acc + +number, 0));
 }
 function getAllColumn(array, myIndex) {
     let newArray = [];
