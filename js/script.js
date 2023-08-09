@@ -281,7 +281,7 @@ function readCSVFile(){
                             yPadding: 10
                         },
                         chartCustomTitle: {
-                            text: "My custom title"
+                            text: `Загрузка в комнатах в прошлом<br>${getAverage(getAllColumn(array, 5))}`
                         }
                     }
                 },
@@ -942,7 +942,11 @@ function drawChart(id, settings) {
     }
     new Chart(ctx, settings);
 }
-
+function getAverage(numbers) {
+    const sum = numbers.reduce((acc, number) => acc + number, 0);
+    const length = numbers.length;
+    return Math.ceil(sum / length);
+};
 function getAllColumn(array, myIndex) {
     let newArray = [];
     array.forEach((element,i) => {
