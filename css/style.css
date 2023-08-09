@@ -241,7 +241,7 @@ canvas:not(.chartJs){
 .charts-row {
 	display: flex;
 	width: 100%;
-    height: 300px;
+    height: 365px;
 	justify-content: space-evenly;
 	margin: 35px 0;
 }
@@ -254,8 +254,18 @@ canvas:not(.chartJs){
 div.chartsWrapper > div.forecast {
 	margin: 100px 0 0 0;
 }
+.charts-row-wrapper {
+	display: flex;
+    max-width: 100%;
+    height: 100%;
+    justify-content: space-between;
+	-webkit-box-shadow: 0px 0px 14px 9px rgba(34, 60, 80, 0.33);
+	-moz-box-shadow: 0px 0px 14px 9px rgba(34, 60, 80, 0.33);
+	box-shadow: 0px 0px 14px 9px rgba(34, 60, 80, 0.33);
+	border-radius: 10px;
+}
 .charts-column {
-	margin: 20px 0;
+	margin: 40px 50px;
 	height: 300px;
 	display: flex;
 	flex-direction: column;
