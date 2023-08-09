@@ -272,7 +272,7 @@ function readCSVFile(){
                             }
                         },
                         legend: {
-                            display: false
+                            display: true
                         },
                         point: {
                             backgroundColor: '#00c7d6'
