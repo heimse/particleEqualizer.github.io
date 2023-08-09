@@ -300,7 +300,7 @@ function readCSVFile(){
                             backgroundColor: '#02faf2',
                         },{
                             //y-axis
-                            label: 'Загрузка в комнатах в будущем',
+                            label: 'Загрузка в комнатах в прошлом',
                             data: getAllColumn(array, 5),
                             borderWidth: 1,
 							pointBackgroundColor: '#00c7d6',
