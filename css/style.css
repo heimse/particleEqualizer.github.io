@@ -252,7 +252,7 @@ canvas:not(.chartJs){
     justify-content: center;
     align-items: center;
 }
-.charts-row:has(.charts-column:has(> .forecast)) {
+.charts-row:has(.forecast) {
 	height: 100px !important;
 }
 .charts-column:has(> .forecast) {
