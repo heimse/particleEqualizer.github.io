@@ -919,16 +919,13 @@ function readCSVFile(){
                             xPadding: 10,
                             yPadding: 10
                         },
-                        chartCustomTitle: {
-                            //text: `Прогноз загрузки в процентах <br>Среднее значение: ${getAverage(getAllColumn(array, 18))}%`
-                        },
                         plugins: {
                             title: {
                                 display: true,
-                                text: `Прогноз загрузки в процентах <br>Среднее значение: ${getAverage(getAllColumn(array, 18))}%`,
+                                text: `Прогноз загрузки в процентах U+000A &#10; Среднее значение: ${getAverage(getAllColumn(array, 18))}%`,
                                 color: '#ffffff',
                                 font: {
-                                    size: 14
+                                    size: 20
                                 },
                                 padding: {
                                     top: 10,
@@ -943,6 +940,7 @@ function readCSVFile(){
             for(let i = 1; i <= settingsArray.length; i++) {
                 drawChart(i, settingsArray[i-1]);
             }
+
             const rows = document.querySelectorAll(".tg tr");
             const futureDates = getAllColumn(array, 10);
             const reccomendation = getAllColumn(array, 20);
@@ -1013,9 +1011,6 @@ function readCSVFile(){
 }
 function drawChart(id, settings) {
     const ctx = $(`#myChart${id}`);
-    if(settings.options.chartCustomTitle) {
-        $(`#myChart${id}`).parent().prepend(`<h2 class="chartCustomTitle">${settings.options.chartCustomTitle.text}</h2>`);
-    }
     new Chart(ctx, settings);
 }
 function getAverage(numbers) {
@@ -1122,7 +1117,6 @@ function CSVToArray( strData, strDelimiter ){
 	
 	
 }
-
 function getColorsSequence(array) {
     const tickColors = [];
     getAllColumn(array, 3).forEach((dataPoint) => {
