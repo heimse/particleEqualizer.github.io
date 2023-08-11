@@ -886,10 +886,10 @@ function readCSVFile(){
                                 ticks: {
                                     color: ['red', 'blue'],
                                 },
-                                gridLines: {
-                                    color: 'rgba(200, 200, 200, 0.08)',
-                                    lineWidth: 1
-                                }
+                                // gridLines: {
+                                //     color: 'rgba(200, 200, 200, 0.08)',
+                                //     lineWidth: 1
+                                // }
                             }],
                             xAxes:[{
                                 ticks: {
