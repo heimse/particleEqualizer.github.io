@@ -272,12 +272,20 @@ div.chartsWrapper > div.forecast {
     justify-content: center;
     align-items: center;
 }
-.charts-row:has(.forecast) {
+/* .charts-row:has(.forecast) {
 	height: auto !important;
 }
 .charts-column:has(> .forecast) {
 	height: 100px !important;
+} */
+
+.short {
+	height: auto !important;
 }
+.short > .charts-column {
+	height: 100px !important;
+}
+
 .forecast {
 	font-size: 40px;
 	color: #fff;

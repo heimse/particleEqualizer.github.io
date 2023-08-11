@@ -882,23 +882,23 @@ function readCSVFile(){
                         },
                         scales: {
                             yAxes: [{
-                        ticks: {
-                            fontColor: '#5e6a81'
-                        },
+                                ticks: {
+                                    fontColor: '#5e6a81'
+                                },
                                 gridLines: {
                                     color: 'rgba(200, 200, 200, 0.08)',
                                     lineWidth: 1
                                 }
                             }],
-                        xAxes:[{
-                            ticks: {
-                                color: ['red', 'green', 'blue'],
-                                textStrokeColor: ['red', 'green', 'blue'],
-                                textStrokeWidth: 2,
-                                z: 999,
-                                display: true,
-                            }
-                        }]
+                            xAxes:[{
+                                ticks: {
+                                    color: ['red', 'green', 'blue'],
+                                    textStrokeColor: ['red', 'green', 'blue'],
+                                    textStrokeWidth: 2,
+                                    z: 999,
+                                    display: true,
+                                }
+                            }]
                         },
                         elements: {
                             line: {
@@ -906,7 +906,7 @@ function readCSVFile(){
                             }
                         },
                         legend: {
-                            display: false
+                            display: true
                         },
                         point: {
                             backgroundColor: '#00c7d6'
@@ -921,7 +921,7 @@ function readCSVFile(){
                             yPadding: 10
                         },
                         chartCustomTitle: {
-                            text: `Прогноз загрузки в комнатах <br>Среднее значение: ${getAverage(getAllColumn(array, 18))}`
+                            text: `Прогноз загрузки в процентах <br>Среднее значение: ${getAverage(getAllColumn(array, 18))}%`
                         }  
                     }
                 },
@@ -1072,3 +1072,45 @@ function CSVToArray( strData, strDelimiter ){
 	
 }
 
+$('#downloadPdf').click(function(event) {
+    // get size of report page
+    var reportPageHeight = $('#reportPage').innerHeight();
+    var reportPageWidth = $('#reportPage').innerWidth();
+    
+    // create a new canvas object that we will populate with all other canvas objects
+    var pdfCanvas = $('<canvas />').attr({
+      id: "canvaspdf",
+      width: reportPageWidth,
+      height: reportPageHeight
+    });
+    
+    // keep track canvas position
+    var pdfctx = $(pdfCanvas)[0].getContext('2d');
+    var pdfctxX = 0;
+    var pdfctxY = 0;
+    var buffer = 100;
+    
+    // for each chart.js chart
+    $("canvas.chartJs").each(function(index) {
+      // get the chart height/width
+      var canvasHeight = $(this).innerHeight();
+      var canvasWidth = $(this).innerWidth();
+      
+      // draw the chart into the new canvas
+      pdfctx.drawImage($(this)[0], pdfctxX, pdfctxY, canvasWidth, canvasHeight);
+      pdfctxX += canvasWidth + buffer;
+      
+      // our report page is in a grid pattern so replicate that in the new canvas
+      if (index % 2 === 1) {
+        pdfctxX = 0;
+        pdfctxY += canvasHeight + buffer;
+      }
+    });
+    
+    // create new pdf and add our new canvas as an image
+    var pdf = new jsPDF('l', 'pt', [reportPageWidth, reportPageHeight]);
+    pdf.addImage($(pdfCanvas)[0], 'PNG', 0, 0);
+    
+    // download the pdf
+    pdf.save('filename.pdf');
+});
