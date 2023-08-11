@@ -925,7 +925,9 @@ function readCSVFile(){
                         plugins: {
                             title: {
                                 display: true,
-                                text: 'Custom Chart Title'
+                                text: 'Custom Chart Title',
+                                color: '#ffffff',
+                                fontSize: 20
                             }
                         } 
                     }
