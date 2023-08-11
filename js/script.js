@@ -1087,8 +1087,8 @@ function readCSVFile(){
 
             $('.downloadPDF').bind('click', () => {
                 // get size of report page
-                var reportPageHeight = $('.chartJs').innerHeight() * 5;
-                var reportPageWidth = $('.chartJs').innerWidth() * 2.5;
+                var reportPageHeight = $('body').innerHeight();
+                var reportPageWidth = $('body').innerWidth();
             
                 // create a new canvas object that we will populate with all other canvas objects
                 var pdfCanvas = $('<canvas />').attr({
