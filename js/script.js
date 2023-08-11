@@ -884,7 +884,7 @@ function readCSVFile(){
                         scales: {
                             y: {
                                 ticks: {
-                                    color: ['#ff0000', '#008000'],
+                                    color: ['#ffffff'],
                                 },
                                 gridLines: {
                                     color: 'rgba(200, 200, 200, 0.08)',
@@ -893,9 +893,9 @@ function readCSVFile(){
                             },
                             x:{
                                 ticks: {
-                                    color: ['#ff0000', '#008000'],
+                                    color: getColorsSequence(),
                                     textStrokeColor: ['#ff0000', '#008000'],
-                                    textStrokeWidth: 2,
+                                    textStrokeWidth: 1,
                                     z: 999,
                                     display: true,
                                 }
@@ -1113,4 +1113,14 @@ function CSVToArray( strData, strDelimiter ){
 	
 }
 
-
+function getColorsSequence() {
+    const tickColors = [];
+    getAllColumn(array, 3).forEach((dataPoint) => {
+        if(dataPoint == 'green') {
+            tickColors.push('#07ab25')
+        } else {
+            tickColors.push('#ab0715')
+        }
+    });
+    return tickColors;
+}
