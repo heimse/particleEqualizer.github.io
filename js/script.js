@@ -488,7 +488,7 @@ function readCSVFile(){
                             borderWidth: 1,
 							pointBackgroundColor: '#00c7d6',
                             borderColor: '#0e1a2f',
-                            backgroundColor: '#02faf2',
+                            backgroundColor: '#02fa93',
                             fill: true
                         }]
                     },
@@ -884,6 +884,7 @@ function readCSVFile(){
                             borderWidth: 1,
 							pointBackgroundColor: '#00c7d6',
                             borderColor: '#0e1a2f',
+                            backgroundColor: '#02fa00',
                             fill: true
                         },{
                             //y-axis
@@ -893,6 +894,7 @@ function readCSVFile(){
 							pointBackgroundColor: '#00c7d6',
                             borderColor: '#0e1a2f',
                             backgroundColor: '#02faf2',
+                            fill: true
                         }]
                     },
                     options:{
@@ -971,6 +973,7 @@ function readCSVFile(){
                             borderWidth: 1,
 							pointBackgroundColor: '#00c7d6',
                             borderColor: '#0e1a2f',
+                            backgroundColor: '#000053',
                             fill: true
                         },{
                             //y-axis
@@ -979,7 +982,8 @@ function readCSVFile(){
                             borderWidth: 1,
 							pointBackgroundColor: '#00c7d6',
                             borderColor: '#0e1a2f',
-                            backgroundColor: '#02faf2',
+                            backgroundColor: '#02e1d9',
+                            fill: true
                         }]
                     },
                     options:{
