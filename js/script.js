@@ -247,11 +247,11 @@ function readCSVFile(){
                         },
                         scales: {
                             y: {
+                                beginAtZero: true,
+                                max: Math.max(...getAllColumn(array, 5)),
                                 ticks: {
                                     color: '#5e6a81',
                                     stepSize: 5,
-                                    beginAtZero: true,
-                                    max: Math.max(...getAllColumn(array, 5))
                                 },
                                 gridLines: {
                                     color: 'rgba(200, 200, 200, 0.08)',
@@ -260,7 +260,7 @@ function readCSVFile(){
                             },
                             x:{
                                 ticks: {
-                                    color: '#5e6a81'
+                                    color: getColorsSequence(array, 2),
                                 }
                             }
                         },
@@ -1005,7 +1005,7 @@ function readCSVFile(){
                             },
                             x:{
                                 ticks: {
-                                    color: getColorsSequence(array),
+                                    color: getColorsSequence(array, 10),
                                     z: 999,
                                     display: true,
                                 }
@@ -1234,9 +1234,9 @@ function CSVToArray( strData, strDelimiter ){
 	
 	
 }
-function getColorsSequence(array) {
+function getColorsSequence(array, index) {
     const tickColors = [];
-    getAllColumn(array, 3).forEach((dataPoint) => {
+    getAllColumn(array, index).forEach((dataPoint) => {
         if(dataPoint == 'green') {
             tickColors.push('#07ab25')
         } else {
