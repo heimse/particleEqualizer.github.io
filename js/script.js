@@ -248,7 +248,7 @@ function readCSVFile(){
                         scales: {
                             y: {
                                 ticks: {
-                                    color: '#5e6a81',
+                                    color: ['#ffffff'],
                                 },
                                 gridLines: {
                                     color: 'rgba(200, 200, 200, 0.08)',
@@ -333,7 +333,7 @@ function readCSVFile(){
                         scales: {
                             y: {
                                 ticks: {
-                                    color: '#5e6a81',
+                                    color: ['#ffffff'],
                                     // stepSize: 10,
                                 },
                                 gridLines: {
@@ -413,7 +413,7 @@ function readCSVFile(){
                             y: {
                                 ticks: {
                                     beginAtZero: true,
-                                    color: '#5e6a81',
+                                    color: ['#ffffff'],
                                     // stepSize: 5
                                 },
                                 gridLines: {
@@ -500,8 +500,7 @@ function readCSVFile(){
                         scales: {
                             y: {
                                 ticks: {
-                                    beginAtZero: true,
-                                    color: '#5e6a81',
+                                    color: ['#ffffff'],
                                     // stepSize: 5
                                 },
                                 gridLines: {
@@ -579,7 +578,7 @@ function readCSVFile(){
                         scales: {
                             y: {
                                 ticks: {
-                                    color: '#5e6a81',
+                                    color: '#ffffff',
                                     // stepSize: 5
                                 },
                                 gridLines: {
@@ -657,7 +656,7 @@ function readCSVFile(){
                         scales: {
                             y: {
                                 ticks: {
-                                    color: '#5e6a81',
+                                    color: '#ffffff',
                                     // stepSize: 5
                                 },
                                 gridLines: {
@@ -736,7 +735,7 @@ function readCSVFile(){
                         scales: {
                             y: {
                                 ticks: {
-                                    color: '#5e6a81',
+                                    color: '#ffffff',
                                     // stepSize: 5
                                 },
                                 gridLines: {
@@ -816,7 +815,7 @@ function readCSVFile(){
                         scales: {
                             y: {
                                 ticks: {
-                                    color: '#5e6a81',
+                                    color: '#ffffff',
                                     // stepSize: 5
                                 },
                                 gridLines: {
@@ -904,7 +903,7 @@ function readCSVFile(){
                         scales: {
                             y: {
                                 ticks: {
-                                    color: '#5e6a81',
+                                    color: '#ffffff',
                                     // stepSize: 5
                                 },
                                 gridLines: {
