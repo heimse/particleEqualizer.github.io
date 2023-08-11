@@ -920,8 +920,14 @@ function readCSVFile(){
                             yPadding: 10
                         },
                         chartCustomTitle: {
-                            text: `Прогноз загрузки в процентах <br>Среднее значение: ${getAverage(getAllColumn(array, 18))}%`
-                        }  
+                            //text: `Прогноз загрузки в процентах <br>Среднее значение: ${getAverage(getAllColumn(array, 18))}%`
+                        },
+                        plugins: {
+                            title: {
+                                display: true,
+                                text: 'Custom Chart Title'
+                            }
+                        } 
                     }
                 },
             ];
@@ -929,8 +935,6 @@ function readCSVFile(){
             for(let i = 1; i <= settingsArray.length; i++) {
                 drawChart(i, settingsArray[i-1]);
             }
-            
-            const table = document.querySelector(".tg");
             const rows = document.querySelectorAll(".tg tr");
             const futureDates = getAllColumn(array, 10);
             const reccomendation = getAllColumn(array, 20);
