@@ -369,7 +369,7 @@ function readCSVFile(){
                         plugins: {
                             title: {
                                 display: true,
-                                text: `Загрузка в комнатах в будущем <br>Среднее значение: ${getAverage(getAllColumn(array, 12))}`,
+                                text: `Загрузка в комнатах в будущем; Среднее значение: ${getAverage(getAllColumn(array, 12))}`,
                                 color: '#ffffff',
                                 font: {
                                     size: 20
@@ -535,7 +535,7 @@ function readCSVFile(){
                         plugins: {
                             title: {
                                 display: true,
-                                text: `Закрузка в процентах в будущем <br>Среднее значение: ${getAverage(getAllColumn(array, 13))}%`,
+                                text: `Закрузка в процентах в будущем; Среднее значение: ${getAverage(getAllColumn(array, 13))}%`,
                                 color: '#ffffff',
                                 font: {
                                     size: 20
@@ -612,7 +612,7 @@ function readCSVFile(){
                         plugins: {
                             title: {
                                 display: true,
-                                text: `Доход в прошлом<br>Всего: ${getSumm(getAllColumn(array, 7))}`,
+                                text: `Доход в прошлом; Всего: ${getSumm(getAllColumn(array, 7))}`,
                                 color: '#ffffff',
                                 font: {
                                     size: 20
@@ -689,7 +689,7 @@ function readCSVFile(){
                         plugins: {
                             title: {
                                 display: true,
-                                text: `Доход в будущем<br>Всего: ${getSumm(getAllColumn(array, 14))}`,
+                                text: `Доход в будущем;Всего: ${getSumm(getAllColumn(array, 14))}`,
                                 color: '#ffffff',
                                 font: {
                                     size: 20
@@ -767,7 +767,7 @@ function readCSVFile(){
                         plugins: {
                             title: {
                                 display: true,
-                                text: `Средний тариф в прошлом <br>Среднее значение: ${getAverage(getAllColumn(array, 8))}`,
+                                text: `Средний тариф в прошлом ;Среднее значение: ${getAverage(getAllColumn(array, 8))}`,
                                 color: '#ffffff',
                                 font: {
                                     size: 20
@@ -847,7 +847,7 @@ function readCSVFile(){
                         plugins: {
                             title: {
                                 display: true,
-                                text: `Средний тариф в будущем <br>Среднее значение: ${getAverage(getAllColumn(array, 15))}`,
+                                text: `Средний тариф в будущем ;Среднее значение: ${getAverage(getAllColumn(array, 15))}`,
                                 color: '#ffffff',
                                 font: {
                                     size: 20
@@ -934,7 +934,7 @@ function readCSVFile(){
                         plugins: {
                             title: {
                                 display: true,
-                                text: `Прогноз загрузки в комнатах <br>Среднее значение: ${getAverage(getAllColumn(array, 17))}`,
+                                text: `Прогноз загрузки в комнатах ;Среднее значение: ${getAverage(getAllColumn(array, 17))}`,
                                 color: '#ffffff',
                                 font: {
                                     size: 20
@@ -1123,14 +1123,14 @@ function getSumm(numbers) {
 function getAllColumn(array, myIndex) {
     let newArray = [];
     array.forEach((element,i) => {
-        newArray.push(array[i][0].split(';')[myIndex]);
+        newArray.push(+array[i][0].split(';')[myIndex]);
     });
     newArray.shift();
 
     newArray = newArray.filter(function( element ) {
         return element !== undefined;
     });
-
+    console.log(newArray);
     return newArray;
 }
 function CSVToArray( strData, strDelimiter ){
