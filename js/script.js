@@ -345,7 +345,7 @@ function readCSVFile(){
                             },
                             x: {
                                 ticks: {
-                                    color: getColorsSequence(array, 3),
+                                    color: getColorsSequence(array, 11),
                                 }
                             }
                         },
@@ -514,7 +514,7 @@ function readCSVFile(){
                             },
                             x:{
                                 ticks: {
-                                    color: getColorsSequence(array, 3),
+                                    color: getColorsSequence(array, 11),
                                 }
                             }
                         },
@@ -670,7 +670,7 @@ function readCSVFile(){
                             },
                             x: {
                                 ticks: {
-                                    color: getColorsSequence(array, 3),
+                                    color: getColorsSequence(array, 11),
                                 }
                             }
                         },
@@ -697,7 +697,7 @@ function readCSVFile(){
                         plugins: {
                             title: {
                                 display: true,
-                                text: `Доход в будущем;Всего: ${getSumm(getAllColumn(array, 14))}`,
+                                text: `Доход в будущем; Всего: ${getSumm(getAllColumn(array, 14))}`,
                                 color: '#ffffff',
                                 font: {
                                     size: 20
@@ -779,7 +779,7 @@ function readCSVFile(){
                         plugins: {
                             title: {
                                 display: true,
-                                text: `Средний тариф в прошлом ;Среднее значение: ${getAverage(getAllColumn(array, 8))}`,
+                                text: `Средний тариф в прошлом; Среднее значение: ${getAverage(getAllColumn(array, 8))}`,
                                 color: '#ffffff',
                                 font: {
                                     size: 20
@@ -835,7 +835,7 @@ function readCSVFile(){
                             },
                             x: {
                                 ticks: {
-                                    color: getColorsSequence(array, 3),
+                                    color: getColorsSequence(array, 11),
                                 }
                             }
                         },
@@ -859,7 +859,7 @@ function readCSVFile(){
                         plugins: {
                             title: {
                                 display: true,
-                                text: `Средний тариф в будущем ;Среднее значение: ${getAverage(getAllColumn(array, 15))}`,
+                                text: `Средний тариф в будущем; Среднее значение: ${getAverage(getAllColumn(array, 15))}`,
                                 color: '#ffffff',
                                 font: {
                                     size: 20
@@ -924,7 +924,7 @@ function readCSVFile(){
                             },
                             x: {
                                 ticks: {
-                                    color: getColorsSequence(array, 3),
+                                    color: getColorsSequence(array, 11),
                                     stacked: true,
                                 }
                             }
@@ -949,7 +949,7 @@ function readCSVFile(){
                         plugins: {
                             title: {
                                 display: true,
-                                text: `Прогноз загрузки в комнатах;Среднее значение: ${getAverage(getAllColumn(array, 17))}`,
+                                text: `Прогноз загрузки в комнатах; Среднее значение: ${getAverage(getAllColumn(array, 17))}`,
                                 color: '#ffffff',
                                 font: {
                                     size: 20
@@ -1015,7 +1015,7 @@ function readCSVFile(){
                             },
                             x:{
                                 ticks: {
-                                    color: getColorsSequence(array, 3),
+                                    color: getColorsSequence(array, 11),
                                     z: 999,
                                     display: true,
                                 }
