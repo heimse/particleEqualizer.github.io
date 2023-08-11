@@ -891,9 +891,13 @@ function readCSVFile(){
                                 }
                             }],
                         xAxes:[{
-                        ticks: {
-                            fontColor: ['red', 'green', 'blue'],
-                        }
+                            ticks: {
+                                color: ['red', 'green', 'blue'],
+                                textStrokeColor: ['red', 'green', 'blue'],
+                                textStrokeWidth: 2,
+                                z: 999,
+                                display: true,
+                            }
                         }]
                         },
                         elements: {
