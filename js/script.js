@@ -249,7 +249,9 @@ function readCSVFile(){
                             y: {
                                 ticks: {
                                     color: '#5e6a81',
-                                    // stepSize: 5
+                                    stepSize: 5,
+                                    beginAtZero: true,
+                                    max: Math.max(...getAllColumn(array, 5))
                                 },
                                 gridLines: {
                                     color: 'rgba(200, 200, 200, 0.08)',
