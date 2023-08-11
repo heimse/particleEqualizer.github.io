@@ -1119,7 +1119,7 @@ function readCSVFile(){
                   }
                 });
                 // create new pdf and add our new canvas as an image
-                var pdf = new jsPDF('portrait', 'pt', [790, 1500]);
+                var pdf = new jsPDF('portrait', 'pt', [reportPageHeight, reportPageWidth]);
                 pdf.addImage($(pdfCanvas)[0], 'PNG', 0, 0);
                 // download the pdf
                 pdf.save('report.pdf');
