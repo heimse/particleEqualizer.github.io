@@ -246,20 +246,21 @@ function readCSVFile(){
                             duration: 520
                         },
                         scales: {
-                            yAxes: [{
-                        ticks: {
-                            fontColor: '#5e6a81'
-                        },
+                            y: {
+                                ticks: {
+                                    color: '#5e6a81',
+                                    stepSize: 5
+                                },
                                 gridLines: {
                                     color: 'rgba(200, 200, 200, 0.08)',
                                     lineWidth: 1
                                 }
-                            }],
-                        xAxes:[{
-                        ticks: {
-                            fontColor: '#5e6a81'
-                        }
-                        }]
+                            },
+                            x:{
+                                ticks: {
+                                    color: '#5e6a81'
+                                }
+                            }
                         },
                         elements: {
                             line: {
@@ -331,20 +332,21 @@ function readCSVFile(){
                             duration: 520
                         },
                         scales: {
-                            yAxes: [{
-                        ticks: {
-                            fontColor: '#5e6a81'
-                        },
+                            y: {
+                                ticks: {
+                                    color: '#5e6a81',
+                                    stepSize: 10,
+                                },
                                 gridLines: {
                                     color: 'rgba(200, 200, 200, 0.08)',
                                     lineWidth: 1
                                 }
-                            }],
-                        xAxes:[{
-                        ticks: {
-                            fontColor: '#5e6a81'
-                        }
-                        }]
+                            },
+                            x: {
+                                ticks: {
+                                    color: '#5e6a81'
+                                }
+                            }
                         },
                         elements: {
                             line: {
@@ -409,21 +411,22 @@ function readCSVFile(){
                             duration: 520
                         },
                         scales: {
-                            yAxes: [{
-                        ticks: {
-                            beginAtZero: true,
-                            fontColor: '#5e6a81'
-                        },
+                            y: {
+                                ticks: {
+                                    beginAtZero: true,
+                                    color: '#5e6a81',
+                                    stepSize: 5
+                                },
                                 gridLines: {
                                     color: 'rgba(200, 200, 200, 0.08)',
                                     lineWidth: 1
                                 }
-                            }],
-                        xAxes:[{
-                        ticks: {
-                            fontColor: '#5e6a81'
-                        }
-                        }]
+                            },
+                            x: {
+                                ticks: {
+                                    color: '#5e6a81'
+                                }
+                            }
                         },
                         elements: {
                             line: {
@@ -496,21 +499,22 @@ function readCSVFile(){
                             duration: 520
                         },
                         scales: {
-                            yAxes: [{
-                        ticks: {
-                            beginAtZero: true,
-                            fontColor: '#5e6a81'
-                        },
+                            y: {
+                                ticks: {
+                                    beginAtZero: true,
+                                    color: '#5e6a81',
+                                    stepSize: 5
+                                },
                                 gridLines: {
                                     color: 'rgba(200, 200, 200, 0.08)',
                                     lineWidth: 1
                                 }
-                            }],
-                        xAxes:[{
-                        ticks: {
-                            fontColor: '#5e6a81'
-                        }
-                        }]
+                            },
+                            x:{
+                                ticks: {
+                                    color: '#5e6a81'
+                                }
+                            }
                         },
                         elements: {
                             line: {
@@ -574,20 +578,21 @@ function readCSVFile(){
                             duration: 520
                         },
                         scales: {
-                            yAxes: [{
-                        ticks: {
-                            fontColor: '#5e6a81'
-                        },
+                            y: {
+                                ticks: {
+                                    color: '#5e6a81',
+                                    stepSize: 5
+                                },
                                 gridLines: {
                                     color: 'rgba(200, 200, 200, 0.08)',
                                     lineWidth: 1
                                 }
-                            }],
-                        xAxes:[{
-                        ticks: {
-                            fontColor: '#5e6a81'
-                        }
-                        }]
+                            },
+                            x: {
+                                ticks: {
+                                    color: '#5e6a81'
+                                }
+                            }
                         },
                         elements: {
                             line: {
@@ -651,20 +656,21 @@ function readCSVFile(){
                             duration: 520
                         },
                         scales: {
-                            yAxes: [{
-                        ticks: {
-                            fontColor: '#5e6a81'
-                        },
+                            y: {
+                                ticks: {
+                                    color: '#5e6a81',
+                                    stepSize: 5
+                                },
                                 gridLines: {
                                     color: 'rgba(200, 200, 200, 0.08)',
                                     lineWidth: 1
                                 }
-                            }],
-                        xAxes:[{
-                        ticks: {
-                            fontColor: '#5e6a81'
-                        }
-                        }]
+                            },
+                            x: {
+                                ticks: {
+                                    color: '#5e6a81'
+                                }
+                            }
                         },
                         elements: {
                             line: {
@@ -729,20 +735,21 @@ function readCSVFile(){
                             duration: 520
                         },
                         scales: {
-                            yAxes: [{
-                        ticks: {
-                            fontColor: '#5e6a81'
-                        },
+                            y: {
+                                ticks: {
+                                    color: '#5e6a81',
+                                    stepSize: 5
+                                },
                                 gridLines: {
                                     color: 'rgba(200, 200, 200, 0.08)',
                                     lineWidth: 1
                                 }
-                            }],
-                        xAxes:[{
-                        ticks: {
-                            fontColor: '#5e6a81'
-                        }
-                        }]
+                            },
+                            x: {
+                                ticks: {
+                                    color: '#5e6a81'
+                                }
+                            }
                         },
                         elements: {
                             line: {
@@ -808,21 +815,21 @@ function readCSVFile(){
                             duration: 520
                         },
                         scales: {
-                            yAxes: [{
-                        ticks: {
-                        
-                            fontColor: '#5e6a81'
-                        },
+                            y: {
+                                ticks: {
+                                    color: '#5e6a81',
+                                    stepSize: 5
+                                },
                                 gridLines: {
                                     color: 'rgba(200, 200, 200, 0.08)',
                                     lineWidth: 1
                                 }
-                            }],
-                        xAxes:[{
-                        ticks: {
-                            fontColor: '#5e6a81'
-                        }
-                        }]
+                            },
+                            x: {
+                                ticks: {
+                                    color: '#5e6a81'
+                                }
+                            }
                         },
                         elements: {
                             line: {
@@ -896,20 +903,21 @@ function readCSVFile(){
                             duration: 520
                         },
                         scales: {
-                            yAxes: [{
-                        ticks: {
-                            fontColor: '#5e6a81'
-                        },
+                            y: {
+                                ticks: {
+                                    color: '#5e6a81',
+                                    stepSize: 5
+                                },
                                 gridLines: {
                                     color: 'rgba(200, 200, 200, 0.08)',
                                     lineWidth: 1
                                 }
-                            }],
-                        xAxes:[{
-                        ticks: {
-                            fontColor: '#5e6a81'
-                        }
-                        }]
+                            },
+                            x: {
+                                ticks: {
+                                    color: '#5e6a81'
+                                }
+                            }
                         },
                         elements: {
                             line: {
@@ -984,6 +992,7 @@ function readCSVFile(){
                             y: {
                                 ticks: {
                                     color: ['#ffffff'],
+                                    stepSize: 5
                                 },
                                 gridLines: {
                                     color: 'rgba(200, 200, 200, 0.08)',
