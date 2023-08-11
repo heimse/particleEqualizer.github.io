@@ -994,6 +994,8 @@ function readCSVFile(){
                                     color: ['#ffffff'],
                                     stepSize: 5
                                 },
+                                min: 0,
+                                max: 100,
                                 gridLines: {
                                     color: 'rgba(200, 200, 200, 0.08)',
                                     lineWidth: 1
