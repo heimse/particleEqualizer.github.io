@@ -892,7 +892,7 @@ function readCSVFile(){
                             }],
                         xAxes:[{
                         ticks: {
-                            color: ['#008000', 'black']
+                            color: 'red'
                         }
                         }]
                         },
