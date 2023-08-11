@@ -925,9 +925,15 @@ function readCSVFile(){
                         plugins: {
                             title: {
                                 display: true,
-                                text: 'Custom Chart Title',
+                                text: `Прогноз загрузки в процентах <br>Среднее значение: ${getAverage(getAllColumn(array, 18))}%`,
                                 color: '#ffffff',
-                                fontSize: 20
+                                font: {
+                                    size: 14
+                                },
+                                padding: {
+                                    top: 10,
+                                    bottom: 30
+                                }
                             }
                         } 
                     }
