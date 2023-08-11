@@ -1085,45 +1085,45 @@ function readCSVFile(){
                 }
             }
 
-            // $('.downloadPDF').bind('click', () => {
-            //     // get size of report page
-            //     var reportPageHeight = $('.charts-row-wrapper').length * $('.charts-row-wrapper').innerHeight();
-            //     var reportPageWidth = $('.charts-row-wrapper').innerWidth();
+            $('.downloadPDF').bind('click', () => {
+                // get size of report page
+                var reportPageHeight = $('.chartJs').innerHeight() * 5;
+                var reportPageWidth = $('.chartJs').innerWidth() * 2.5;
             
-            //     // create a new canvas object that we will populate with all other canvas objects
-            //     var pdfCanvas = $('<canvas />').attr({
-            //       id: "canvaspdf",
-            //       width: reportPageWidth,
-            //       height: reportPageHeight
-            //     });
+                // create a new canvas object that we will populate with all other canvas objects
+                var pdfCanvas = $('<canvas />').attr({
+                  id: "canvaspdf",
+                  width: reportPageWidth,
+                  height: reportPageHeight
+                });
             
-            //     // keep track canvas position
-            //     var pdfctx = $(pdfCanvas)[0].getContext('2d');
-            //     var pdfctxX = 0;
-            //     var pdfctxY = 0;
-            //     var buffer = 100;
-            //     // for each chart.js chart
-            //     $("canvas.chartJs").each(function(index) {
-            //       // get the chart height/width
-            //       var canvasHeight = $(this).innerHeight();
-            //       var canvasWidth = $(this).innerWidth();
+                // keep track canvas position
+                var pdfctx = $(pdfCanvas)[0].getContext('2d');
+                var pdfctxX = 0;
+                var pdfctxY = 0;
+                var buffer = 100;
+                // for each chart.js chart
+                $("canvas.chartJs").each(function(index) {
+                  // get the chart height/width
+                  var canvasHeight = $(this).innerHeight();
+                  var canvasWidth = $(this).innerWidth();
                   
-            //       // draw the chart into the new canvas
-            //       pdfctx.drawImage($(this)[0], pdfctxX, pdfctxY, canvasWidth, canvasHeight);
-            //       pdfctxX += canvasWidth + buffer;
+                  // draw the chart into the new canvas
+                  pdfctx.drawImage($(this)[0], pdfctxX, pdfctxY, canvasWidth, canvasHeight);
+                  pdfctxX += canvasWidth + buffer;
                   
-            //       // our report page is in a grid pattern so replicate that in the new canvas
-            //       if (index % 2 === 1) {
-            //         pdfctxX = 0;
-            //         pdfctxY += canvasHeight + buffer;
-            //       }
-            //     });
-            //     // create new pdf and add our new canvas as an image
-            //     var pdf = new jsPDF('portrait', 'pt', [reportPageHeight, reportPageWidth]);
-            //     pdf.addImage($(pdfCanvas)[0], 'PNG', 0, 0);
-            //     // download the pdf
-            //     pdf.save('report.pdf');
-            // });
+                  // our report page is in a grid pattern so replicate that in the new canvas
+                  if (index % 2 === 1) {
+                    pdfctxX = 0;
+                    pdfctxY += canvasHeight + buffer;
+                  }
+                });
+                // create new pdf and add our new canvas as an image
+                var pdf = new jsPDF('portrait', 'pt', [reportPageHeight, reportPageWidth]);
+                pdf.addImage($(pdfCanvas)[0], 'PNG', 0, 0);
+                // download the pdf
+                pdf.save('report.pdf');
+            });
         };
 
     } else {
