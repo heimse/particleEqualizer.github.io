@@ -281,8 +281,19 @@ function readCSVFile(){
                             xPadding: 10,
                             yPadding: 10
                         },
-                        chartCustomTitle: {
-                            text: `Загрузка в комнатах в прошлом<br>Среднее значение: ${getAverage(getAllColumn(array, 5))}`
+                        plugins: {
+                            title: {
+                                display: true,
+                                text: `Загрузка в комнатах в прошлом; Среднее значение: ${getAverage(getAllColumn(array, 5))}`,
+                                color: '#ffffff',
+                                font: {
+                                    size: 20
+                                },
+                                padding: {
+                                    top: 10,
+                                    bottom: 30
+                                }
+                            }
                         }
                     }
                 },
@@ -355,8 +366,19 @@ function readCSVFile(){
                             xPadding: 10,
                             yPadding: 10
                         },
-                        chartCustomTitle: {
-                            text: `Загрузка в комнатах в будущем <br>Среднее значение: ${getAverage(getAllColumn(array, 12))}`
+                        plugins: {
+                            title: {
+                                display: true,
+                                text: `Загрузка в комнатах в будущем <br>Среднее значение: ${getAverage(getAllColumn(array, 12))}`,
+                                color: '#ffffff',
+                                font: {
+                                    size: 20
+                                },
+                                padding: {
+                                    top: 10,
+                                    bottom: 30
+                                }
+                            }
                         }
                     }
                 },
@@ -423,8 +445,19 @@ function readCSVFile(){
                             xPadding: 10,
                             yPadding: 10
                         },
-                        chartCustomTitle: {
-                            text: `Закрузка в процентах в прошлом <br>Среднее значение: ${getAverage(getAllColumn(array, 6))}%`
+                        plugins: {
+                            title: {
+                                display: true,
+                                text: `Закрузка в процентах в прошлом; Среднее значение: ${getAverage(getAllColumn(array, 6))}%`,
+                                color: '#ffffff',
+                                font: {
+                                    size: 20
+                                },
+                                padding: {
+                                    top: 10,
+                                    bottom: 30
+                                }
+                            }
                         }
                     }
                 }, 
@@ -499,8 +532,19 @@ function readCSVFile(){
                             xPadding: 10,
                             yPadding: 10
                         },
-                        chartCustomTitle: {
-                            text: `Закрузка в процентах в будущем <br>Среднее значение: ${getAverage(getAllColumn(array, 13))}%`
+                        plugins: {
+                            title: {
+                                display: true,
+                                text: `Закрузка в процентах в будущем <br>Среднее значение: ${getAverage(getAllColumn(array, 13))}%`,
+                                color: '#ffffff',
+                                font: {
+                                    size: 20
+                                },
+                                padding: {
+                                    top: 10,
+                                    bottom: 30
+                                }
+                            }
                         }
                     }
                 }, 
@@ -565,8 +609,19 @@ function readCSVFile(){
                             xPadding: 10,
                             yPadding: 10
                         },
-                        chartCustomTitle: {
-                            text: `Доход в прошлом<br>Всего: ${getSumm(getAllColumn(array, 7))}`
+                        plugins: {
+                            title: {
+                                display: true,
+                                text: `Доход в прошлом<br>Всего: ${getSumm(getAllColumn(array, 7))}`,
+                                color: '#ffffff',
+                                font: {
+                                    size: 20
+                                },
+                                padding: {
+                                    top: 10,
+                                    bottom: 30
+                                }
+                            }
                         }
                     }
                 }, 
@@ -631,8 +686,19 @@ function readCSVFile(){
                             xPadding: 10,
                             yPadding: 10
                         },
-                        chartCustomTitle: {
-                            text: `Доход в будущем<br>Всего: ${getSumm(getAllColumn(array, 14))}`
+                        plugins: {
+                            title: {
+                                display: true,
+                                text: `Доход в будущем<br>Всего: ${getSumm(getAllColumn(array, 14))}`,
+                                color: '#ffffff',
+                                font: {
+                                    size: 20
+                                },
+                                padding: {
+                                    top: 10,
+                                    bottom: 30
+                                }
+                            }
                         }
                     }
                 }, 
@@ -698,8 +764,19 @@ function readCSVFile(){
                             xPadding: 10,
                             yPadding: 10
                         },
-                        chartCustomTitle: {
-                            text: `Средний тариф в прошлом <br>Среднее значение: ${getAverage(getAllColumn(array, 8))}`
+                        plugins: {
+                            title: {
+                                display: true,
+                                text: `Средний тариф в прошлом <br>Среднее значение: ${getAverage(getAllColumn(array, 8))}`,
+                                color: '#ffffff',
+                                font: {
+                                    size: 20
+                                },
+                                padding: {
+                                    top: 10,
+                                    bottom: 30
+                                }
+                            }
                         }
                     }
                 },
@@ -767,8 +844,19 @@ function readCSVFile(){
                             xPadding: 10,
                             yPadding: 10
                         },
-                        chartCustomTitle: {
-                            text: `Средний тариф в будущем <br>Среднее значение: ${getAverage(getAllColumn(array, 15))}`
+                        plugins: {
+                            title: {
+                                display: true,
+                                text: `Средний тариф в будущем <br>Среднее значение: ${getAverage(getAllColumn(array, 15))}`,
+                                color: '#ffffff',
+                                font: {
+                                    size: 20
+                                },
+                                padding: {
+                                    top: 10,
+                                    bottom: 30
+                                }
+                            }
                         }
                          
                     }
@@ -843,8 +931,19 @@ function readCSVFile(){
                             xPadding: 10,
                             yPadding: 10
                         },
-                        chartCustomTitle: {
-                            text: `Прогноз загрузки в комнатах <br>Среднее значение: ${getAverage(getAllColumn(array, 17))}`
+                        plugins: {
+                            title: {
+                                display: true,
+                                text: `Прогноз загрузки в комнатах <br>Среднее значение: ${getAverage(getAllColumn(array, 17))}`,
+                                color: '#ffffff',
+                                font: {
+                                    size: 20
+                                },
+                                padding: {
+                                    top: 10,
+                                    bottom: 30
+                                }
+                            }
                         }
                     }
                 },
@@ -922,7 +1021,7 @@ function readCSVFile(){
                         plugins: {
                             title: {
                                 display: true,
-                                text: `Прогноз загрузки в процентах U+000A &#10; Среднее значение: ${getAverage(getAllColumn(array, 18))}%`,
+                                text: `Прогноз загрузки в процентах; Среднее значение: ${getAverage(getAllColumn(array, 18))}%`,
                                 color: '#ffffff',
                                 font: {
                                     size: 20
