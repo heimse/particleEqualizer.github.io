@@ -892,7 +892,7 @@ function readCSVFile(){
                             }],
                         xAxes:[{
                         ticks: {
-                            color: 'red'
+                            fontColor: ['red', 'green', 'blue'],
                         }
                         }]
                         },
@@ -965,7 +965,6 @@ function drawChart(id, settings) {
 }
 function getAverage(numbers) {
     const sum = numbers.reduce((acc, number) => +acc + +number, 0);
-    console.log(sum);
     const length = numbers.length;
     return Math.ceil(sum / length);
 };
