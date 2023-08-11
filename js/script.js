@@ -1073,16 +1073,19 @@ function CSVToArray( strData, strDelimiter ){
 }
 
 $('.downloadPDF').click(function(event) {
+    console.log('clicl');
     // get size of report page
     var reportPageHeight = $('#reportPage').innerHeight();
     var reportPageWidth = $('#reportPage').innerWidth();
-    
+    console.log(reportPageHeight, reportPageWidth);
     // create a new canvas object that we will populate with all other canvas objects
     var pdfCanvas = $('<canvas />').attr({
       id: "canvaspdf",
       width: reportPageWidth,
       height: reportPageHeight
     });
+
+    console.log(pdfCanvas);
     
     // keep track canvas position
     var pdfctx = $(pdfCanvas)[0].getContext('2d');
@@ -1110,7 +1113,7 @@ $('.downloadPDF').click(function(event) {
     // create new pdf and add our new canvas as an image
     var pdf = new jsPDF('l', 'pt', [reportPageWidth, reportPageHeight]);
     pdf.addImage($(pdfCanvas)[0], 'PNG', 0, 0);
-    
+    console.log(pdf);
     // download the pdf
     pdf.save('filename.pdf');
 });
