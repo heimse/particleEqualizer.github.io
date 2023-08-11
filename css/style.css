@@ -272,13 +272,13 @@ div.chartsWrapper > div.forecast {
     justify-content: center;
     align-items: center;
 }
-/* .charts-row:has(.forecast) {
-	height: auto !important;
-}
-.charts-column:has(> .forecast) {
-	height: 100px !important;
-} */
 
+.downloadPDF {
+	color: #ffffff;
+	border: 1px solid #ffffff;
+	border-radius: 10px;
+	padding: 10px;
+}
 .short {
 	height: auto !important;
 }
