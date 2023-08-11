@@ -233,7 +233,7 @@ function readCSVFile(){
 							pointBackgroundColor: '#00c7d6',
                             borderColor: '#0e1a2f',
                             backgroundColor: '#02faf2',
-                            fill: true,
+                            // fill: true,
                         }]
                     },
                     options:{
@@ -311,7 +311,7 @@ function readCSVFile(){
 							pointBackgroundColor: '#00c7d6',
                             borderColor: '#0e1a2f',
                             backgroundColor: '#02faf2',
-                            fill: true
+                            // fill: true
                         },{
                             //y-axis
                             label: 'Загрузка в комнатах в прошлом',
@@ -320,7 +320,7 @@ function readCSVFile(){
 							pointBackgroundColor: '#00c7d6',
                             borderColor: '#0e1a2f',
                             backgroundColor: '#00C7D6',
-                            fill: true
+                            // fill: true
                         }]
                     },
                     options:{
@@ -399,7 +399,7 @@ function readCSVFile(){
 							pointBackgroundColor: '#00c7d6',
                             borderColor: '#0e1a2f',
                             backgroundColor: '#02faf2',
-                            fill: true
+                            // fill: true
                         }]
                     },
                     options:{
@@ -480,7 +480,7 @@ function readCSVFile(){
 							pointBackgroundColor: '#00c7d6',
                             borderColor: '#0e1a2f',
                             backgroundColor: '#02faf23',
-                            fill: true
+                            // fill: true
                         },{
                             //y-axis
                             label: 'Закрузка в процентах в прошлом',
@@ -489,7 +489,7 @@ function readCSVFile(){
 							pointBackgroundColor: '#00c7d6',
                             borderColor: '#0e1a2f',
                             backgroundColor: '#02fa93',
-                            fill: true
+                            // fill: true
                         }]
                     },
                     options:{
@@ -884,8 +884,8 @@ function readCSVFile(){
                             borderWidth: 1,
 							pointBackgroundColor: '#00c7d6',
                             borderColor: '#0e1a2f',
-                            backgroundColor: '#02fa00',
-                            fill: true
+                            backgroundColor: '#02faf2',
+                            // fill: true
                         },{
                             //y-axis
                             label: 'Прогноз загрузки в комнатах',
@@ -894,7 +894,7 @@ function readCSVFile(){
 							pointBackgroundColor: '#00c7d6',
                             borderColor: '#0e1a2f',
                             backgroundColor: '#02faf2',
-                            fill: true
+                            // fill: true
                         }]
                     },
                     options:{
@@ -922,6 +922,7 @@ function readCSVFile(){
                             x: {
                                 ticks: {
                                     color: getColorsSequence(array, 3),
+                                    stacked: true,
                                 }
                             }
                         },
@@ -948,7 +949,7 @@ function readCSVFile(){
                         plugins: {
                             title: {
                                 display: true,
-                                text: `Прогноз загрузки в комнатах ;Среднее значение: ${getAverage(getAllColumn(array, 17))}`,
+                                text: `Прогноз загрузки в комнатах;Среднее значение: ${getAverage(getAllColumn(array, 17))}`,
                                 color: '#ffffff',
                                 font: {
                                     size: 20
@@ -974,7 +975,7 @@ function readCSVFile(){
 							pointBackgroundColor: '#00c7d6',
                             borderColor: '#0e1a2f',
                             backgroundColor: '#000053',
-                            fill: true
+                            // fill: true
                         },{
                             //y-axis
                             label: 'Прогноз загрузки в процентах',
@@ -983,7 +984,7 @@ function readCSVFile(){
 							pointBackgroundColor: '#00c7d6',
                             borderColor: '#0e1a2f',
                             backgroundColor: '#02e1d9',
-                            fill: true
+                            // fill: true
                         }]
                     },
                     options:{
