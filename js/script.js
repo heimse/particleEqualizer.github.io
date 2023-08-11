@@ -1138,7 +1138,7 @@ function getAllColumn(array, myIndex) {
         if(isNaN(+currentElement)) {
             newArray.push(currentElement); 
         } else {
-            newArray.push(+elcurrentElementement);
+            newArray.push(+currentElement);
         }
     });
     newArray.shift();
