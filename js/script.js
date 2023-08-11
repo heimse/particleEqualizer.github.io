@@ -232,7 +232,7 @@ function readCSVFile(){
                             borderWidth: 1,
 							pointBackgroundColor: '#00c7d6',
                             borderColor: '#0e1a2f',
-                            backgroundColor: '#02fa9',
+                            backgroundColor: '#02faf2',
                         }]
                     },
                     options:{
@@ -395,7 +395,7 @@ function readCSVFile(){
                             borderWidth: 1,
 							pointBackgroundColor: '#00c7d6',
                             borderColor: '#0e1a2f',
-                            backgroundColor: '#02fa9',
+                            backgroundColor: '#02faf2',
                         }]
                     },
                     options:{
@@ -475,7 +475,7 @@ function readCSVFile(){
                             borderWidth: 1,
 							pointBackgroundColor: '#00c7d6',
                             borderColor: '#0e1a2f',
-                            backgroundColor: '#02fa93',
+                            backgroundColor: '#02faf23',
                         },{
                             //y-axis
                             label: 'Закрузка в процентах в прошлом',
@@ -483,7 +483,7 @@ function readCSVFile(){
                             borderWidth: 1,
 							pointBackgroundColor: '#00c7d6',
                             borderColor: '#0e1a2f',
-                            backgroundColor: '#02fa9',
+                            backgroundColor: '#02faf2',
                         }]
                     },
                     options:{
