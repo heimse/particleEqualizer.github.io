@@ -1123,7 +1123,7 @@ function getSumm(numbers) {
 function getAllColumn(array, myIndex) {
     let newArray = [];
     array.forEach((element,i) => {
-        newArray.push(+array[i][0].split(';')[myIndex]);
+        newArray.push(array[i][0].split(';')[myIndex]);
     });
     newArray.shift();
 
