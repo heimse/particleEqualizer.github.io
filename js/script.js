@@ -1072,7 +1072,7 @@ function CSVToArray( strData, strDelimiter ){
 	
 }
 
-$('.downloadPdf').click(function(event) {
+$('.downloadPDF').click(function(event) {
     // get size of report page
     var reportPageHeight = $('#reportPage').innerHeight();
     var reportPageWidth = $('#reportPage').innerWidth();
