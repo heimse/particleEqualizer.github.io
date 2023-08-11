@@ -882,24 +882,24 @@ function readCSVFile(){
                             duration: 520
                         },
                         scales: {
-                            y: [{
+                            y: {
                                 ticks: {
-                                    color: ['red', 'blue'],
+                                    color: ['#ff0000', '#008000'],
                                 },
-                                // gridLines: {
-                                //     color: 'rgba(200, 200, 200, 0.08)',
-                                //     lineWidth: 1
-                                // }
-                            }],
-                            xAxes:[{
+                                gridLines: {
+                                    color: 'rgba(200, 200, 200, 0.08)',
+                                    lineWidth: 1
+                                }
+                            },
+                            x:{
                                 ticks: {
-                                    color: ['red', 'green', 'blue'],
-                                    textStrokeColor: ['red', 'green', 'blue'],
+                                    color: ['#ff0000', '#008000'],
+                                    textStrokeColor: ['#ff0000', '#008000'],
                                     textStrokeWidth: 2,
                                     z: 999,
                                     display: true,
                                 }
-                            }]
+                            }
                         },
                         elements: {
                             line: {
