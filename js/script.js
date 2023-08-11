@@ -10,7 +10,7 @@ var m_device_checker;
 var flag = 0;
 var audio;
 var init = function(){
-    console.log('init');
+    // console.log('init');
     // device_checker
     m_device_checker = new DeviceChecker();
     var _is_mobile = m_device_checker.is_mobile();
@@ -19,7 +19,7 @@ var init = function(){
     //init audio element
     var audioDiv = document.querySelector(".audioDiv");
     audioDiv.innerHTML = "<audio id='audio' src='src.mp3' type='audio/mp3'></audio>";
-    console.log(audioDiv);
+    // console.log(audioDiv);
     audio = document.getElementById("audio");
 
     audio.onended = function() {
@@ -95,9 +95,9 @@ const interfaceFunctions = () => {
     let audio;
 
     $("#play").bind('click', () => {
-        console.log(flag);
+        // console.log(flag);
         if(flag == 0 || flag == undefined) {
-            console.log('inssit');
+            // console.log('inssit');
             init();
             audio = document.getElementById("audio");
             flag = 1;
@@ -153,7 +153,7 @@ const interfaceFunctions = () => {
             $("canvas:not(.chartJs)").fadeOut("slow");
             $("#play").css("display", "none");
         } else {
-            console.log('play');
+            // console.log('play');
             audio.play();
         }
         $("#play").toggleClass("played");
@@ -185,7 +185,7 @@ $(document).ready(() => {
 
     const inputElement = document.getElementById("file-input");
     inputElement.addEventListener("change", () => {
-        console.log('input changes');
+        // console.log('input changes');
         readCSVFile();
         $(".upload").addClass('stop');
     }, false);
@@ -218,7 +218,7 @@ function readCSVFile(){
             const csvdata = event.target.result;
             const array = CSVToArray(csvdata);
             const charts = document.querySelectorAll('.chartJs');
-            console.log(array);            
+            // console.log(array);            
             const settingsArray = [
                 {
                     type: 'line',
@@ -1087,8 +1087,8 @@ function readCSVFile(){
 
             $('.downloadPDF').bind('click', () => {
                 // get size of report page
-                var reportPageHeight = $('.chartsWrapper').innerHeight() - $('.forecast').innerHeight() - $('.chartsWrapper .tg').innerHeight() -  $('.charts-row.short').innerHeight();
-                var reportPageWidth = $(window).width();
+                var reportPageHeight = $('.charts-row-wrapper').length * $('.charts-row-wrapper').innerHeight();
+                var reportPageWidth = $('.charts-row-wrapper').innerWidth()+20;
             
                 // create a new canvas object that we will populate with all other canvas objects
                 var pdfCanvas = $('<canvas />').attr({
@@ -1158,7 +1158,7 @@ function getAllColumn(array, myIndex) {
     newArray = newArray.filter(function( element ) {
         return element !== undefined;
     });
-    console.log(newArray);
+    // // console.log(newArray);
     return newArray;
 }
 function CSVToArray( strData, strDelimiter ){
