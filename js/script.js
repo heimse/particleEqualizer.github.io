@@ -894,8 +894,6 @@ function readCSVFile(){
                             x:{
                                 ticks: {
                                     color: getColorsSequence(array),
-                                    textStrokeColor: ['#ff0000', '#008000'],
-                                    textStrokeWidth: 1,
                                     z: 999,
                                     display: true,
                                 }
