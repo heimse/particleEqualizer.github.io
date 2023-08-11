@@ -1158,7 +1158,7 @@ function getAllColumn(array, myIndex) {
     newArray = newArray.filter(function( element ) {
         return element !== undefined;
     });
-    // // console.log(newArray);
+    // console.log(newArray);
     return newArray;
 }
 function CSVToArray( strData, strDelimiter ){
