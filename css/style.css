@@ -240,7 +240,7 @@ canvas:not(.chartJs){
 }
 .charts-row {
 	display: flex;
-	width: 100%;
+	width: 90%;
     height: 600px;
 	justify-content: space-evenly;
 	margin: 35px 0;

@@ -247,11 +247,8 @@ function readCSVFile(){
                         },
                         scales: {
                             y: {
-                                beginAtZero: true,
-                                max: Math.max(...getAllColumn(array, 5)),
                                 ticks: {
                                     color: '#5e6a81',
-                                    stepSize: 5,
                                 },
                                 gridLines: {
                                     color: 'rgba(200, 200, 200, 0.08)',
@@ -260,7 +257,7 @@ function readCSVFile(){
                             },
                             x:{
                                 ticks: {
-                                    color: getColorsSequence(array, 2),
+                                    color: getColorsSequence(array, 3),
                                 }
                             }
                         },
@@ -346,7 +343,7 @@ function readCSVFile(){
                             },
                             x: {
                                 ticks: {
-                                    color: '#5e6a81'
+                                    color: getColorsSequence(array, 3),
                                 }
                             }
                         },
@@ -426,7 +423,7 @@ function readCSVFile(){
                             },
                             x: {
                                 ticks: {
-                                    color: '#5e6a81'
+                                    color: getColorsSequence(array, 3),
                                 }
                             }
                         },
@@ -514,7 +511,7 @@ function readCSVFile(){
                             },
                             x:{
                                 ticks: {
-                                    color: '#5e6a81'
+                                    color: getColorsSequence(array, 3),
                                 }
                             }
                         },
@@ -592,7 +589,7 @@ function readCSVFile(){
                             },
                             x: {
                                 ticks: {
-                                    color: '#5e6a81'
+                                    color: getColorsSequence(array, 3),
                                 }
                             }
                         },
@@ -670,7 +667,7 @@ function readCSVFile(){
                             },
                             x: {
                                 ticks: {
-                                    color: '#5e6a81'
+                                    color: getColorsSequence(array, 3),
                                 }
                             }
                         },
@@ -749,7 +746,7 @@ function readCSVFile(){
                             },
                             x: {
                                 ticks: {
-                                    color: '#5e6a81'
+                                    color: getColorsSequence(array, 3),
                                 }
                             }
                         },
@@ -829,7 +826,7 @@ function readCSVFile(){
                             },
                             x: {
                                 ticks: {
-                                    color: '#5e6a81'
+                                    color: getColorsSequence(array, 3),
                                 }
                             }
                         },
@@ -917,7 +914,7 @@ function readCSVFile(){
                             },
                             x: {
                                 ticks: {
-                                    color: '#5e6a81'
+                                    color: getColorsSequence(array, 3),
                                 }
                             }
                         },
@@ -1005,7 +1002,7 @@ function readCSVFile(){
                             },
                             x:{
                                 ticks: {
-                                    color: getColorsSequence(array, 10),
+                                    color: getColorsSequence(array, 3),
                                     z: 999,
                                     display: true,
                                 }
