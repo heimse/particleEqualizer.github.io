@@ -1134,11 +1134,11 @@ function getSumm(numbers) {
 function getAllColumn(array, myIndex) {
     let newArray = [];
     array.forEach((element,i) => {
-        const element = array[i][0].split(';')[myIndex];
-        if(isNaN(+element)) {
-            newArray.push(element); 
+        const currentElement = array[i][0].split(';')[myIndex];
+        if(isNaN(+currentElement)) {
+            newArray.push(currentElement); 
         } else {
-            newArray.push(+element);
+            newArray.push(+elcurrentElementement);
         }
     });
     newArray.shift();
