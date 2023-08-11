@@ -267,9 +267,6 @@ function readCSVFile(){
                                 tension: 0.4
                             }
                         },
-                        legend: {
-                            display: false
-                        },
                         point: {
                             backgroundColor: '#00c7d6'
                         },
@@ -294,7 +291,10 @@ function readCSVFile(){
                                     top: 10,
                                     bottom: 30
                                 }
-                            }
+                            },
+                            legend: {
+                                display: false
+                            },
                         }
                     }
                 },
@@ -354,9 +354,6 @@ function readCSVFile(){
                                 tension: 0.4
                             }
                         },
-                        legend: {
-                            display: false
-                        },
                         point: {
                             backgroundColor: '#00c7d6'
                         },
@@ -381,7 +378,10 @@ function readCSVFile(){
                                     top: 10,
                                     bottom: 30
                                 }
-                            }
+                            },
+                            legend: {
+                                display: false
+                            },
                         }
                     }
                 },
@@ -435,9 +435,6 @@ function readCSVFile(){
                                 tension: 0.4
                             }
                         },
-                        legend: {
-                            display: false
-                        },
                         point: {
                             backgroundColor: '#00c7d6'
                         },
@@ -462,7 +459,10 @@ function readCSVFile(){
                                     top: 10,
                                     bottom: 30
                                 }
-                            }
+                            },
+                            legend: {
+                                display: false
+                            },
                         }
                     }
                 }, 
@@ -523,9 +523,6 @@ function readCSVFile(){
                                 tension: 0.4
                             }
                         },
-                        legend: {
-                            display: false
-                        },
                         point: {
                             backgroundColor: '#00c7d6'
                         },
@@ -550,7 +547,10 @@ function readCSVFile(){
                                     top: 10,
                                     bottom: 30
                                 }
-                            }
+                            },
+                            legend: {
+                                display: false
+                            },
                         }
                     }
                 }, 
@@ -601,9 +601,6 @@ function readCSVFile(){
                                 tension: 0.4
                             }
                         },
-                        legend: {
-                            display: false
-                        },
                         point: {
                             backgroundColor: '#00c7d6'
                         },
@@ -628,7 +625,10 @@ function readCSVFile(){
                                     top: 10,
                                     bottom: 30
                                 }
-                            }
+                            },
+                            legend: {
+                                display: false
+                            },
                         }
                     }
                 }, 
@@ -707,7 +707,10 @@ function readCSVFile(){
                                     bottom: 30
                                 }
                             }
-                        }
+                        },
+                        legend: {
+                            display: false
+                        },
                     }
                 }, 
                 {
@@ -785,7 +788,10 @@ function readCSVFile(){
                                     top: 10,
                                     bottom: 30
                                 }
-                            }
+                            },
+                            legend: {
+                                display: false
+                            },
                         }
                     }
                 },
@@ -838,9 +844,6 @@ function readCSVFile(){
                                 tension: 0.4
                             }
                         },
-                        legend: {
-                            display: false
-                        },
                         point: {
                             backgroundColor: '#00c7d6'
                         },
@@ -865,7 +868,10 @@ function readCSVFile(){
                                     top: 10,
                                     bottom: 30
                                 }
-                            }
+                            },
+                            legend: {
+                                display: false
+                            },
                         }
                          
                     }
@@ -928,9 +934,6 @@ function readCSVFile(){
                                 tension: 0.4
                             }
                         },
-                        legend: {
-                            display: false
-                        },
                         point: {
                             backgroundColor: '#00c7d6'
                         },
@@ -955,7 +958,10 @@ function readCSVFile(){
                                     top: 10,
                                     bottom: 30
                                 }
-                            }
+                            },
+                            legend: {
+                                display: false
+                            },
                         }
                     }
                 },
@@ -1020,9 +1026,6 @@ function readCSVFile(){
                                 tension: 0.4
                             }
                         },
-                        legend: {
-                            display: true
-                        },
                         point: {
                             backgroundColor: '#00c7d6'
                         },
@@ -1047,7 +1050,10 @@ function readCSVFile(){
                                     top: 10,
                                     bottom: 30
                                 }
-                            }
+                            },
+                            legend: {
+                                display: false
+                            },
                         } 
                     }
                 },
