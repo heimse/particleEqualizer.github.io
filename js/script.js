@@ -249,6 +249,7 @@ function readCSVFile(){
                             y: {
                                 ticks: {
                                     color: '#5e6a81',
+                                    // stepSize: 5
                                 },
                                 gridLines: {
                                     color: 'rgba(200, 200, 200, 0.08)',
@@ -334,7 +335,7 @@ function readCSVFile(){
                             y: {
                                 ticks: {
                                     color: '#5e6a81',
-                                    stepSize: 10,
+                                    // stepSize: 10,
                                 },
                                 gridLines: {
                                     color: 'rgba(200, 200, 200, 0.08)',
@@ -414,7 +415,7 @@ function readCSVFile(){
                                 ticks: {
                                     beginAtZero: true,
                                     color: '#5e6a81',
-                                    stepSize: 5
+                                    // stepSize: 5
                                 },
                                 gridLines: {
                                     color: 'rgba(200, 200, 200, 0.08)',
@@ -502,7 +503,7 @@ function readCSVFile(){
                                 ticks: {
                                     beginAtZero: true,
                                     color: '#5e6a81',
-                                    stepSize: 5
+                                    // stepSize: 5
                                 },
                                 gridLines: {
                                     color: 'rgba(200, 200, 200, 0.08)',
@@ -580,7 +581,7 @@ function readCSVFile(){
                             y: {
                                 ticks: {
                                     color: '#5e6a81',
-                                    stepSize: 5
+                                    // stepSize: 5
                                 },
                                 gridLines: {
                                     color: 'rgba(200, 200, 200, 0.08)',
@@ -658,7 +659,7 @@ function readCSVFile(){
                             y: {
                                 ticks: {
                                     color: '#5e6a81',
-                                    stepSize: 5
+                                    // stepSize: 5
                                 },
                                 gridLines: {
                                     color: 'rgba(200, 200, 200, 0.08)',
@@ -737,7 +738,7 @@ function readCSVFile(){
                             y: {
                                 ticks: {
                                     color: '#5e6a81',
-                                    stepSize: 5
+                                    // stepSize: 5
                                 },
                                 gridLines: {
                                     color: 'rgba(200, 200, 200, 0.08)',
@@ -817,7 +818,7 @@ function readCSVFile(){
                             y: {
                                 ticks: {
                                     color: '#5e6a81',
-                                    stepSize: 5
+                                    // stepSize: 5
                                 },
                                 gridLines: {
                                     color: 'rgba(200, 200, 200, 0.08)',
@@ -905,7 +906,7 @@ function readCSVFile(){
                             y: {
                                 ticks: {
                                     color: '#5e6a81',
-                                    stepSize: 5
+                                    // stepSize: 5
                                 },
                                 gridLines: {
                                     color: 'rgba(200, 200, 200, 0.08)',
@@ -991,7 +992,7 @@ function readCSVFile(){
                             y: {
                                 ticks: {
                                     color: ['#ffffff'],
-                                    stepSize: 5
+                                    // stepSize: 5
                                 },
                                 min: 0,
                                 max: 100,
@@ -1133,7 +1134,12 @@ function getSumm(numbers) {
 function getAllColumn(array, myIndex) {
     let newArray = [];
     array.forEach((element,i) => {
-        newArray.push(array[i][0].split(';')[myIndex]);
+        const element = array[i][0].split(';')[myIndex];
+        if(isNaN(+element)) {
+            newArray.push(element); 
+        } else {
+            newArray.push(+element);
+        }
     });
     newArray.shift();
 
