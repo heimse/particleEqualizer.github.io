@@ -893,7 +893,7 @@ function readCSVFile(){
                             },
                             x:{
                                 ticks: {
-                                    color: getColorsSequence(),
+                                    color: getColorsSequence(array),
                                     textStrokeColor: ['#ff0000', '#008000'],
                                     textStrokeWidth: 1,
                                     z: 999,
@@ -1113,7 +1113,7 @@ function CSVToArray( strData, strDelimiter ){
 	
 }
 
-function getColorsSequence() {
+function getColorsSequence(array) {
     const tickColors = [];
     getAllColumn(array, 3).forEach((dataPoint) => {
         if(dataPoint == 'green') {
