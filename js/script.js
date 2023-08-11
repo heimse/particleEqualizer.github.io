@@ -882,9 +882,9 @@ function readCSVFile(){
                             duration: 520
                         },
                         scales: {
-                            yAxes: [{
+                            y: [{
                                 ticks: {
-                                    fontColor: '#5e6a81'
+                                    color: ['red', 'blue'],
                                 },
                                 gridLines: {
                                     color: 'rgba(200, 200, 200, 0.08)',
@@ -955,7 +955,45 @@ function readCSVFile(){
                 }
             }
 
+            $('.downloadPDF').bind('click', () => {
+                // get size of report page
+                var reportPageHeight = $('.chartsWrapper').innerHeight() - $('.forecast').innerHeight() - $('.chartsWrapper .tg').innerHeight() -  $('.charts-row.short').innerHeight();
+                var reportPageWidth = $(window).width();
             
+                // create a new canvas object that we will populate with all other canvas objects
+                var pdfCanvas = $('<canvas />').attr({
+                  id: "canvaspdf",
+                  width: reportPageWidth,
+                  height: reportPageHeight
+                });
+            
+                // keep track canvas position
+                var pdfctx = $(pdfCanvas)[0].getContext('2d');
+                var pdfctxX = 0;
+                var pdfctxY = 0;
+                var buffer = 100;
+                // for each chart.js chart
+                $("canvas.chartJs").each(function(index) {
+                  // get the chart height/width
+                  var canvasHeight = $(this).innerHeight();
+                  var canvasWidth = $(this).innerWidth();
+                  
+                  // draw the chart into the new canvas
+                  pdfctx.drawImage($(this)[0], pdfctxX, pdfctxY, canvasWidth, canvasHeight);
+                  pdfctxX += canvasWidth + buffer;
+                  
+                  // our report page is in a grid pattern so replicate that in the new canvas
+                  if (index % 2 === 1) {
+                    pdfctxX = 0;
+                    pdfctxY += canvasHeight + buffer;
+                  }
+                });
+                // create new pdf and add our new canvas as an image
+                var pdf = new jsPDF('portrait', 'pt', [790, 1500]);
+                pdf.addImage($(pdfCanvas)[0], 'PNG', 0, 0);
+                // download the pdf
+                pdf.save('report.pdf');
+            });
         };
 
     } else {
@@ -1076,42 +1114,3 @@ function CSVToArray( strData, strDelimiter ){
 }
 
 
-$('.downloadPDF').bind('click', () => {
-    // get size of report page
-    var reportPageHeight = $('.chartsWrapper').innerHeight();
-    var reportPageWidth = $(window).width();
-
-    // create a new canvas object that we will populate with all other canvas objects
-    var pdfCanvas = $('<canvas />').attr({
-      id: "canvaspdf",
-      width: reportPageWidth,
-      height: reportPageHeight
-    });
-
-    // keep track canvas position
-    var pdfctx = $(pdfCanvas)[0].getContext('2d');
-    var pdfctxX = 0;
-    var pdfctxY = 0;
-    var buffer = 100;
-    // for each chart.js chart
-    $("canvas.chartJs").each(function(index) {
-      // get the chart height/width
-      var canvasHeight = $(this).innerHeight();
-      var canvasWidth = $(this).innerWidth();
-      
-      // draw the chart into the new canvas
-      pdfctx.drawImage($(this)[0], pdfctxX, pdfctxY, canvasWidth, canvasHeight);
-      pdfctxX += canvasWidth + buffer;
-      
-      // our report page is in a grid pattern so replicate that in the new canvas
-      if (index % 2 === 1) {
-        pdfctxX = 0;
-        pdfctxY += canvasHeight + buffer;
-      }
-    });
-    // create new pdf and add our new canvas as an image
-    var pdf = new jsPDF('l', 'pt', [reportPageWidth, reportPageHeight]);
-    pdf.addImage($(pdfCanvas)[0], 'PNG', 0, 0);
-    // download the pdf
-    pdf.save('report.pdf');
-});
